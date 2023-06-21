@@ -1,0 +1,48 @@
+header{
+    &.header{
+        @include dflex(space-between,center) ;
+        padding: 1rem 1rem 1rem 1rem ;
+        width: 100%;
+        border-bottom: 1px solid gainsboro;
+        background-color: white;
+        .header-left{
+            @include dflex(null,center) ;
+            .header-nav{
+                @include dflex(null,center) ;
+                .header-nav-item{
+                    padding: 0 1rem;
+                    cursor: pointer;
+                    font-weight: 700;
+                }
+            }
+        }
+        .header-right{
+            @include dflex(end,null) ;
+            .search{
+                @include dflex(null,center) ;
+                position: relative;
+                .seacrh-icon{
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    transform: translate(0%, -50%);
+                }
+            }
+            .form-control{
+                border-radius: 50px;
+                min-width: 250px
+            }
+            button{
+                &.btnLink{
+                    @include fontSize(1rem, #53B6B7,500);
+                    border-radius: 20px;
+                    margin: 0 0.75rem;
+                    border: 1px solid #53B6B7;
+                    padding: 0px 12px;
+                    white-space: nowrap;
+
+                }
+            }
+        }
+    }
+}

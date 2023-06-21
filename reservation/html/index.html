@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>預約掛號首頁index</title>
+    <link rel="stylesheet" href="/common/css/common.css">
+  </head>
+
+  <body>
+    <div class="container border p-0">
+      <header class="header"></header>
+      <div class="content-container">
+        <nav class="ad-image">API引入一張圖片</nav>
+        <main>
+          <div class="major-title">預約掛號</div>
+          <div class="major-content">
+            <div class="major-content-block">
+              <div class="major-content-title">
+                搜尋關鍵字
+                <div class="input-container">
+                  <input
+                    type="text "
+                    placeholder="關鍵字搜尋..."
+                    class="form-control keyword"
+                  />
+                  <span class="cancelIcon">x</span>
+                </div>
+              </div>
+            </div>
+            <div class="major-content-block">
+              <div class="major-content-title">選擇城市</div>
+              <div class="major-content-list city-container">
+                <div class="list-one-line">
+                  <div class="list-item zone">北部</div>
+                  <div class="list-item city">基隆市</div>
+                  <div class="list-item city active">台北市</div>
+                  <div class="list-item city">新北市</div>
+                  <div class="list-item city">桃園市</div>
+                  <div class="list-item city">新竹市</div>
+                  <div class="list-item city">新竹縣</div>
+                </div>
+                <div class="list-one-line">
+                  <div class="list-item zone">北部</div>
+                  <div class="list-item city">基隆市</div>
+                  <div class="list-item city active">台北市</div>
+                  <div class="list-item city">新北市</div>
+                  <div class="list-item city">桃園市</div>
+                  <div class="list-item city">新竹市</div>
+                  <div class="list-item city">新竹縣</div>
+                </div>
+              </div>
+            </div>
+
+            <div id="district-container" class="major-content-block">
+              <div class="major-content-title">
+                選擇區域(可複選)
+                <div class="notLimited district">不限</div>
+              </div>
+              <div class="major-content-list district-container">
+                <div class="list-one-line"></div>
+              </div>
+            </div>
+
+            <div id="department-container" class="major-content-block">
+              <div class="major-content-title">
+                選擇科別(可複選)
+                <div class="notLimited department">不限</div>
+              </div>
+              <div class="major-content-list department-container">
+                <div class="list-one-line"></div>
+              </div>
+            </div>
+
+            <div id="condition-container" class="major-content-block">
+              <div class="major-content-title">
+                更多條件(可複選)
+                <div class="notLimited condition">不限</div>
+              </div>
+              <div class="major-content-list condition-container">
+                <div class="list-one-line"></div>
+              </div>
+            </div>
+
+            <button class="btn btn-success">搜尋</button>
+          </div>
+        </main>
+        <section>
+          <div class="major-title">搜尋結果</div>
+          <div class="major-content">
+            <div class="switch-header">
+              <div class="total">共38間診所</div>
+            </div>
+            <div class="clinic-list">
+              <dd class="clinic-item">
+                <div class="department-List">
+                  <div class="item department">家醫科</div>
+                  <div class="item department">家醫科</div>
+                  <div class="item department">家醫科</div>
+                </div>
+                <dl class="inform">
+                  <div class="item name">丁文內科診所</div>
+                  <div class="item tel">02-12345678</div>
+                  <div class="item address">新北市蘆洲區長安街23號</div>
+                  <div class="item btn btn-detail">詳細內容</div>
+                </dl>
+              </dd>
+              <dd class="clinic-item">
+                <div class="department-List">
+                  <div class="item department">家醫科</div>
+                  <div class="item department">家醫科</div>
+                  <div class="item department">家醫科</div>
+                </div>
+                <dl class="inform">
+                  <div class="item name">丁文內科診所</div>
+                  <div class="item tel">02-12345678</div>
+                  <div class="item address">新北市蘆洲區長安街23號</div>
+                  <div class="item btn btn-detail">詳細內容</div>
+                </dl>
+              </dd>
+            </div>
+            <section class="pagination-container pagination-container-custom">
+              <ul class="page"></ul>
+            </section>
+          </div>
+        </section>
+      </div>
+
+      <footer></footer>
+    </div>
+  </body>
+</html>
+<!-- <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+<script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script> -->
+<!-- <script src="../../js/innerHeight.js"></script> -->
+<!-- <script src="../../js/cityZoneSelect.js"></script> -->
+<!-- <script src="../../component/Header.js"></script> -->
+<!-- <script src="../../component/Navbar.js"></script>
+<script src="../../component/Carousel.js"></script>
+<script src="../../component/HashTagContainer.js"></script>
+<script src="../../component/Title-line.js"></script> -->
+<!-- <script src="../../component/Footer.js"></script> -->
+
+<!-- <script type="module" src="/js/UI_render.js"></script>
+<script src="../../AreaManager.js"></script>
+<script src="/js/class/INPUT.js"></script>
+<script src="/js/class/PAGINATION.js"></script>
+<script src="/js/class/RESERVATION_SEARCH.js"></script> -->
+
+<script type="module" src="/common/js/Common_UI_Render.js"></script>
+<!-- <script>
+  // let Header=new HEADER()
+  let searchObj = {
+    keyword: "",
+    city: "臺北市",
+    district: [],
+    department: [],
+    condition: [],
+  };
+
+  let manager = new AreaManager();
+  manager
+    .onAreaChange((initial, items) => {
+      // console.log(initial, "initial", items, "area");
+      // areaUIRender(initial, items);
+    })
+    .onCityChange((initial, items) => {
+      // console.log(initial, "initial", items, "city");
+      // manager.selectCity("臺北市");
+      // manager.selectCity("臺北市");
+      // manager.selectCity("臺北市");
+      // cityUIRender(initial, items);
+    })
+    .onDistrictChange((initial, items) => {
+      initDistrictUIRender(initial, items);
+      // districtUIRender(initial, items);
+    })
+    .start();
+
+  // 撈API
+
+  // manager.selectCity(searchObj.city);
+  const initCityUIRender = () => {
+    let dom = document.querySelector(".major-content-list.city-container");
+    let str = "";
+    const entries = Object.entries(manager.data);
+    for (let i = 0; i < entries.length; i++) {
+      const zone = entries[i];
+      const city = Object.keys(zone[1]);
+      str += ` <div class="list-one-line">
+                <div class="list-item zone">${zone[0]}</div>
+                 ${city
+                   .map(
+                     (item, index) =>
+                       `<div data-id="${item}" onclick="cityChange('${
+                         zone[0]
+                       }','${item}')" class="list-item
+                        city ${searchObj.city === item ? "active" : ""}
+                       ">${item}</div>`
+                   )
+                   .join("")}
+                </div>`;
+    }
+
+    dom.innerHTML = str;
+  };
+  initCityUIRender();
+
+  const cityChange = (zone, city) => {
+    let target = event.target; //自己
+    manager.selectArea(zone);
+    manager.selectCity(city);
+    activeCssChange("single", target);
+  };
+
+  function initDistrictUIRender(initial, items) {
+    items = items.slice(1);
+    console.log(items, "itemsss");
+    let districtDom = document.querySelector("#district-container");
+
+    let district = new RESERVATION_SEARCH(districtDom, items);
+  }
+  // function initDepartmentUIRender(params) {
+  //   let data = [
+  //     { code: "1", text: "Ｘ光" },
+  //     { code: "2", text: "測試" },
+  //   ];
+  //   let dom = document.querySelector(".department-container .list-one-line");
+  //   let str = "";
+  //   data.forEach((item) => {
+  //     str += ` <div data-id="${item.code}" class="list-item department " onclick="optionSelect('department')">${item.text}</div>`;
+  //   });
+  //   dom.innerHTML = str;
+  // }
+  // initDepartmentUIRender();
+
+  // function initConditionUIRender(params) {
+  //   let data = [
+  //     { code: "1", text: "Ｘ光" },
+  //     { code: "2", text: "測試" },
+  //   ];
+  //   let dom = document.querySelector(".condition-container .list-one-line");
+  //   let str = "";
+  //   data.forEach((item) => {
+  //     str += ` <div data-id="${item.code}" class="list-item condition " onclick="optionSelect('condition')">${item.text}</div>`;
+  //   });
+  //   dom.innerHTML = str;
+  // }
+  // initConditionUIRender();
+
+  let data = [
+    { code: "1", text: "Ｘ光" },
+    { code: "2", text: "測試" },
+  ];
+  let conditionDom = document.querySelector("#condition-container");
+
+  let condition = new RESERVATION_SEARCH(conditionDom, data);
+
+  let departmentDom = document.querySelector("#department-container");
+
+  let department = new RESERVATION_SEARCH(departmentDom, data);
+
+  // let department= new RESERVATION_SEARCH(dom,data);
+  // 預設進來
+
+  // 撈科別ＡＰＩ 得到陣列
+  // 預設不限會亮
+  // initDepartmentUIRender(array)
+
+  // 撈條件ＡＰＩ 得到陣列
+  // 預設不限會亮
+  // initConditionUIRender(array)
+
+  // 到這邊應該是畫面沒有任何選取 ＵＩ炫染完成
+
+  // 撈最重要的ＡＰＩ 得到 他目前選擇的全部
+  // 預設是台北市不分區
+  // manager.selectCity(searchObj.city); 台北市帶進去 得到區域的列表
+  // initDistrictUIRender（）
+
+  // 台北市會active 然後不限會active
+
+  // 需特別注意：{
+  //   換城市 區域的active就會變不限
+  // }
+
+  // 最後會形成一個 一個obj
+  // post API取得結果
+
+  // 有兩種狀況
+  // 如果他是搜尋進來 會直接走post 然後畫面停在搜尋結果
+  // 跟他是預約掛號點進來 全部都是空值 就不要移動
+
+  function activeCssChange(type, target) {
+    if (type === "single") {
+      if (target.classList.contains("active")) {
+        return;
+      }
+      let oldDom = document.querySelector(
+        ".city-container .list-one-line .active"
+      );
+      oldDom.classList.remove("active");
+      target.classList.add("active");
+      return;
+    }
+    if (type === "many") {
+      target.classList.toggle("active");
+    }
+  }
+  // function optionSelect(type) {
+  //   let target = event.target; //自己
+  //   let dataID = target.getAttribute("data-id");
+  //   let value = target.textContent;
+
+  //   let targetObj = {
+  //     id: dataID,
+  //     value,
+  //   };
+
+  //   activeCssChange("many", target);
+  //   let searchObj_data = searchObj[type];
+  //   dataArrHanglder(targetObj, searchObj_data, type);
+  // }
+  // function dataArrHanglder(targetObj, ARR, type) {
+  //   let isExist = ARR.findIndex((item) => item.id === targetObj.id);
+
+  //   if (isExist !== -1) {
+  //     ARR.splice(isExist, 1);
+  //   } else {
+  //     ARR.push(targetObj);
+  //   }
+  //   notLimitedControl(ARR, type);
+  // }
+  // function notLimitedControl(arr, type) {
+  //   let length = arr.length || null;
+  //   let dom = document.querySelector(
+  //     `.major-content-title .notLimited.${type}`
+  //   );
+  //   if (!length) {
+  //     dom.classList.add("active");
+  //   } else {
+  //     dom.classList.remove("active");
+  //   }
+  // }
+</script>
+
+<script>
+  // import INPUT from '/js/class/INPUT.js';
+  const input = new INPUT(
+    document.querySelector(".major-content-title input.keyword"),
+    document.querySelector(".major-content-title .cancelIcon")
+  );
+
+  const pagination = new PAGINATION(
+    document.querySelector(".pagination-container ul.page"),
+    7
+  );
+</script> -->
+
+<script>
+  // 搜尋結果那個ＡＰＩ得到的節果 會是array
+  // 預設一定是第一頁
+
+  // 搜尋出去會分兩種 想寫在同一支？
+  // 有合作{
+  //   診所基本資料
+  //   診所班表
+  //   立即預約（導頁）
+  //   現場看診進度 （導頁）
+  //   注意事項
+  //   門診公告
+  //   我們自己的ＡＤ
+  // }
+
+  // 沒合作{
+  //   診所基本資料
+  //   診所班表
+  //   回上一頁btn
+  //   我們自己的ＡＤ
+  // }
+
+  // 立即預約{
+  //   進入step 三部曲
+  //   1
+  //   醫師列表
+  //   約診日期
+  //   約診時段
+
+  //   2
+  //   剛剛選取的預約資料 放上來
+  //   填寫聯絡資訊
+
+  //   3
+  //   全部完成
+  //   查詢（導頁）
+
+  // }
+</script>
