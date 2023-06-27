@@ -1,0 +1,875 @@
+@charset "UTF-8";
+section.ad-loop {
+  width: 100%;
+  background-color: lightcyan;
+  height: 150px;
+}
+
+.content-container {
+  padding: 1.5rem 2rem 0 2rem;
+  background-color: white;
+  width: 90%;
+  margin: 0 auto;
+}
+@media (max-width: 996px) {
+  .content-container {
+    padding: 1rem;
+    padding-bottom: 0;
+  }
+}
+
+.majorTitle {
+  font-size: 2rem;
+  color: #333333;
+  font-weight: 900;
+  letter-spacing: 0.01em;
+  font-family: "Noto Sans TC";
+  text-align: center;
+}
+
+.minTitle {
+  font-size: 20px;
+  color: #333333;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  font-family: "Noto Sans TC";
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  white-space: nowrap;
+  padding-bottom: 0.5rem;
+}
+
+.input-container {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  margin-bottom: 1.5rem;
+  margin: 0;
+}
+.input-container .label {
+  font-size: 18px;
+  color: #4a4a4a;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  font-family: "Noto Sans TC";
+  white-space: nowrap;
+  min-width: 150px;
+  margin-right: 1rem;
+  text-align: start;
+}
+.input-container .cancelIcon {
+  color: red;
+}
+.input-container .form-control {
+  width: 50%;
+}
+
+.borderBottom {
+  border-bottom: #cdcdcd 1px solid;
+}
+
+.active {
+  background: #24a8a7 !important;
+  border-radius: 16px;
+  color: white !important;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.05);
+  border-radius: 8px 8px 0 0;
+  background-color: white;
+  padding: 2rem 3.5rem;
+  margin-top: 1rem;
+  border: none;
+}
+
+.cardItem {
+  margin-bottom: 1rem;
+}
+.cardItem .cardItem-container .list-singleLine {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: 1rem 0;
+}
+.cardItem .cardItem-container .list-singleLine .listItem {
+  font-size: 1rem;
+  color: #666666;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  font-family: "Noto Sans TC";
+  margin: 0.5rem 0;
+  margin-right: 0.25rem;
+  cursor: pointer;
+  padding: 2px 16px;
+}
+.cardItem .cardItem-container .list-singleLine .listItem.listItem-zone {
+  color: black;
+  margin-right: 0.5rem;
+  padding: 0;
+}
+.unlimited_btn {
+  border: 1px #24a8a7 solid;
+  border-radius: 16px;
+  background-color: white;
+  font-size: 1rem;
+  color: #24a8a7;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  font-family: "Noto Sans TC";
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  cursor: pointer;
+  padding: 2px 1rem;
+  line-height: initial;
+  margin-left: 1rem;
+}
+
+section.searchResult {
+  margin: 1rem 0;
+}
+section.searchResult .card .total {
+  font-size: 20px;
+  color: #666666;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  font-family: "Noto Sans TC";
+  text-align: end;
+}
+section.searchResult .card .clinicList {
+  padding: 1rem 0;
+}
+section.searchResult .card .clinicList .clinicItem {
+  border-bottom: #cdcdcd 1px solid;
+  padding: 0.5rem 0;
+}
+section.searchResult .card .clinicList .clinicItem .departmentList {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+section.searchResult .card .clinicList .clinicItem .departmentList .departmentItem {
+  font-size: 1rem;
+  color: #666666;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  font-family: "Noto Sans TC";
+  margin-right: 0.5rem;
+  padding: 0.25rem;
+  background-color: #efefef;
+  border: 1px solid #e2e2e2;
+  border-radius: 4px;
+}
+section.searchResult .card .clinicList .clinicItem .inform {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  font-size: 1rem;
+  color: #666666;
+  font-weight: 900;
+  letter-spacing: 0.01em;
+  font-family: "Noto Sans TC";
+  padding-top: 0.5rem;
+}
+section.searchResult .card .clinicList .clinicItem .inform .informItem {
+  white-space: nowrap;
+}
+section.searchResult .card .clinicList .clinicItem .inform .informItem.btn-detail {
+  padding: 4px 16px;
+  border-radius: 16px;
+  border: 1px solid gray;
+}
+
+.pagination {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+:root {
+  --primary: #23adad;
+  --greyLight: #23adade1;
+  --greyLight-2: #cbe0dd;
+  --greyDark: #2d4848;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.items-list {
+  max-width: 90vw;
+  margin: 2rem;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 3rem;
+  justify-content: center;
+  align-content: center;
+}
+@media only screen and (max-width: 600px) {
+  .items-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.item {
+  width: 10rem;
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--greyDark);
+  cursor: initial;
+}
+.item.state {
+  cursor: initial;
+}
+.item span {
+  background: #ffffff;
+  box-shadow: 0 0.8rem 2rem rgba(90, 97, 129, 0.05);
+  border-radius: 0.6rem;
+  padding: 2rem;
+  font-size: 3rem;
+  transition: all 0.3s ease;
+}
+.item:hover span {
+  transform: scale(1.2);
+  color: var(--primary);
+}
+.item p {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  color: var(--greyLight);
+}
+
+.page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.6rem;
+  background: #ffffff;
+  box-shadow: 0 0.8rem 2rem rgba(90, 97, 129, 0.05);
+  width: 100%;
+}
+.page__numbers, .page__btn, .page__dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.25rem 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.page__dots {
+  padding: 0.5rem 0.75rem;
+  color: var(--greyLight);
+  cursor: initial;
+}
+.page__numbers {
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.4rem;
+}
+.page__numbers:hover {
+  color: var(--primary);
+}
+.page__numbers.active {
+  color: #ffffff;
+  background: var(--primary);
+  font-weight: 600;
+  border: 1px solid var(--primary);
+}
+.page__btn {
+  color: var(--greyLight);
+  pointer-events: none;
+}
+.page__btn.active {
+  color: var(--greyDark);
+  pointer-events: initial;
+}
+.page__btn.active:hover {
+  color: var(--primary);
+}
+.page .prevIcon,
+.page .nextIcon {
+  background: #ffffff;
+  border: 0.5px solid #4a4a4a;
+  border-radius: 8px;
+  padding: 0.5rem 0.5rem;
+  cursor: pointer;
+}
+.page .prevIcon.dis,
+.page .nextIcon.dis {
+  background: #edebeb;
+  color: white;
+  border: none;
+}
+
+#simple-container .schedule-container {
+  transform: none;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.clinicImage {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding: 0 1rem;
+  background-color: #53b6b7;
+  background-image: linear-gradient(to top, rgb(2, 148, 149) 20%, hsla(181, 41%, 52%, 0) 70%), url("../image/卡比.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  width: 90%;
+  margin: 0 auto;
+  height: 500px;
+}
+.clinicImage .inform {
+  font-size: 18px;
+  color: white;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  font-family: "Noto Sans TC";
+}
+.clinicImage .inform .departmentList {
+  padding-bottom: 1rem;
+}
+.clinicImage .inform .clinicName {
+  font-size: 48px;
+  letter-spacing: 0.02em;
+  padding-bottom: 1rem;
+}
+
+.content-container .inform-detail {
+  font-size: 20px;
+  color: #666666;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  font-family: "Noto Sans TC";
+  letter-spacing: 0.08em;
+}
+.content-container .inform-detail .phone,
+.content-container .inform-detail .address,
+.content-container .inform-detail .facebook {
+  margin-bottom: 0.75rem;
+}
+.content-container .conditionList {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.content-container .conditionList .conditionItem {
+  border-radius: 50px;
+  background-color: #e7e4e4;
+  color: gray;
+  padding: 0.55rem 0.75rem;
+  margin: 0.5rem 0;
+  margin-right: 0.5rem;
+  position: relative;
+}
+
+.clinicDetail {
+  padding-top: 1rem;
+}
+.clinicDetail .title {
+  font-size: 28px;
+  color: #2B9293;
+  font-weight: 900;
+  letter-spacing: 0.01em;
+  font-family: "Noto Sans TC";
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  flex-wrap: wrap;
+  flex-direction: row;
+  border-bottom: 1px solid #cdcdcd;
+  padding: 1rem 2.5rem;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.05);
+}
+.clinicDetail .card-body {
+  font-size: 20px;
+  color: #666666;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  font-family: "Noto Sans TC";
+  padding: 1rem 2.5rem;
+  background-color: transparent;
+  border: 0;
+  box-shadow: none;
+}
+.clinicDetail .content {
+  font-size: 20px;
+  color: #666666;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  font-family: "Noto Sans TC";
+  letter-spacing: 0.08em;
+  padding: 1rem 0;
+}
+.clinicDetail .content ul {
+  min-height: 300px;
+  padding: 0;
+  width: 90%;
+  margin: 0 auto;
+}
+.clinicDetail .content ul li {
+  color: #4a4a4a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  border-bottom: 1px solid #cdcdcd;
+  padding: 0.75rem 0;
+}
+
+#simple-container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 2rem 0;
+  background-color: #F5F5F5;
+}
+#simple-container .simpleCard {
+  margin-bottom: 2rem;
+  background-color: white;
+  box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  padding: 1.5rem 0;
+}
+#simple-container .simpleCard .simpleCard-container {
+  width: 90%;
+  margin: 0 auto;
+}
+#simple-container .simpleCard .departmentList {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-bottom: 0.25rem;
+}
+#simple-container .simpleCard .departmentList .departmentItem {
+  background-color: #EFEFEF;
+  padding: 0.25rem 0.5rem;
+  font-size: 14px;
+  color: #666666;
+  letter-spacing: 0.01em;
+  font-family: "Noto Sans TC";
+  margin-right: 1rem;
+  border-radius: 10px;
+}
+#simple-container .simpleCard .clinicName, #simple-container .simpleCard .clinicTime {
+  font-size: 40px;
+  color: #53B6B7;
+  font-weight: 900;
+  letter-spacing: 0.01em;
+  font-family: "Noto Sans TC";
+  border-bottom: 1px solid #CDCDCD;
+}
+#simple-container .simpleCard .phone, #simple-container .simpleCard .address, #simple-container .simpleCard .alert {
+  font-size: 20px;
+  color: #666666;
+  font-weight: 7 0;
+  letter-spacing: 0.01em;
+  font-family: "Noto Sans TC";
+  letter-spacing: 0.08em;
+  margin: 0.5rem 0;
+  padding: 0;
+}
+#simple-container .simpleCard .clinicTime {
+  font-size: 28px;
+}
+
+.schedule-container {
+  transform: translate(0px, 130px);
+  width: 50%;
+}
+
+.item {
+  width: auto;
+  height: auto;
+}
+.item span {
+  font-size: 1rem;
+}
+
+.schedule {
+  background-color: white;
+  border: 1px solid #e2e2e2;
+  border-radius: 10px;
+  width: 100%;
+  padding: 20px;
+}
+.schedule .clinic-week {
+  width: 100%;
+  text-align: center;
+  font-size: 24px;
+  color: #4a4a4a;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  font-family: "Noto Sans TC";
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+.schedule .clinic-week .clinic-week-col {
+  width: 11.4285714286%;
+}
+.schedule .clinic-week .clinic-week-col:first-child {
+  min-width: 20%;
+}
+.schedule .clinic-week .clinic-week-col:first-child .item {
+  border-left: none;
+}
+.schedule .clinic-week .clinic-week-col:last-child .item {
+  border-right: none;
+}
+.schedule .clinic-week .clinic-week-col .item {
+  font-size: 1rem;
+  font-weight: 900;
+  letter-spacing: 0.01em;
+  font-family: "Noto Sans TC";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  overflow: hidden;
+  height: 60px;
+  border: 1px dotted #e2e2e2;
+}
+.schedule .clinic-week .clinic-week-col .item.state {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: column;
+}
+.schedule .clinic-week .clinic-week-col .item.state .stateName {
+  padding-top: 10px;
+}
+.schedule .clinic-week .clinic-week-col .item.state .range {
+  padding-top: 5px;
+  font-size: 1rem;
+}
+.schedule .clinic-week .clinic-week-col .item.isWeekend {
+  color: #9c0e4e;
+}
+.schedule .clinic-week .clinic-week-col .item.isRest {
+  color: #9c0e4e;
+}
+.schedule .clinic-week .clinic-week-col .item:first-child {
+  border-top: none;
+}
+.schedule .clinic-week .clinic-week-col .item:last-child {
+  border-bottom: none;
+}
+.schedule .clinic-week .clinic-week-col .item .active {
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  background: #53b6b7;
+  border-radius: 50%;
+}
+.schedule .clinic-week .clinic-week-col .item .active.isWeekend {
+  background-color: #9c0e4e !important;
+}
+@media (max-width: 576px) {
+  .schedule .clinic-week .clinic-week-col .item .active {
+    width: 15px;
+    height: 15px;
+  }
+}
+.schedule .clinic-doctor {
+  margin: 2rem 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+@media (max-width: 576px) {
+  .schedule .clinic-doctor {
+    width: 100%;
+    margin: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+}
+.schedule .clinic-doctor .doctor {
+  cursor: pointer;
+  margin: 0.5rem;
+  margin-left: 0;
+  padding: 1rem 3rem;
+  background: #ffffff;
+  border-radius: 4px;
+  font-size: 20px;
+  color: #4a4a4a;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  font-family: "Noto Sans TC";
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 576px) {
+  .schedule .clinic-doctor .doctor {
+    white-space: nowrap;
+    justify-content: space-between;
+    padding: 1rem;
+    display: block;
+    width: calc(50% - 0.5rem);
+  }
+}
+.schedule .clinic-doctor .doctor.active {
+  border: 1px solid #53b6b7;
+  background: #eefcfb;
+  color: #53b6b7;
+}
+.schedule .clinic-time {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 0;
+}
+.schedule .clinic-time .clinic-time-state {
+  letter-spacing: 0.01em;
+  color: black;
+  font-weight: 400;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-bottom: 1.5rem;
+}
+@media (max-width: 996px) {
+  .schedule .clinic-time .clinic-time-state {
+    width: auto;
+  }
+}
+.schedule .clinic-time .clinic-time-state .title {
+  text-align: start;
+  margin-bottom: 0.75rem;
+}
+.schedule .clinic-time .clinic-time-state .list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.schedule .clinic-time .clinic-time-state .list .timeItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  width: calc(14.2857142857% - 1rem);
+  height: 60px;
+  background: #ffffff;
+  border-radius: 4px;
+}
+@media (max-width: 996px) {
+  .schedule .clinic-time .clinic-time-state .list .timeItem {
+    width: auto;
+    padding: 0 1rem;
+  }
+}
+.schedule .clinic-time .clinic-time-state .list .timeItem.active {
+  background: #eefcfb;
+  border: 1px solid #53b6b7;
+  border-radius: 4px;
+  color: #24a8a7;
+}
+
+.resevation-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-top: 1.5rem;
+}
+.resevation-container .btn-link {
+  font-size: 20px;
+  color: white;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  font-family: "Noto Sans TC";
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  padding: 10px 20px;
+  border: 1.5px solid #2b9293;
+  box-shadow: 0px 4px 4px rgba(102, 102, 102, 0.15);
+  border-radius: 50px;
+  margin: 0 1rem;
+}
+.resevation-container .btn-link.nowCalled {
+  background: #2b9293;
+}
+.resevation-container .btn-link.reservation {
+  background: #53b6b7;
+}
+
+#step-container {
+  margin: 0 auto;
+  width: 90%;
+  background-color: white;
+}
+#step-container .step {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  position: relative;
+  padding: 2rem 0;
+  width: 90%;
+  margin: 0 auto 0rem auto;
+}
+#step-container .line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  background-color: #53b6b7;
+  height: 2.5px;
+  z-index: 1;
+}
+#step-container .stepItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  font-size: 20px;
+  color: #53b6b7;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  font-family: "Noto Sans TC";
+  width: 25%;
+  border: 1px solid #53b6b7;
+  border-bottom: 2px solid #53b6b7;
+  border-radius: 10px 10px 0px 0px;
+  padding: 0.75rem 0;
+  background-color: white;
+  box-shadow: 0 0 0 5px white; /* 调整颜色和模糊程度 */
+  z-index: 100;
+}
+#step-container .stepItem .stepItem-num {
+  font-size: 1rem;
+  color: #53b6b7;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  font-family: "Noto Sans TC";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  border: 1px solid #53b6b7;
+  margin: 0 0.5rem;
+  border-radius: 50px;
+  width: 25px;
+  height: 25px;
+}
+#step-container .stepItem .stepItem-name {
+  letter-spacing: 2px;
+}
+#step-container .stepItem.active {
+  background: #53b6b7 !important;
+  color: white !important;
+  border-bottom: 3px solid #2b9293 !important;
+}
+#step-container .stepItem.active .stepItem-num {
+  background-color: white !important;
+  color: #53b6b7 !important;
+}
+
+.fillIn_inform {
+  width: 90%;
+  padding: 0 1rem;
+  margin: 1rem auto;
+}
+.fillIn_inform .title {
+  position: relative;
+}
+.fillIn_inform .title .title-name {
+  font-size: 28px;
+  color: gray;
+  font-weight: 900;
+  letter-spacing: 0.01em;
+  font-family: "Noto Sans TC";
+  background-color: white;
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+}
+.fillIn_inform .title .title-line {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 50%;
+  height: 1px;
+  background-color: rgba(128, 128, 128, 0.5);
+  z-index: 1;
+}
+
+#calendar .monthControl {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  font-size: 20px;
+  color: #24a8a7;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  font-family: "Noto Sans TC";
+}
+#calendar .date-week {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+#calendar .date-week .weekItem {
+  font-size: 20px;
+  color: black;
+  font-weight: 900;
+  letter-spacing: 0.01em;
+  font-family: "Noto Sans TC";
+  text-align: center;
+  width: 14.2857142857%;
+}
+#calendar .date-week .weekItem.isWeekend {
+  color: #9c0e4e;
+}
+#calendar .date-day {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}/*# sourceMappingURL=reservation.css.map */

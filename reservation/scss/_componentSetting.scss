@@ -1,0 +1,28 @@
+.content-container {
+  @include content_container();
+}
+.majorTitle {
+  @include fontSize(2rem, #333333, 900);
+  text-align: center;
+}
+.minTitle {
+  @include fontSize(20px, #333333, 700);
+  @include dflex(null,center);
+  white-space: nowrap;
+  padding-bottom: 0.5rem;
+}
+.input-container {
+  @include input();
+  margin:  0;
+  .form-control {
+    width: 50%;
+  }
+}
+.borderBottom {
+  border-bottom: #cdcdcd 1px solid;
+}
+.active{
+  background: #24a8a7 !important;
+  border-radius: 16px;
+  color: white !important;
+}

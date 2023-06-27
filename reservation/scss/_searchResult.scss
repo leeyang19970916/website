@@ -1,0 +1,42 @@
+section {
+  &.searchResult {
+    margin: 1rem 0;
+    .card {
+      .total {
+        @include fontSize(20px, #666666, 400);
+        text-align: end;
+      }
+      .clinicList {
+        padding: 1rem 0;
+        .clinicItem {
+          border-bottom: #cdcdcd 1px solid;
+          padding: 0.5rem 0;
+          .departmentList {
+            @include dflex(null, center, wrap);
+            .departmentItem {
+              @include fontSize(1rem, #666666, 400);
+              margin-right: 0.5rem;
+              padding: 0.25rem;
+              background-color: #efefef;
+              border: 1px solid #e2e2e2;
+              border-radius: 4px;
+            }
+          }
+          .inform {
+            @include dflex(space-between, center, nowrap);
+            @include fontSize(1rem, #666666, 900);
+            padding-top: 0.5rem;
+            .informItem {
+              white-space: nowrap;
+              &.btn-detail {
+                padding: 4px 16px;
+                border-radius: 16px;
+                border: 1px solid gray;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

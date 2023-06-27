@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>step1</title>
+    <!-- <link rel="stylesheet" href="../../../common/sass/common.css" /> -->
+    <link rel="stylesheet" href="/common/sass/common.css" />
+    <link rel="stylesheet" href="/reservation/scss/reservation.css" />
+  </head>
+
+  <body>
+    <div id="container-bg" class="container border p-0">
+      <header class="header"></header>
+      <div id="step-container">
+        <div class="step"></div>
+
+        <section id="doctorList" class="fillIn_inform">
+          <div class="title">
+            <div class="title-name">約診醫師</div>
+            <div class="title-line"></div>
+          </div>
+          <div class="option-container"></div>
+        </section>
+        <section id="calendar" class="fillIn_inform">
+          <div class="title">
+            <div class="title-name">約診日期</div>
+            <div class="title-line"></div>
+          </div>
+          <div class="option-container">
+            <div class="monthControl">
+              <div class="prev" onclick="monthChange('prev')">左邊</div>
+              <div class="month">2023年五月</div>
+              <div class="next" onclick="monthChange('next')">右邊</div>
+            </div>
+            <div class="date">
+                <div class="date-week">
+                  <div class="weekItem isWeekend">日</div>
+                  <div class="weekItem">一</div>
+                  <div class="weekItem">二</div>
+                  <div class="weekItem">三</div>
+                  <div class="weekItem">四</div>
+                  <div class="weekItem">五</div>
+                  <div class="weekItem isWeekend">六</div>
+                </div>
+                <div class="date-day"></div>
+              </div>
+          </div>
+        </section>
+
+        <section id="time" class="fillIn_inform">
+          <div class="title">
+            <div class="title-name">約診時段</div>
+            <div class="title-line"></div>
+          </div>
+          <div class="option-container"></div>
+        </section>
+      </div>
+      <footer></footer>
+    </div>
+  </body>
+</html>
+
+<script type="module" src="/common/js/Common_UI_Render.js"></script>
+<!-- <script src="/reservation/js/class/SCHEDULE.js"></script> -->
+<script src="/reservation/js/class/STEP.js"></script>
+<script src="/reservation/js/class/CALENDAR.js"></script>
+<script src="/reservation/js/class/RESERVATION_DATE.js"></script>
+<script>
+  // page
+  //   let page = new PAGINATION(5);
+</script>
+<script></script>
+<script>
+  // step
+  let step = new STEP(1);
+</script>
+<script>
+  let reservation = new RESERVATION_DATE();
+  console.log(reservation, "reservation");
+</script>

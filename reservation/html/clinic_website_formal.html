@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>預約掛號首頁index</title>
+    <link rel="stylesheet" href="/common/sass/common.css" />
+    <link rel="stylesheet" href="/reservation/scss/reservation.css" />
+  </head>
+
+  <body>
+    <div id="container-bg" class="container border p-0">
+      <header class="header"></header>
+      <div class="clinicImage">
+        <div class="inform">
+          <div class="departmentList">
+            <span>家醫科 |</span> <span>家醫科 |</span> <span>家醫科</span>
+          </div>
+          <div class="clinicName">愛管家小兒科診所</div>
+        </div>
+        <div class="schedule-container">
+          <div class="schedule">
+            <div class="clinic-week"></div>
+          </div>
+          <div class="resevation-container">
+            <div class="btn-link nowCalled">現場看診進度</div>
+            <div class="btn-link reservation">立即預約</div>
+          </div>
+        </div>
+      </div>
+      <div class="content-container">
+        <div class="inform-detail">
+          <div class="phone">02-82822809</div>
+          <div class="address">
+            新北市蘆洲區長安街30、32號1樓市蘆洲區長安街30號
+          </div>
+          <div class="facebook">愛管家小雸科診所 紛絲專頁</div>
+        </div>
+
+        <div class="conditionList">
+          <span class="conditionItem trapezoid">週六看診</span
+          ><span class="conditionItem">週六看診</span
+          ><span class="conditionItem">週六看診</span>
+        </div>
+
+        <section class="clinicDetail">
+          <div class="title">
+            <div
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseExample"
+              aria-expanded="false"
+              aria-controls="collapseExample"
+            >
+              注意事項
+            </div>
+            <span
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseExample"
+              aria-expanded="false"
+              aria-controls="collapseExample"
+            >
+              ></span
+            >
+          </div>
+          <div class="collapse" id="collapseExample">
+            <div class="card card-body">
+              Some placeholder content for the collapse component. This panel is
+              hidden by default but revealed when the user activates the
+              relevant trigger.
+            </div>
+          </div>
+        </section>
+        <section class="clinicDetail announce">
+          <div class="title">門診公告</div>
+          <div class="content">
+            <ul class="list">
+              <li>
+                <div>
+                  2023-06-01
+                  <span class="itemContent">Korem ipsum dolor sit amet</span>
+                </div>
+                <div
+                  class="more"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseExample1"
+                  aria-expanded="false"
+                  aria-controls="collapseExample1"
+                >
+                  more>
+                </div>
+                <div class="collapse" id="collapseExample1">
+                  <div class="card card-body">
+                    Some placeholder content for the collapse component. This
+                    panel is hidden by default but revealed when the user
+                    activates the relevant trigger.
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div>
+                  2023-06-01
+                  <span class="itemContent">Korem ipsum dolor sit amet</span>
+                </div>
+                <div
+                  class="more"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseExample1"
+                  aria-expanded="false"
+                  aria-controls="collapseExample1"
+                >
+                  more>
+                </div>
+                <div class="collapse" id="collapseExample1">
+                  <div class="card card-body">
+                    Some placeholder content for the collapse component. This
+                    panel is hidden by default but revealed when the user
+                    activates the relevant trigger.
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div>
+                  2023-06-01
+                  <span class="itemContent">Korem ipsum dolor sit amet</span>
+                </div>
+                <div
+                  class="more"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseExample1"
+                  aria-expanded="false"
+                  aria-controls="collapseExample1"
+                >
+                  more>
+                </div>
+                <div class="collapse" id="collapseExample1">
+                  <div class="card card-body">
+                    Some placeholder content for the collapse component. This
+                    panel is hidden by default but revealed when the user
+                    activates the relevant trigger.
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <section id="pagination" class="pagination">
+              <ul class="page"></ul>
+            </section>
+          </div>
+        </section>
+      </div>
+
+      <section class="ad-loop">ad廣告輪播</section>
+      <footer></footer>
+    </div>
+  </body>
+</html>
+
+<script type="module" src="/common/js/Common_UI_Render.js"></script>
+<script src="/reservation/js/class/PAGINATION.js"></script>
+<script src="/reservation/js/class/SCHEDULE.js"></script>
+<script>
+  // page
+  let page = new PAGINATION(5);
+</script>
+<script>
+  let SleepData = ["02", "61", "43", "52", "33", "32"];
+  let schedule = new SCHEDULE(SleepData);
+</script>

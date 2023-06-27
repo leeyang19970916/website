@@ -1,0 +1,19 @@
+section{
+    &.ad-loop{
+        width: 100%;
+        background-color: lightcyan;
+        height: 150px;
+    }
+}
+@import "../../common/sass/include";
+@import "./componentSetting";
+@import "./card";
+@import "./searchResult";
+@import "./pagination";
+
+
+
+
+@import "./clinic";
+@import "./schedule";
+@import "./step";

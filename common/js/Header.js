@@ -5,7 +5,6 @@ class HEADER {
         this.initRender();
     }
     initRender() {
-      console.log(this.dom, "dommm");
       let navUI = this.navUI();
       let searchInput = this.searchInput();
       let btnLink = this.btnLink();
@@ -24,7 +23,7 @@ class HEADER {
     navUI() {
       let str = "";
       this.list.forEach((item) => {
-        str += `<div class="header-nav-item active" onclick="redirectTo('reservation')" >${item}</div>`;
+        str += `<div class="header-nav-item" onclick="redirectTo('reservation')" >${item}</div>`;
       });
       return str;
     }

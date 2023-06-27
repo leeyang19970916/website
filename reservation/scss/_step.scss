@@ -1,0 +1,120 @@
+#step-container {
+  margin: 0 auto;
+  width: 90%;
+  background-color: white;
+
+  .step {
+    @include dflex(space-between, center, nowrap);
+    // margin-bottom: 1.5rem;
+    position: relative;
+    padding: 2rem 0;
+    width: 90%;
+    margin: 0 auto 0rem auto;
+  }
+  .line {
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: #53b6b7;
+    height: 2.5px;
+    z-index: 1;
+  }
+  .stepItem {
+    @include dflex(center, center, nowrap);
+    @include fontSize(20px, #53b6b7, 400);
+    width: calc(100% / 4);
+    border: 1px solid #53b6b7;
+    border-bottom: 2px solid #53b6b7;
+    border-radius: 10px 10px 0px 0px;
+    padding: 0.75rem 0;
+    background-color: white;
+    box-shadow: 0 0 0 5px white; /* 调整颜色和模糊程度 */
+
+    // margin: 1rem 0;
+    z-index: 100;
+    .stepItem-num {
+      @include fontSize(1rem, #53b6b7, 400);
+      @include dflex(center, center, nowrap);
+      // background: #53b6b7;
+      border: 1px solid #53b6b7;
+      margin: 0 0.5rem;
+      border-radius: 50px;
+      width: 25px;
+      height: 25px;
+    }
+    .stepItem-name {
+      letter-spacing: 2px;
+    }
+    &.active {
+      background: #53b6b7 !important;
+      color: white !important;
+      border-bottom: 3px solid #2b9293 !important;
+      // 3px solid #2B9293
+      .stepItem-num {
+        background-color: white !important;
+        color: #53b6b7 !important;
+      }
+    }
+  }
+}
+.fillIn_inform{
+    width: 90%;
+    padding: 0 1rem;
+    margin: 1rem auto;
+    .title{
+        position: relative;
+        .title-name{
+            @include fontSize(28px,gray,900);
+            background-color: white;
+            display: inline-block;
+            position: relative;
+            z-index: 2;
+        }
+        .title-line{
+            position: absolute;
+            right: 0;
+            left: 0;
+            top: 50%;
+            height: 1px;
+            background-color: rgb(128, 128, 128,50%) ;
+            z-index: 1;
+        }
+    }
+}
+#calendar{
+    .monthControl{
+        @include dflex(space-between,center,wrap);
+        @include fontSize(20px,#24a8a7,600);
+    }
+    .date-week{
+        margin-top: 1rem;
+        @include dflex(null,center,wrap);
+        .weekItem{
+            @include fontSize(20px,black,900);
+            text-align: center;
+            width:calc(100% / 7);
+            &.isWeekend{
+                color: #9c0e4e;
+            }
+        }
+    }
+    .date-day{
+        @include dflex(start,center,wrap);
+        width: 100%;
+        .dayItem{
+            @include dflex(start,center,wrap);
+            @include fontSize(20px);
+            width: calc(100% / 7 - 1rem);
+            height: 60px;
+            background-color: white;
+            border-radius: 4px;
+            margin: 0.5rem;
+            &.none{
+                cursor: initial;
+            }
+            &.active{
+                
+            }
+        }
+    }
+}
