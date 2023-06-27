@@ -97,4 +97,13 @@ class CALENDAR {
       
         dayDOM.innerHTML = str;
     }
+    monthChange(e){
+        if (e === "next") {
+            this.nextMonth();
+          } else {
+            this.prevMonth();
+          }
+          this.monthUI();
+          this.dayUI();
+    }
   }

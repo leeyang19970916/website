@@ -102,9 +102,10 @@
         @include dflex(start,center,wrap);
         width: 100%;
         .dayItem{
-            @include dflex(start,center,wrap);
-            @include fontSize(20px);
+            @include dflex(center,center,wrap);
+            @include fontSize(20px,black,400);
             width: calc(100% / 7 - 1rem);
+            text-align: center;
             height: 60px;
             background-color: white;
             border-radius: 4px;
@@ -112,9 +113,17 @@
             &.none{
                 cursor: initial;
             }
-            &.active{
-                
+            span{
+                &.active{
+                    background: #24a8a7;
+                    border: 1px solid #53b6b7;
+                    width: 50px;
+                    height: 50px;
+                    @include dflex(center,center,wrap);
+                    border-radius:50px
+                }
             }
+
         }
     }
 }
