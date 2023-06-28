@@ -4,7 +4,7 @@ class AREAMANAGER {
     constructor() {
       this.data = this.createData()
       this.onArea = (initial, items) => {}
-      this.onCity = (initial, items) => {}
+      this.onCity = (initial, items) => {} 
       this.onDistrict = (initial, items) => {}
   
       this.areas = new Map()
