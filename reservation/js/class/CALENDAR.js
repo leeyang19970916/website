@@ -20,7 +20,11 @@ class CALENDAR {
     this.month = 0;
     this.currentDay = 0;
     this.lastDay = 0;
-    this.today = {year:this.currentDate.getFullYear(),month:this.currentDate.getMonth() + 1,day:this.currentDate.getDate()};
+    this.today = {
+      year: this.currentDate.getFullYear(),
+      month: this.currentDate.getMonth() + 1,
+      day: this.currentDate.getDate(),
+    };
     this.firstDayWeek = 0;
     this.weekends = [];
     this.calculateDays();
@@ -65,13 +69,17 @@ class CALENDAR {
   }
   nextMonth() {
     this.currentDate.setMonth(this.currentDate.getMonth() + 1);
-    this.currentDate.setDate(1);
+    // this.currentDate.setDate(1);
     this.calculateDays();
     return this;
   }
   prevMonth() {
+    if (this.today.month === this.month) {
+      console.log("不能再往後點了 不能小於當月");
+      return;
+    }
     this.currentDate.setMonth(this.currentDate.getMonth() - 1);
-    this.currentDate.setDate(1);
+    // this.currentDate.setDate(1);
     this.calculateDays();
     return this;
   }
@@ -95,16 +103,34 @@ class CALENDAR {
         str += ` <div  class="dayItem none"></div>`;
       }
     }
+    // for (let i = 1; i <= this.lastDay; i++) {
+    //   if (this.today.month === this.month) {
+    //     if (i < this.today.day) {
+    //       str += `<div  class="dayItem disable"> <span class="">${i}</span> </div>`;
+    //     } else {
+    //       if (i == this.currentDay) {
+    //         console.log(this.currentDay, "this.currentDaythis.currentDay");
+    //         str += `<div class="dayItem" onclick='changeDay(event)'> <span class="active">${i}</span></div>`;
+    //       } else {
+    //         str += `<div  class="dayItem" onclick='changeDay(event)'> <span class="">${i}</span> </div>`;
+    //       }
+    //     }
+    //   } else {
+    //     str += `<div  class="dayItem" onclick='changeDay(event)'> <span class="">${i}</span> </div>`;
+    //   }
+    // }
     for (let i = 1; i <= this.lastDay; i++) {
-      if (i === this.currentDay) {
-        str += `<div class="dayItem" onclick='changeDay(event)'> <span class="active">${i}</span></div>`;
-      } else if (i < this.currentDay) {
-        str += `<div  class="dayItem disable"> <span class="">${i}</span> </div>`;
+      if (this.today.month === this.month) {
+        if (i < this.today.day) {
+          str += `<div  class="dayItem disable"> <span class="">${i}</span> </div>`;
+        } else {
+            str += `<div  class="dayItem" onclick='changeDay(event)'> <span class="">${i}</span> </div>`;
+          
+        }
       } else {
         str += `<div  class="dayItem" onclick='changeDay(event)'> <span class="">${i}</span> </div>`;
       }
     }
-
     dayDOM.innerHTML = str;
   }
   monthChange(e) {
@@ -117,12 +143,16 @@ class CALENDAR {
   }
 }
 function changeDay(event) {
-  let dom = event.currentTarget
-  let span=dom.querySelector('span')
-  let oldActiveDom=document.querySelector('#calendar .date-day .dayItem .active')
-  if (oldActiveDom.innerHTML===span.innerHTML) {
-    return
+  let dom = event.currentTarget;
+  let span = dom.querySelector("span");
+  let oldActiveDom =
+    document.querySelector("#calendar .date-day .dayItem .active") || null;
+  if (oldActiveDom) {
+    if (oldActiveDom.innerHTML === span.innerHTML) {
+      return;
+    }
   }
+
   reservation.initDate.currentDay = span.innerHTML;
   new CLASSHANDLER(span, "date-day");
   // reservation.initRender()
