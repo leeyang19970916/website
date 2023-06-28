@@ -25,9 +25,14 @@ class RESERVATION_DATE {
     this.UIdoctors(doctors);
   }
   apiDoctorSchedule() {
-    // this.activeClinicId/ this.activeDoctor.id
+    // this.activeClinicId/ this.activeDoctor.id/today
+    // 龍哥會給我 該月 今天以後~月底的可上班日期
+    // [28,29,30]
     // do api
     // get Date this.activeDate
+
+    let calendarDay=[28,29,30]
+    UIcalendar(calendarDay)
   }
   apiDoctorTime() {
     // this.activeClinicId/ this.activeDoctor/this.activeDate
@@ -55,6 +60,9 @@ class RESERVATION_DATE {
 
     //   return
     dom.innerHTML = str;
+  }
+  UIcalendar(dateDay){
+    let dom=document.querySelector('#calendar .date-day')
   }
   UItime(dataTime) {
     let dom = document.querySelector("#time .option-container");

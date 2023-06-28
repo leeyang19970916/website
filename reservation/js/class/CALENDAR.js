@@ -20,6 +20,7 @@ class CALENDAR {
     this.month = 0;
     this.currentDay = 0;
     this.lastDay = 0;
+    this.today = {year:this.currentDate.getFullYear(),month:this.currentDate.getMonth() + 1,day:this.currentDate.getDate()};
     this.firstDayWeek = 0;
     this.weekends = [];
     this.calculateDays();
@@ -32,17 +33,20 @@ class CALENDAR {
       this.monthChange("next");
     });
   }
+
   calculateDays() {
     this.year = this.currentDate.getFullYear();
     this.month = this.currentDate.getMonth() + 1;
     this.monthName = this.monthNamesArr[this.month - 1];
     this.currentDay = this.currentDate.getDate();
+
     this.lastDay = new Date(this.year, this.month, 0).getDate();
     this.firstDayWeek = new Date(
       this.year,
       this.currentDate.getMonth(),
       1
     ).getDay();
+
     this.getHoliday();
   }
   getHoliday() {
@@ -76,7 +80,6 @@ class CALENDAR {
     this.dayUI();
   }
   monthUI() {
-
     let monthDOM = document.querySelector("#calendar .option-container .month");
     monthDOM.innerHTML = `${this.year}年${this.monthName}`;
   }
@@ -89,17 +92,16 @@ class CALENDAR {
     if (this.firstDayWeek > 0) {
       week = this.firstDayWeek;
       for (let i = 0; i < week; i++) {
-        str += ` <div class="dayItem none"></div>`;
+        str += ` <div  class="dayItem none"></div>`;
       }
     }
     for (let i = 1; i <= this.lastDay; i++) {
-      let isWeekend = this.weekends.findIndex((item) => item === i);
       if (i === this.currentDay) {
-        str += `<div class="dayItem"> <span class="active">${i}</span></div>`;
+        str += `<div class="dayItem" onclick='changeDay(event)'> <span class="active">${i}</span></div>`;
+      } else if (i < this.currentDay) {
+        str += `<div  class="dayItem disable"> <span class="">${i}</span> </div>`;
       } else {
-        str += `<div  class="dayItem  ${
-          isWeekend !== -1 ? "isWeek" : ""
-        }"> <span onclick='changeDay()' class="">${i}</span> </div>`;
+        str += `<div  class="dayItem" onclick='changeDay(event)'> <span class="">${i}</span> </div>`;
       }
     }
 
@@ -111,11 +113,17 @@ class CALENDAR {
     } else {
       this.prevMonth();
     }
-    this.initRender()
+    this.initRender();
   }
-
 }
-function changeDay(){
-  new CLASSHANDLER(event.target,"date-day");
+function changeDay(event) {
+  let dom = event.currentTarget
+  let span=dom.querySelector('span')
+  let oldActiveDom=document.querySelector('#calendar .date-day .dayItem .active')
+  if (oldActiveDom.innerHTML===span.innerHTML) {
+    return
+  }
+  reservation.initDate.currentDay = span.innerHTML;
+  new CLASSHANDLER(span, "date-day");
+  // reservation.initRender()
 }
-

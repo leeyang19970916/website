@@ -127,11 +127,16 @@
       background-color: white;
       border-radius: 4px;
       margin: 0.5rem;
+      cursor: pointer;
       &.none {
         cursor: initial;
       }
+      &.disable{
+        color: rgba(74, 74, 74, 0.3);
+        cursor: initial;
+      }
       span {
-        cursor: pointer;
+        // cursor: pointer;
         &.active {
           cursor: initial;
           background: #24a8a7;
@@ -168,5 +173,15 @@
         padding: 0.5rem 2rem;
       }
     }
+  }
+}
+.stepControl{
+  @include dflex(center,center);
+  margin-bottom: 2rem;
+  .stepbtn{
+    @include fontSize(24px,rgb(74, 74, 74,30%),bold);
+    letter-spacing: 14%;
+    @include button()
+
   }
 }
