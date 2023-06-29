@@ -2,10 +2,7 @@
   @include dflex(space-between, end, wrap);
   padding: 0 1rem;
   background-color: #53b6b7;
-  // background-image: linear-
   @include backgroundImage("../image/卡比.jpg");
-  width: 90%;
-  margin: 0 auto;
   height: 500px;
   .inform {
     @include fontSize(18px, white, 700);
@@ -32,27 +29,21 @@
   .conditionList {
     @include dflex(start, center, wrap);
     .conditionItem {
-        border-radius: 50px;
+      border-radius: 50px;
       background-color: #e7e4e4;
-      //   border: #24a8a7 1px solid;
       color: gray;
       padding: 0.55rem 0.75rem;
-    // width: 60px;
-    // height: 40px;
-      //   transform: rotate(135deg);
       margin: 0.5rem 0;
       margin-right: 0.5rem;
       position: relative;
-
     }
   }
 }
 
 .clinicDetail {
   padding-top: 1rem;
-//   padding: 0 2.5rem;
   .title {
-    @include fontSize(28px, #2B9293, 900);
+    @include fontSize(28px, #2b9293, 900);
     @include dflex(space-between, end);
     border-bottom: 1px solid #cdcdcd;
     padding: 1rem 2.5rem;
@@ -84,47 +75,45 @@
   }
 }
 
-#simple-container{
-    width: 90%;
-    margin: 0 auto;
-    padding: 2rem 0;
-    background-color:#F5F5F5 ;
-    .simpleCard{
-        margin-bottom: 2rem;
-        background-color: white;
-        box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.05);
-        border-radius: 10px;
-        padding: 1.5rem 0;
-        .simpleCard-container{
-            width: 90%;
-            margin: 0 auto;
-        }
-        .departmentList{
-            @include dflex(null,center,wrap);
-            margin-bottom: 0.25rem;
-            .departmentItem{
-                background-color: #EFEFEF;
-                padding: 0.25rem 0.5rem ;
-                @include fontSize(14px,#666666,null);
-                margin-right:1rem;
-                border-radius: 10px;
-            }
-
-        }
-        .clinicName,.clinicTime{
-            @include fontSize(40px,#53B6B7,900);
-            // padding-bottom: 1rem;
-            border-bottom:1px solid #CDCDCD;
-        }
-        .phone,.address,.alert{
-            @include fontSize(20px, #666666,7 00);
-            letter-spacing:0.08em;
-            margin: 0.5rem 0;
-            padding: 0;
-            // margin-bottom: 1rem;
-        }
-        .clinicTime{
-            font-size: 28px;
-        }
+#simple-container {
+  margin: 2rem auto;
+  .simpleCard {
+    background-color: white;
+    box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    padding: 1.5rem 0;
+    .simpleCard-container {
+      width: 90%;
+      margin: 0 auto;
     }
+    .departmentList {
+      @include dflex(null, center, wrap);
+      margin-bottom: 0.25rem;
+      .departmentItem {
+        background-color: #efefef;
+        padding: 0.25rem 0.5rem;
+        @include fontSize(14px, #666666, null);
+        margin-right: 1rem;
+        border-radius: 10px;
+      }
+    }
+    .clinicName,
+    .clinicTime {
+      @include fontSize(40px, #53b6b7, 900);
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid #cdcdcd;
+    }
+    .phone,
+    .address,
+    .alert {
+      @include fontSize(20px, #666666, 7 00);
+      letter-spacing: 0.08em;
+      margin: 0.5rem 0;
+      padding: 0;
+      // margin-bottom: 1rem;
+    }
+    .clinicTime {
+      font-size: 28px;
+    }
+  }
 }

@@ -143,17 +143,18 @@ class CALENDAR {
   }
 }
 function changeDay(event) {
-  let dom = event.currentTarget;
-  let span = dom.querySelector("span");
-  let oldActiveDom =
-    document.querySelector("#calendar .date-day .dayItem .active") || null;
-  if (oldActiveDom) {
-    if (oldActiveDom.innerHTML === span.innerHTML) {
-      return;
-    }
-  }
+  console.log(event.currentTarget,"到底點了誰RRRR")
+  // let dom = event.currentTarget;
+  // let span = dom.querySelector("span");
+  // let oldActiveDom =
+  //   document.querySelector("#calendar .date-day .dayItem .active") || null;
+  // if (oldActiveDom) {
+  //   if (oldActiveDom.innerHTML === span.innerHTML) {
+  //     return;
+  //   }
+  // }
 
-  reservation.initDate.currentDay = span.innerHTML;
-  new CLASSHANDLER(span, "date-day");
+  // reservation.initDate.currentDay = span.innerHTML;
+  // new CLASSHANDLER(span, "date-day");
   // reservation.initRender()
 }

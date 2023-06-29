@@ -8,7 +8,7 @@ section.ad-loop {
 .content-container {
   padding: 1.5rem 2rem 0 2rem;
   background-color: white;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
 }
 @media (max-width: 996px) {
@@ -23,7 +23,7 @@ section.ad-loop {
   color: #333333;
   font-weight: 900;
   letter-spacing: 0.01em;
-  font-family: "Noto Sans TC";
+  font-family: "Noto Sans TC", sans-serif;
   text-align: center;
 }
 
@@ -32,7 +32,7 @@ section.ad-loop {
   color: #333333;
   font-weight: 700;
   letter-spacing: 0.01em;
-  font-family: "Noto Sans TC";
+  font-family: "Noto Sans TC", sans-serif;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -55,11 +55,9 @@ section.ad-loop {
   color: #4a4a4a;
   font-weight: 400;
   letter-spacing: 0.01em;
-  font-family: "Noto Sans TC";
+  font-family: "Noto Sans TC", sans-serif;
   white-space: nowrap;
-  min-width: 150px;
-  margin-right: 1rem;
-  text-align: start;
+  min-width: 120px;
 }
 .input-container .cancelIcon {
   color: red;
@@ -79,6 +77,12 @@ section.ad-loop {
 }
 .active:hover {
   background: #3dc7c7 !important;
+}
+
+#formal-container, #simple-container, #step-container, #search-container {
+  width: 75%;
+  margin: 0 auto;
+  background-color: white;
 }
 
 .card {
@@ -107,7 +111,7 @@ section.ad-loop {
   color: #666666;
   font-weight: 400;
   letter-spacing: 0.01em;
-  font-family: "Noto Sans TC";
+  font-family: "Noto Sans TC", sans-serif;
   margin: 0.5rem 0;
   margin-right: 0.25rem;
   cursor: pointer;
@@ -126,7 +130,7 @@ section.ad-loop {
   color: #24a8a7;
   font-weight: 400;
   letter-spacing: 0.01em;
-  font-family: "Noto Sans TC";
+  font-family: "Noto Sans TC", sans-serif;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -145,7 +149,7 @@ section.searchResult .card .total {
   color: #666666;
   font-weight: 400;
   letter-spacing: 0.01em;
-  font-family: "Noto Sans TC";
+  font-family: "Noto Sans TC", sans-serif;
   text-align: end;
 }
 section.searchResult .card .clinicList {
@@ -166,7 +170,7 @@ section.searchResult .card .clinicList .clinicItem .departmentList .departmentIt
   color: #666666;
   font-weight: 400;
   letter-spacing: 0.01em;
-  font-family: "Noto Sans TC";
+  font-family: "Noto Sans TC", sans-serif;
   margin-right: 0.5rem;
   padding: 0.25rem;
   background-color: #efefef;
@@ -183,7 +187,7 @@ section.searchResult .card .clinicList .clinicItem .inform {
   color: #666666;
   font-weight: 900;
   letter-spacing: 0.01em;
-  font-family: "Noto Sans TC";
+  font-family: "Noto Sans TC", sans-serif;
   padding-top: 0.5rem;
 }
 section.searchResult .card .clinicList .clinicItem .inform .informItem {
@@ -340,8 +344,6 @@ ul {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  width: 90%;
-  margin: 0 auto;
   height: 500px;
 }
 .clinicImage .inform {
@@ -349,7 +351,7 @@ ul {
   color: white;
   font-weight: 700;
   letter-spacing: 0.01em;
-  font-family: "Noto Sans TC";
+  font-family: "Noto Sans TC", sans-serif;
 }
 .clinicImage .inform .departmentList {
   padding-bottom: 1rem;
@@ -365,7 +367,7 @@ ul {
   color: #666666;
   font-weight: 500;
   letter-spacing: 0.01em;
-  font-family: "Noto Sans TC";
+  font-family: "Noto Sans TC", sans-serif;
   letter-spacing: 0.08em;
 }
 .content-container .inform-detail .phone,
@@ -395,10 +397,10 @@ ul {
 }
 .clinicDetail .title {
   font-size: 28px;
-  color: #2B9293;
+  color: #2b9293;
   font-weight: 900;
   letter-spacing: 0.01em;
-  font-family: "Noto Sans TC";
+  font-family: "Noto Sans TC", sans-serif;
   display: flex;
   justify-content: space-between;
   align-items: end;
@@ -413,7 +415,7 @@ ul {
   color: #666666;
   font-weight: 400;
   letter-spacing: 0.01em;
-  font-family: "Noto Sans TC";
+  font-family: "Noto Sans TC", sans-serif;
   padding: 1rem 2.5rem;
   background-color: transparent;
   border: 0;
@@ -424,7 +426,7 @@ ul {
   color: #666666;
   font-weight: 400;
   letter-spacing: 0.01em;
-  font-family: "Noto Sans TC";
+  font-family: "Noto Sans TC", sans-serif;
   letter-spacing: 0.08em;
   padding: 1rem 0;
 }
@@ -446,13 +448,9 @@ ul {
 }
 
 #simple-container {
-  width: 90%;
-  margin: 0 auto;
-  padding: 2rem 0;
-  background-color: #F5F5F5;
+  margin: 2rem auto;
 }
 #simple-container .simpleCard {
-  margin-bottom: 2rem;
   background-color: white;
   box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.05);
   border-radius: 10px;
@@ -470,29 +468,33 @@ ul {
   margin-bottom: 0.25rem;
 }
 #simple-container .simpleCard .departmentList .departmentItem {
-  background-color: #EFEFEF;
+  background-color: #efefef;
   padding: 0.25rem 0.5rem;
   font-size: 14px;
   color: #666666;
   letter-spacing: 0.01em;
-  font-family: "Noto Sans TC";
+  font-family: "Noto Sans TC", sans-serif;
   margin-right: 1rem;
   border-radius: 10px;
 }
-#simple-container .simpleCard .clinicName, #simple-container .simpleCard .clinicTime {
+#simple-container .simpleCard .clinicName,
+#simple-container .simpleCard .clinicTime {
   font-size: 40px;
-  color: #53B6B7;
+  color: #53b6b7;
   font-weight: 900;
   letter-spacing: 0.01em;
-  font-family: "Noto Sans TC";
-  border-bottom: 1px solid #CDCDCD;
+  font-family: "Noto Sans TC", sans-serif;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #cdcdcd;
 }
-#simple-container .simpleCard .phone, #simple-container .simpleCard .address, #simple-container .simpleCard .alert {
+#simple-container .simpleCard .phone,
+#simple-container .simpleCard .address,
+#simple-container .simpleCard .alert {
   font-size: 20px;
   color: #666666;
   font-weight: 7 0;
   letter-spacing: 0.01em;
-  font-family: "Noto Sans TC";
+  font-family: "Noto Sans TC", sans-serif;
   letter-spacing: 0.08em;
   margin: 0.5rem 0;
   padding: 0;
@@ -503,7 +505,6 @@ ul {
 
 .schedule-container {
   transform: translate(0px, 130px);
-  width: 50%;
 }
 
 .item {
@@ -528,7 +529,7 @@ ul {
   color: #4a4a4a;
   font-weight: 400;
   letter-spacing: 0.01em;
-  font-family: "Noto Sans TC";
+  font-family: "Noto Sans TC", sans-serif;
   display: flex;
   flex-wrap: nowrap;
   flex-direction: row;
@@ -549,7 +550,7 @@ ul {
   font-size: 1rem;
   font-weight: 900;
   letter-spacing: 0.01em;
-  font-family: "Noto Sans TC";
+  font-family: "Noto Sans TC", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -630,7 +631,7 @@ ul {
   color: #4a4a4a;
   font-weight: 400;
   letter-spacing: 0.01em;
-  font-family: "Noto Sans TC";
+  font-family: "Noto Sans TC", sans-serif;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -719,7 +720,7 @@ ul {
   color: white;
   font-weight: 500;
   letter-spacing: 0.01em;
-  font-family: "Noto Sans TC";
+  font-family: "Noto Sans TC", sans-serif;
   text-decoration: none;
   letter-spacing: 0.08em;
   padding: 10px 20px;
@@ -735,11 +736,6 @@ ul {
   background: #53b6b7;
 }
 
-#step-container {
-  margin: 0 auto;
-  width: 90%;
-  background-color: white;
-}
 #step-container .step {
   display: flex;
   justify-content: space-between;
@@ -769,7 +765,7 @@ ul {
   color: #53b6b7;
   font-weight: 400;
   letter-spacing: 0.01em;
-  font-family: "Noto Sans TC";
+  font-family: "Noto Sans TC", sans-serif;
   width: 25%;
   border: 1px solid #53b6b7;
   border-bottom: 2px solid #53b6b7;
@@ -784,7 +780,7 @@ ul {
   color: #53b6b7;
   font-weight: 400;
   letter-spacing: 0.01em;
-  font-family: "Noto Sans TC";
+  font-family: "Noto Sans TC", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -822,7 +818,7 @@ ul {
   color: gray;
   font-weight: 900;
   letter-spacing: 0.01em;
-  font-family: "Noto Sans TC";
+  font-family: "Noto Sans TC", sans-serif;
   background-color: white;
   display: inline-block;
   position: relative;
@@ -855,7 +851,7 @@ ul {
   color: rgba(74, 74, 74, 0.3);
   font-weight: 400;
   letter-spacing: 0.01em;
-  font-family: "Noto Sans TC";
+  font-family: "Noto Sans TC", sans-serif;
   border: 1px solid rgba(205, 205, 205, 0.5);
 }
 
@@ -870,7 +866,7 @@ ul {
   color: #24a8a7;
   font-weight: 600;
   letter-spacing: 0.01em;
-  font-family: "Noto Sans TC";
+  font-family: "Noto Sans TC", sans-serif;
 }
 #calendar .date-week {
   margin-top: 1rem;
@@ -884,7 +880,7 @@ ul {
   color: black;
   font-weight: 900;
   letter-spacing: 0.01em;
-  font-family: "Noto Sans TC";
+  font-family: "Noto Sans TC", sans-serif;
   text-align: center;
   width: 14.2857142857%;
 }
@@ -909,7 +905,7 @@ ul {
   color: black;
   font-weight: 400;
   letter-spacing: 0.01em;
-  font-family: "Noto Sans TC";
+  font-family: "Noto Sans TC", sans-serif;
   width: calc(14.2857142857% - 1rem);
   text-align: center;
   height: 60px;
@@ -948,7 +944,7 @@ ul {
   color: gray;
   font-weight: bold;
   letter-spacing: 0.01em;
-  font-family: "Noto Sans TC";
+  font-family: "Noto Sans TC", sans-serif;
   letter-spacing: 14%;
 }
 #time .time-container .time-list {
@@ -961,13 +957,13 @@ ul {
 }
 #time .time-container .time-list .timeItem {
   cursor: pointer;
-  border: 1px solid #C0C0C0;
+  border: 1px solid #c0c0c0;
   border-radius: 10px;
   font-size: 24px;
   color: gray;
   font-weight: 500;
   letter-spacing: 0.01em;
-  font-family: "Noto Sans TC";
+  font-family: "Noto Sans TC", sans-serif;
   margin: 0.5rem;
   margin-left: 0;
   padding: 0.5rem 2rem;
@@ -986,16 +982,346 @@ ul {
   color: rgba(74, 74, 74, 0.3);
   font-weight: bold;
   letter-spacing: 0.01em;
-  font-family: "Noto Sans TC";
+  font-family: "Noto Sans TC", sans-serif;
   letter-spacing: 14%;
   text-align: center;
   border-radius: 16px;
   padding: 0.5rem 2.5rem;
   border: 1px solid rgba(74, 74, 74, 0.3);
   margin: 0 1rem;
+  color: rgba(74, 74, 74, 0.3);
+  font-size: 24px;
+  letter-spacing: 0.14em;
   cursor: pointer;
 }
 .stepControl .stepbtn:hover {
   color: rgba(74, 74, 74, 0.7);
   border-color: rgba(74, 74, 74, 0.7);
+}
+
+#reservation-content .option-container {
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+#reservation-content .option-container .reservationContent-item {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  font-size: 1.25rem;
+  color: #4a4a4a;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  font-family: "Noto Sans TC", sans-serif;
+  letter-spacing: 0.14em;
+  margin-bottom: 1rem;
+}
+#reservation-content .option-container .reservationContent-item .reservationContent-item-label {
+  white-space: nowrap;
+  padding-right: 2rem;
+  font-weight: bold;
+}
+#reservation-content .option-container .reservationContent-item .reservationContent-item-value {
+  color: #53b6b7;
+  white-space: nowrap;
+}
+
+#personal-inform .option-container .first_followUp {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+#personal-inform .option-container .first_followUp .first_followUpBtn {
+  text-align: center;
+  border-radius: 16px;
+  padding: 0.5rem 2.5rem;
+  border: 1px solid rgba(74, 74, 74, 0.3);
+  margin: 0 1rem;
+  color: rgba(74, 74, 74, 0.3);
+  font-size: 24px;
+  letter-spacing: 0.14em;
+  cursor: pointer;
+  width: 30%;
+  font-size: 1.25rem;
+}
+#personal-inform .option-container .first_followUp .first_followUpBtn:hover {
+  color: rgba(74, 74, 74, 0.7);
+  border-color: rgba(74, 74, 74, 0.7);
+}
+#personal-inform .option-container .inform-input {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  width: 100%;
+  margin: 1.5rem 0 0 0;
+}
+#personal-inform .option-container .inform-input .inform-input-item {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  margin-bottom: 1.5rem;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+#personal-inform .option-container .inform-input .inform-input-item .label {
+  font-size: 18px;
+  color: #4a4a4a;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  font-family: "Noto Sans TC", sans-serif;
+  white-space: nowrap;
+  min-width: 120px;
+}
+#personal-inform .option-container .inform-input .inform-input-item .cancelIcon {
+  color: red;
+}
+#personal-inform .option-container .inform-input .inform-input-item .label {
+  font-size: 1rem;
+  color: gray;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  font-family: "Noto Sans TC", sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  margin-right: 1rem;
+}
+#personal-inform .option-container .inform-input .inform-input-item .label .word {
+  display: block;
+}
+#personal-inform .option-container .inform-input .inform-input-item .form-control {
+  min-width: 250px;
+  width: 75%;
+  border-radius: 16px;
+  border: 1px solid #c0c0c0;
+}
+#personal-inform .option-container .inform-input .inform-input-item.form-check {
+  position: relative;
+  width: 40%;
+  white-space: nowrap;
+}
+#personal-inform .option-container .inform-input .inform-input-item.form-check .form-check-input {
+  width: 25px;
+  height: 25px;
+  border-color: rgba(74, 74, 74, 0.7);
+}
+#personal-inform .option-container .inform-input .inform-input-item.form-check .form-check-input:focus {
+  box-shadow: 0 0 0 2px rgba(74, 74, 74, 0.3);
+}
+#personal-inform .option-container .inform-input .inform-input-item.form-check .form-check-input:checked {
+  box-shadow: 0 0 0 2px rgba(74, 74, 74, 0.3);
+  background-color: rgba(74, 74, 74, 0.7);
+  border-color: rgba(74, 74, 74, 0.7);
+}
+#personal-inform .option-container .inform-input .inform-input-item.form-check .form-check-label {
+  padding-left: 1rem;
+  font-size: 1.25rem;
+  color: #4a4a4a;
+  font-weight: bold;
+  letter-spacing: 0.01em;
+  font-family: "Noto Sans TC", sans-serif;
+  position: absolute;
+  top: 6%;
+}
+
+.reservation-complete {
+  font-size: 24px;
+  color: #ab0f56;
+  font-weight: 900;
+  letter-spacing: 0.01em;
+  font-family: "Noto Sans TC", sans-serif;
+  letter-spacing: 3.36px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+#reservation-complete .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+#reservation-complete .title .title-name {
+  font-size: 20px;
+  color: #4a4a4a;
+  font-weight: 900;
+  letter-spacing: 0.01em;
+  font-family: "Noto Sans TC", sans-serif;
+  letter-spacing: 2.8px;
+}
+#reservation-complete .option-container {
+  width: 60%;
+  margin: 2rem auto 3.5rem auto;
+  justify-content: space-between;
+  align-items: start;
+}
+#reservation-complete .option-container .inform-content-container .informContent-item {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  font-size: 1.25rem;
+  color: #4a4a4a;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  font-family: "Noto Sans TC", sans-serif;
+  letter-spacing: 2.8px;
+  margin-bottom: 1.5rem;
+}
+#reservation-complete .option-container .inform-content-container .informContent-item .informContent-item-label {
+  min-width: 150px;
+  text-align: end;
+  white-space: nowrap;
+  padding-right: 1.5rem;
+}
+#reservation-complete .option-container .inform-content-container .informContent-item .informContent-item-value {
+  white-space: nowrap;
+  color: #53b6b7;
+}
+
+.search-bar {
+  position: relative;
+}
+.search-bar .search-bar-card {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  max-width: 800px;
+  width: 50%;
+  min-width: 50%;
+  max-height: 450px;
+}
+.search-bar .search-bar-card .card-title {
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+  font-weight: 900;
+  letter-spacing: 0.01em;
+  font-family: "Noto Sans TC", sans-serif;
+  letter-spacing: 3px;
+  background-color: #24A8A7;
+  border-radius: 70px 70px 0 0;
+  padding: 1rem 0;
+  position: relative;
+}
+.search-bar .search-bar-card .card-title .icon {
+  position: absolute;
+  background-color: white;
+  border-radius: 50px;
+  box-shadow: 4px 4px 16px 0px rgba(0, 0, 0, 0.05);
+  width: 40px;
+  height: 85px;
+  top: -50%;
+}
+.search-bar .search-bar-card .card-title .icon.left {
+  left: 10%;
+}
+.search-bar .search-bar-card .card-title .icon.right {
+  right: 10%;
+}
+.search-bar .search-bar-card .card-content {
+  background-color: white;
+  border-radius: 0 0 70px 70px;
+  min-height: 280px;
+  display: flex;
+}
+.search-bar .search-bar-card .card-content .inform-input {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  width: 100%;
+}
+.search-bar .search-bar-card .card-content .inform-input .inform-input-item {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  margin-bottom: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.search-bar .search-bar-card .card-content .inform-input .inform-input-item .label {
+  font-size: 18px;
+  color: #4a4a4a;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  font-family: "Noto Sans TC", sans-serif;
+  white-space: nowrap;
+  min-width: 120px;
+}
+.search-bar .search-bar-card .card-content .inform-input .inform-input-item .cancelIcon {
+  color: red;
+}
+.search-bar .search-bar-card .card-content .inform-input .inform-input-item .label {
+  font-size: 1rem;
+  color: gray;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  font-family: "Noto Sans TC", sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  margin-right: 1rem;
+}
+.search-bar .search-bar-card .card-content .inform-input .inform-input-item .label .word {
+  display: block;
+}
+.search-bar .search-bar-card .card-content .inform-input .inform-input-item .form-control {
+  min-width: 250px;
+  width: 75%;
+  border: 1px solid #c0c0c0;
+}
+.search-bar .search-bar-card .card-content .search_btn {
+  width: 100%;
+  text-align: center;
+  border-radius: 16px;
+  padding: 0.5rem 2.5rem;
+  border: 1px solid rgba(74, 74, 74, 0.3);
+  margin: 0 1rem;
+  color: rgba(74, 74, 74, 0.3);
+  font-size: 24px;
+  letter-spacing: 0.14em;
+  cursor: pointer;
+  font-size: 1.25rem;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 0.01em;
+  font-family: "Noto Sans TC", sans-serif;
+  width: auto;
+  background-color: #53b6b7;
+  border: 1px solid var(--primary, #53b6b7);
+  padding: 0.5rem 0;
+  width: 25%;
+  margin: 0 auto;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+.search-bar .search-bar-card .card-content .search_btn:hover {
+  color: rgba(74, 74, 74, 0.7);
+  border-color: rgba(74, 74, 74, 0.7);
+}
+
+#search-container .search-list-coard {
+  border-radius: 8px 8px 0px 0px;
+  background-color: white;
 }/*# sourceMappingURL=reservation.css.map */

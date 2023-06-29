@@ -1,0 +1,95 @@
+.search-bar {
+  // height: 300px;
+  // background-color: #4c932b;
+
+  position: relative;
+  .search-bar-card {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    max-width: 800px;
+    // border-radius: 70px;
+    // background-color: white;
+    width: calc(75% / 3 * 2);
+    min-width:50%;
+    max-height: 450px;
+    .card-title {
+      text-align: center;
+      @include fontSize(2rem, white, 900);
+      letter-spacing: 3px;
+      background-color: #24A8A7;
+      border-radius: 70px 70px 0 0;
+      padding: 1rem 0;
+      position: relative;
+      .icon{
+        position: absolute;
+        background-color:white ;
+        border-radius: 50px;
+        box-shadow: 4px 4px 16px 0px rgba(0, 0, 0, 0.05);
+        width: 40px;
+        height: 85px;
+        top: -50%;
+        &.left{
+            left: 10%;
+            // transform: translateX(-50%);
+        }
+        &.right{
+            right: 10%;
+            // transform: translateX(-50%);
+        }
+      }
+    }
+    .card-content {
+      background-color: white;
+      border-radius: 0 0 70px 70px;
+      //   padding: 1.5rem 0;
+      min-height: 280px;
+      display: flex;
+      .inform-input {
+        @include dflex(center, null, nowrap, column);
+        width: 100%;
+        .inform-input-item {
+          @include input();
+          //   width: 50%;
+          margin-left: auto;
+          margin-right: auto;
+          .label {
+            @include fontSize(1rem, gray, 400);
+            @include dflex(space-between, center, nowrap);
+            margin-right: 1rem;
+            .word {
+              display: block;
+            }
+          }
+          .form-control {
+            min-width: 250px;
+            width: 75%;
+            // border-radius: 16px;
+            border: 1px solid #c0c0c0;
+          }
+        }
+      }
+      .search_btn {
+        width: 100%;
+        @include button();
+        @include fontSize(1.25rem, white, bold);
+        width: auto;
+        background-color: #53b6b7;
+        border: 1px solid var(--primary, #53b6b7);
+        padding: 0.5rem 0;
+        width: 25%;
+        margin: 0 auto;
+        margin-top: 2rem;
+        @include dflex(center, null, null);
+      }
+    }
+  }
+}
+
+#search-container{
+    .search-list-coard{
+        border-radius: 8px 8px 0px 0px;
+        background-color: white;
+    }
+}

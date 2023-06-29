@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>預約查詢/取消預約</title>
+    <link rel="stylesheet" href="/common/sass/common.css" />
+    <link rel="stylesheet" href="/reservation/scss/reservation.css" />
+  </head>
+
+  <body>
+    <div id="container-bg" class="border p-0">
+      <header class="header"></header>
+      <section class="search-bar">
+        <img
+          src="/reservation/image/Frame 772.png"
+          class="w-100 image"
+          alt=""
+        />
+        <div class="search-bar-card">
+          <div class="card-title">
+            <span class="icon left"></span>
+            <span class="icon right"></span>
+            查詢/取消掛號</div>
+          <div class="card-content">
+            <div class="inform-input">
+              <div class="inform-input-item">
+                <label class="label" for="">
+                  <span class="word">身</span>
+                  <span class="word">份</span>
+                  <span class="word">證</span>
+                  <span class="word">字</span>
+                  <span class="word">號</span>
+                </label>
+                <input type="text" class="form-control" />
+              </div>
+              <div class="inform-input-item">
+                <label class="label" for="">
+                  <span class="word">出</span>
+                  <span class="word">生</span>
+                  <span class="word">日</span>
+                  <span class="word">期</span>
+                </label>
+                <input type="text" class="form-control" />
+              </div>
+              <div class="search_btn"> 送出查詢</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div style="height: 300px;"></div>
+      <div id="search-container">
+
+        <div class="search-list-coard"> 123</div>
+        <section class="ad-loop">ad廣告輪播</section>
+      </div>
+
+      <footer></footer>
+    </div>
+  </body>
+</html>
+
+<script type="module" src="/common/js/Common_UI_Render.js"></script>
+<script src="/reservation/js/class/SCHEDULE.js"></script>
+<script>
+  // page
+  let page = new PAGINATION(5);
+</script>
+<script>
+  let SleepData = ["02", "61", "43", "52", "33", "32", "51"];
+  let schedule = new SCHEDULE(SleepData);
+</script>

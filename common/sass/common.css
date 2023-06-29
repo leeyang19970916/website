@@ -12093,7 +12093,7 @@ header.header .header-right button.btnLink {
   color: #53B6B7;
   font-weight: 500;
   letter-spacing: 0.01em;
-  font-family: "Noto Sans TC";
+  font-family: "Noto Sans TC", sans-serif;
   border-radius: 20px;
   margin: 0 0.75rem;
   border: 1px solid #53B6B7;
@@ -12128,7 +12128,7 @@ footer .list {
   color: #666666;
   font-weight: 400;
   letter-spacing: 0.01em;
-  font-family: "Noto Sans TC";
+  font-family: "Noto Sans TC", sans-serif;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -12154,7 +12154,7 @@ footer .copyright {
   color: #a7a7a7;
   font-weight: 400;
   letter-spacing: 0.01em;
-  font-family: "Noto Sans TC";
+  font-family: "Noto Sans TC", sans-serif;
 }
 @media (max-width: 996px) {
   footer .copyright {

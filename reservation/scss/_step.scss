@@ -1,8 +1,4 @@
 #step-container {
-  margin: 0 auto;
-  width: 90%;
-  background-color: white;
-
   .step {
     @include dflex(space-between, center, nowrap);
     // margin-bottom: 1.5rem;
@@ -131,7 +127,7 @@
       &.none {
         cursor: initial;
       }
-      &.disable{
+      &.disable {
         color: rgba(74, 74, 74, 0.3);
         cursor: initial;
       }
@@ -150,38 +146,166 @@
     }
   }
 }
-#time{
-  .option-container{
+#time {
+  .option-container {
     flex-direction: column;
-    align-items: start
+    align-items: start;
   }
-  .time-container{
-    .time-title{
-      @include fontSize(20px,gray,bold);
+  .time-container {
+    .time-title {
+      @include fontSize(20px, gray, bold);
       letter-spacing: 14%;
     }
-    .time-list{
-      @include dflex(start,center,wrap);
-      margin:0rem 0 1rem 0;
-      .timeItem{
+    .time-list {
+      @include dflex(start, center, wrap);
+      margin: 0rem 0 1rem 0;
+      .timeItem {
         cursor: pointer;
-        border: 1px solid #C0C0C0;
+        border: 1px solid #c0c0c0;
         border-radius: 10px;
-        @include fontSize(24px,gray,500);
-        margin:0.5rem;
+        @include fontSize(24px, gray, 500);
+        margin: 0.5rem;
         margin-left: 0;
         padding: 0.5rem 2rem;
       }
     }
   }
 }
-.stepControl{
-  @include dflex(center,center);
+.stepControl {
+  @include dflex(center, center);
   margin-bottom: 2rem;
-  .stepbtn{
-    @include fontSize(24px,rgb(74, 74, 74,30%),bold);
+  .stepbtn {
+    @include fontSize(24px, rgb(74, 74, 74, 30%), bold);
     letter-spacing: 14%;
-    @include button()
+    @include button();
+  }
+}
 
+// step2
+#reservation-content {
+  .option-container {
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    .reservationContent-item {
+      @include dflex(start, center, wrap);
+      @include fontSize(1.25rem, #4a4a4a, 400);
+      letter-spacing: 0.14em;
+      margin-bottom: 1rem;
+      .reservationContent-item-label {
+        white-space: nowrap;
+        padding-right: 2rem;
+        // width: 20%;
+        font-weight: bold;
+      }
+      .reservationContent-item-value {
+        color: #53b6b7;
+        white-space: nowrap;
+      }
+    }
+  }
+}
+
+#personal-inform {
+  .option-container {
+    .first_followUp {
+      width: 100%;
+      @include dflex(center, center, nowrap);
+      .first_followUpBtn {
+        @include button();
+        // padding: 0.5rem 3.5rem;
+        width: 30%;
+        font-size: 1.25rem;
+      }
+    }
+    .inform-input {
+      @include dflex(center, null, nowrap, column);
+      width: 100%;
+      margin: 1.5rem 0 0 0;
+      .inform-input-item {
+        @include input();
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        .label {
+          @include fontSize(1rem, gray, 400);
+          @include dflex(space-between, center, nowrap);
+          margin-right: 1rem;
+          .word {
+            display: block;
+          }
+        }
+        .form-control {
+          min-width: 250px;
+          width: 75%;
+          border-radius: 16px;
+          border: 1px solid #c0c0c0;
+        }
+        &.form-check {
+          position: relative;
+          width: 40%;
+          white-space: nowrap;
+          .form-check-input {
+            width: 25px;
+            height: 25px;
+            border-color: rgb(74, 74, 74, 0.7);
+            &:focus {
+              box-shadow: 0 0 0 2px rgb(74, 74, 74, 0.3);
+            }
+            &:checked {
+              box-shadow: 0 0 0 2px rgb(74, 74, 74, 0.3);
+              background-color: rgb(74, 74, 74, 0.7);
+              border-color: rgb(74, 74, 74, 0.7);
+            }
+          }
+          .form-check-label {
+            padding-left: 1rem;
+            @include fontSize(1.25rem, #4a4a4a, bold);
+            position: absolute;
+            top: 6%;
+          }
+        }
+      }
+    }
+  }
+}
+.reservation-complete {
+  @include fontSize(24px, #ab0f56, 900);
+  letter-spacing: 3.36px;
+  text-align: center;
+  margin: 0 auto;
+}
+#reservation-complete {
+  .title {
+    @include dflex(center, center, wrap);
+    .title-name {
+      @include fontSize(20px, #4a4a4a, 900);
+      letter-spacing: 2.8px;
+    }
+  }
+  .option-container {
+    width: 60%;
+    margin: 2rem auto 3.5rem auto;
+    justify-content: space-between;
+    align-items: start;
+    // margin: 1. 0;
+    .inform-content-container {
+      .informContent-item {
+        @include dflex(start, center, nowrap);
+        @include fontSize(1.25rem, #4a4a4a, 400);
+        letter-spacing: 2.8px;
+        margin-bottom: 1.5rem;
+        .informContent-item-label {
+          min-width: 150px;
+          text-align: end;
+          white-space: nowrap;
+          padding-right: 1.5rem;
+        }
+        .informContent-item-value {
+          white-space: nowrap;
+          color: #53b6b7;
+        }
+      }
+    }
   }
 }

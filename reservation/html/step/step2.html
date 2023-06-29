@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>step2</title>
+    <!-- <link rel="stylesheet" href="../../../common/sass/common.css" /> -->
+    <link rel="stylesheet" href="/common/sass/common.css" />
+    <link rel="stylesheet" href="/reservation/scss/reservation.css" />
+  </head>
+
+  <body>
+    <div id="container-bg" class=" border p-0">
+      <header class="header"></header>
+      <div id="step-container">
+        <div class="step"></div>
+
+        <section id="reservation-content" class="fillIn_inform">
+          <div class="title">
+            <div class="title-name">預約內容確認</div>
+            <div class="title-line"></div>
+          </div>
+          <div class="option-container">
+            <div class="reservationContent-item">
+              <div class="reservationContent-item-label">預約醫師</div>
+              <div class="reservationContent-item-value">陳曉明醫師</div>
+            </div>
+            <div class="reservationContent-item">
+              <div class="reservationContent-item-label">預約醫師</div>
+              <div class="reservationContent-item-value">陳曉明醫師</div>
+            </div>
+            <div class="reservationContent-item">
+                <div class="reservationContent-item-label">預約醫師</div>
+                <div class="reservationContent-item-value">陳曉明醫師</div>
+              </div>
+          </div>
+        </section>
+        <section id="personal-inform" class="fillIn_inform">
+          <div class="title">
+            <div class="title-name">填寫聯絡資訊</div>
+            <div class="title-line"></div>
+          </div>
+          <div class="option-container">
+            <div class="first_followUp">
+              <div class="first_followUpBtn first" onclick="changeVisit('first')">我是初診患者</div>
+
+              <div class="first_followUpBtn followUp" onclick="changeVisit('followUp')">我是複診患者</div>
+            </div>
+            <div class="inform-input">
+              <div class="inform-input-item">
+                <label class="label" for="">
+                    <span class="word">姓</span>
+                    <span class="word">名</span>
+                   </label>
+                <input type="text" class="form-control" />
+              </div>
+              <div class="inform-input-item">
+                <label class="label" for="">
+                    <span class="word">身</span>
+                    <span class="word">份</span> 
+                    <span class="word">證</span>
+                    <span class="word">字</span>
+                    <span class="word">號</span>
+                </label>
+                <input type="text" class="form-control" />
+              </div>
+              <div class="inform-input-item">
+                <label class="label" for="">
+                    <span class="word">出</span> 
+                    <span class="word">生</span>
+                    <span class="word">日</span>
+                    <span class="word">期</span>
+                </label>
+                <input type="text" class="form-control" />
+              </div>
+              <div class="inform-input-item">
+                <label class="label" for="">
+                    <span class="word">聯</span> 
+                    <span class="word">絡</span>
+                    <span class="word">電</span>
+                    <span class="word">話</span>
+                </label>
+                <input type="text" class="form-control" />
+              </div>
+              <div class="inform-input-item form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                <label class="form-check-label" for="flexCheckChecked">
+                    我已知道並同意診所的約診注意事項
+                                </label>
+            </div>
+          </div>
+        </section>
+
+        <section class="stepControl">
+          <div class="stepbtn">上一步</div>
+          <div class="stepbtn active">確認預約</div>
+        </section>
+        <section class="ad-loop">adlooper</section>
+      </div>
+      <footer></footer>
+    </div>
+  </body>
+</html>
+
+<script type="module" src="/common/js/Common_UI_Render.js"></script>
+<!-- <script src="/reservation/js/class/SCHEDULE.js"></script> -->
+<script src="/reservation/js/class/STEP.js"></script>
+<script src="/reservation/js/class/CLASSHANDLER.js"></script>
+<!-- <script src="/reservation/js/class/CALENDAR.js"></script> -->
+<!-- <script src="/reservation/js/class/RESERVATION_DATE.js"></script> -->
+<script>
+  // page
+  //   let page = new PAGINATION(5);
+</script>
+<script></script>
+<script>
+  // step
+  let step = new STEP(2);
+
+
+</script>
+<script>
+//   first/followup
+
+
+function changeVisit(state){
+    let target=event.target
+    new CLASSHANDLER(target,'first_followUp')
+
+}
+</script>
