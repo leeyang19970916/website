@@ -22,7 +22,8 @@
           <div class="card-title">
             <span class="icon left"></span>
             <span class="icon right"></span>
-            查詢/取消掛號</div>
+            查詢/取消掛號
+          </div>
           <div class="card-content">
             <div class="inform-input">
               <div class="inform-input-item">
@@ -33,7 +34,7 @@
                   <span class="word">字</span>
                   <span class="word">號</span>
                 </label>
-                <input type="text" class="form-control" />
+                <input type="text" class="form-control userID" />
               </div>
               <div class="inform-input-item">
                 <label class="label" for="">
@@ -42,17 +43,94 @@
                   <span class="word">日</span>
                   <span class="word">期</span>
                 </label>
-                <input type="text" class="form-control" />
+                <input type="text" class="form-control userDate" />
               </div>
-              <div class="search_btn"> 送出查詢</div>
+              <div class="search_btn" onclick="postAPItoSearch()">送出查詢</div>
             </div>
           </div>
         </div>
       </section>
-      <div style="height: 300px;"></div>
+      <div style="height: 150px"></div>
       <div id="search-container">
-
-        <div class="search-list-coard"> 123</div>
+        <div class="search-list-card">
+          <div class="card-title">查詢結果</div>
+          <div class="card-record">共3筆 預約紀錄</div>
+          <div class="card-list">
+            <section id="reservationID" class="list-item">
+              <div class="num">1</div>
+              <div class="content">
+                <div class="department-list">
+                  <div class="department-item">小兒科</div>
+                  <div class="department-item">小兒科</div>
+                  <div class="department-item">小兒科</div>
+                </div>
+                <div class="list-item-content-container">
+                  <div class="list-item-start-clinic">
+                    <div class="clinic clinicName">愛管家聯合診所</div>
+                    <div class="clinic clinicPhone">02-1234567</div>
+                    <div class="clinic clinicAddr">
+                      台北市內湖區民權東路六段168號
+                    </div>
+                  </div>
+                  <div class="list-item-center-reservation">
+                    <div class="reservationItem">
+                      <label class="label" for="">預約日期</label>
+                      <span>2023 年 06 月 08 日</span>
+                    </div>
+                    <div class="reservationItem">
+                      <label class="label" for="">預約時間</label>
+                      <span>早診 09:00</span>
+                    </div>
+                    <div class="reservationItem">
+                      <label class="label" for="">預約醫師</label>
+                      <span>陳曉明 <span>醫師</span></span>
+                    </div>
+                  </div>
+                  <div class="list-item-end-btn">
+                    <div class="cancel-button">取消預約</div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <div class="list-item-line"></div>
+            <section id="reservationID" class="list-item">
+              <div class="num">1</div>
+              <div class="content">
+                <div class="department-list">
+                  <div class="department-item">小兒科</div>
+                  <div class="department-item">小兒科</div>
+                  <div class="department-item">小兒科</div>
+                </div>
+                <div class="list-item-content-container">
+                  <div class="list-item-start-clinic">
+                    <div class="clinic clinicName">愛管家聯合診所</div>
+                    <div class="clinic clinicPhone">02-1234567</div>
+                    <div class="clinic clinicAddr">
+                      台北市內湖區民權東路六段168號
+                    </div>
+                  </div>
+                  <div class="list-item-center-reservation">
+                    <div class="reservationItem">
+                      <label class="label" for="">預約日期</label>
+                      <span>2023 年 06 月 08 日</span>
+                    </div>
+                    <div class="reservationItem">
+                      <label class="label" for="">預約時間</label>
+                      <span>早診 09:00</span>
+                    </div>
+                    <div class="reservationItem">
+                      <label class="label" for="">預約醫師</label>
+                      <span>陳曉明 <span>醫師</span></span>
+                    </div>
+                  </div>
+                  <div class="list-item-end-btn">
+                    <div class="cancel-button">取消預約</div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
         <section class="ad-loop">ad廣告輪播</section>
       </div>
 
@@ -62,12 +140,24 @@
 </html>
 
 <script type="module" src="/common/js/Common_UI_Render.js"></script>
-<script src="/reservation/js/class/SCHEDULE.js"></script>
 <script>
-  // page
-  let page = new PAGINATION(5);
+  // 送出查詢
+  // post API ID/Date
+
+  // get list
+function postAPItoSearch(params) {
+  let userDate=document.querySelector(".userDate").value || false
+  let userID=document.querySelector(".userID").value || false
+  if (!userDate || !userID) {
+    console.log("id或是生日不能為空值")
+  }
+  console.log(userDate,userID)
+}
+
+
 </script>
 <script>
-  let SleepData = ["02", "61", "43", "52", "33", "32", "51"];
-  let schedule = new SCHEDULE(SleepData);
+// cancel reservation
+// post API reservationID
+// delete finish
 </script>

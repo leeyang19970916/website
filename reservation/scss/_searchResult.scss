@@ -1,6 +1,6 @@
 section {
   &.searchResult {
-    margin: 1rem 0;
+    margin: 2rem 0;
     .card {
       .total {
         @include fontSize(20px, #666666, 400);

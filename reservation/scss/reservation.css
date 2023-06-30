@@ -79,7 +79,7 @@ section.ad-loop {
   background: #3dc7c7 !important;
 }
 
-#formal-container, #simple-container, #step-container, #search-container {
+#index-search-container, #formal-container, #simple-container, #step-container, #search-container {
   width: 75%;
   margin: 0 auto;
   background-color: white;
@@ -141,8 +141,15 @@ section.ad-loop {
   margin-left: 1rem;
 }
 
+#index-search-container {
+  background-color: #f5f5f5;
+}
+#index-search-container .ad-loop {
+  margin: 2rem 0;
+}
+
 section.searchResult {
-  margin: 1rem 0;
+  margin: 2rem 0;
 }
 section.searchResult .card .total {
   font-size: 20px;
@@ -376,20 +383,40 @@ ul {
   margin-bottom: 0.75rem;
 }
 .content-container .conditionList {
+  --triangle: 20px;
   display: flex;
   justify-content: start;
   align-items: center;
   flex-wrap: wrap;
   flex-direction: row;
+  padding: 0 var(--triangle);
 }
 .content-container .conditionList .conditionItem {
-  border-radius: 50px;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  height: calc(2 * var(--triangle));
   background-color: #e7e4e4;
   color: gray;
-  padding: 0.55rem 0.75rem;
+  padding: 0rem 1rem;
   margin: 0.5rem 0;
-  margin-right: 0.5rem;
+  margin-right: calc(1rem + var(--triangle));
   position: relative;
+}
+.content-container .conditionList .conditionItem::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: calc(-1 * var(--triangle));
+  width: 0;
+  height: 0;
+  border-top: var(--triangle) solid transparent;
+  border-bottom: var(--triangle) solid transparent;
+  border-right: var(--triangle) solid #e7e4e4;
 }
 
 .clinicDetail {
@@ -520,7 +547,7 @@ ul {
   border: 1px solid #e2e2e2;
   border-radius: 10px;
   width: 100%;
-  padding: 20px;
+  padding: 1rem 1.25rem;
 }
 .schedule .clinic-week {
   width: 100%;
@@ -1213,7 +1240,7 @@ ul {
   letter-spacing: 0.01em;
   font-family: "Noto Sans TC", sans-serif;
   letter-spacing: 3px;
-  background-color: #24A8A7;
+  background-color: #24a8a7;
   border-radius: 70px 70px 0 0;
   padding: 1rem 0;
   position: relative;
@@ -1321,7 +1348,117 @@ ul {
   border-color: rgba(74, 74, 74, 0.7);
 }
 
-#search-container .search-list-coard {
+#search-container {
+  margin-top: 1rem;
+}
+#search-container .search-list-card {
   border-radius: 8px 8px 0px 0px;
   background-color: white;
+  width: 75%;
+  margin: 0 auto;
+  font-size: 1rem;
+  color: #666;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  font-family: "Noto Sans TC", sans-serif;
+  letter-spacing: 0.8px;
+  padding: 3rem 0rem;
+}
+#search-container .search-list-card .card-title {
+  font-weight: 900;
+  font-size: 2rem;
+}
+#search-container .search-list-card .card-record {
+  font-weight: 400;
+  letter-spacing: 0.2px;
+}
+#search-container .search-list-card .card-list section.list-item {
+  padding: 1rem 0;
+  display: flex;
+  justify-content: start;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  font-size: 16px;
+  color: #666;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  font-family: "Noto Sans TC", sans-serif;
+  letter-spacing: 1.28px;
+}
+#search-container .search-list-card .card-list .num {
+  border-radius: 8px 0px 0px 8px;
+  border-right: 2px solid var(--primary, #53b6b7);
+  background: var(--primary-eefcfb, #eefcfb);
+  font-size: 1.25rem;
+  color: #53b6b7;
+  font-weight: bold;
+  letter-spacing: 0.01em;
+  font-family: "Noto Sans TC", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  padding: 0 0.75rem;
+}
+#search-container .search-list-card .card-list .content {
+  padding-left: 0.75rem;
+  width: 100%;
+}
+#search-container .search-list-card .card-list .content .department-list {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+#search-container .search-list-card .card-list .content .department-list .department-item {
+  font-size: 14px;
+  color: #666;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  font-family: "Noto Sans TC", sans-serif;
+  letter-spacing: 0.14px;
+  border-radius: 4px;
+  padding: 2px 8px;
+  margin-right: 0.75rem;
+  background: #efefef;
+}
+#search-container .search-list-card .card-list .content .list-item-content-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+#search-container .search-list-card .card-list .content .list-item-content-container .list-item-start-clinic, #search-container .search-list-card .card-list .content .list-item-content-container .list-item-center-reservation, #search-container .search-list-card .card-list .content .list-item-content-container .list-item-end-btn {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+#search-container .search-list-card .card-list .list-item-start-clinic .clinic {
+  margin-top: 0.5rem;
+}
+#search-container .search-list-card .card-list .list-item-center-reservation .reservationItem {
+  margin-top: 0.5rem;
+}
+#search-container .search-list-card .card-list .list-item-center-reservation .reservationItem .label {
+  color: #53B6B7;
+}
+#search-container .search-list-card .card-list .list-item-end-btn .cancel-button {
+  margin-top: 0.5rem;
+  color: white;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  font-family: "Noto Sans TC", sans-serif;
+  cursor: pointer;
+  background-color: #53B6B7;
+  border-radius: 16px;
+  border: 1px solid var(--primary-dark, #2B9293);
+  padding: 4px 16px;
+}
+#search-container .search-list-card .card-list .list-item-line {
+  height: 1px;
+  width: 100%;
+  background-color: #cdcdcd;
 }/*# sourceMappingURL=reservation.css.map */

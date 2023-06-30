@@ -27,15 +27,31 @@
     }
   }
   .conditionList {
+    --triangle: 20px;
     @include dflex(start, center, wrap);
+    padding: 0 var(--triangle);
     .conditionItem {
-      border-radius: 50px;
+      font-size: 1rem;
+      @include dflex(center, center, nowrap);
+      height: calc(2 * var(--triangle));
       background-color: #e7e4e4;
       color: gray;
-      padding: 0.55rem 0.75rem;
+      padding: 0rem 1rem;
       margin: 0.5rem 0;
-      margin-right: 0.5rem;
+      margin-right: calc(1rem + var(--triangle));
       position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: calc(-1 * var(--triangle));
+        width: 0;
+        height: 0;
+        border-top: var(--triangle) solid transparent;
+        border-bottom: var(--triangle) solid transparent;
+        border-right: var(--triangle) solid #e7e4e4;
+      }
     }
   }
 }

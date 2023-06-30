@@ -12,31 +12,31 @@
     // border-radius: 70px;
     // background-color: white;
     width: calc(75% / 3 * 2);
-    min-width:50%;
+    min-width: 50%;
     max-height: 450px;
     .card-title {
       text-align: center;
       @include fontSize(2rem, white, 900);
       letter-spacing: 3px;
-      background-color: #24A8A7;
+      background-color: #24a8a7;
       border-radius: 70px 70px 0 0;
       padding: 1rem 0;
       position: relative;
-      .icon{
+      .icon {
         position: absolute;
-        background-color:white ;
+        background-color: white;
         border-radius: 50px;
         box-shadow: 4px 4px 16px 0px rgba(0, 0, 0, 0.05);
         width: 40px;
         height: 85px;
         top: -50%;
-        &.left{
-            left: 10%;
-            // transform: translateX(-50%);
+        &.left {
+          left: 10%;
+          // transform: translateX(-50%);
         }
-        &.right{
-            right: 10%;
-            // transform: translateX(-50%);
+        &.right {
+          right: 10%;
+          // transform: translateX(-50%);
         }
       }
     }
@@ -87,9 +87,93 @@
   }
 }
 
-#search-container{
-    .search-list-coard{
-        border-radius: 8px 8px 0px 0px;
-        background-color: white;
+#search-container {
+  margin-top: 1rem;
+  .search-list-card {
+    border-radius: 8px 8px 0px 0px;
+    background-color: white;
+    width: 75%;
+    margin: 0 auto;
+    @include fontSize(1rem, #666, 400);
+    letter-spacing: 0.8px;
+    padding: 3rem 0rem;
+    .card-title {
+      font-weight: 900;
+      font-size: 2rem;
     }
+    .card-record {
+      font-weight: 400;
+      letter-spacing: 0.2px;
+    }
+    .card-list {
+      section {
+        &.list-item {
+          padding: 1rem 0;
+          @include dflex(start, null, nowrap);
+          @include fontSize(16px, #666, 400);
+          letter-spacing: 1.28px;
+        }
+      }
+      .num {
+        border-radius: 8px 0px 0px 8px;
+        border-right: 2px solid var(--primary, #53b6b7);
+        background: var(--primary-eefcfb, #eefcfb);
+        @include fontSize(1.25rem, #53b6b7, bold);
+        @include dflex(center, center, nowrap);
+        padding: 0 0.75rem;
+      }
+      .content {
+        padding-left: 0.75rem;
+        width: 100%;
+        .department-list {
+          @include dflex(start, center, wrap);
+          .department-item {
+            @include fontSize(14px, #666, 400);
+            letter-spacing: 0.14px;
+            border-radius: 4px;
+            padding: 2px 8px;
+            margin-right: 0.75rem;
+            background: #efefef;
+          }
+        }
+        .list-item-content-container{
+          @include dflex(space-between,center,nowrap);
+          .list-item-start-clinic, .list-item-center-reservation,.list-item-end-btn{
+            @include dflex(space-between,null,null,column);
+          }
+        }
+      }
+      .list-item-start-clinic {
+          .clinic {
+            // margin-bottom: 0.5rem;
+            margin-top: 0.5rem;
+          }
+      }
+      .list-item-center-reservation{
+        .reservationItem{
+          margin-top: 0.5rem;
+          .label{
+            color: #53B6B7
+          }
+        }
+      }
+      .list-item-end-btn{
+        .cancel-button{
+          margin-top: 0.5rem;
+          @include fontSize(null,white,400);
+          cursor: pointer;
+          background-color: #53B6B7;
+          border-radius: 16px;
+          border: 1px solid var(--primary-dark, #2B9293);
+          padding: 4px 16px;
+
+        }
+      }
+      .list-item-line {
+        height: 1px;
+        width: 100%;
+        background-color: #cdcdcd;
+      }
+    }
+  }
 }
