@@ -9,7 +9,8 @@ class HEADER {
       let searchInput = this.searchInput();
       let btnLink = this.btnLink();
   
-      let str = `    <div class="header-left">
+      let str = `   <div id='header-container'>
+       <div class="header-left">
       <div><button class="btn btn-warning">title</button></div>
       <div class="header-nav">
         ${navUI}
@@ -17,6 +18,7 @@ class HEADER {
     </div>
     <div class="header-right">
           ${searchInput}${btnLink}
+    </div>
     </div>`;
       this.dom.innerHTML = str;
     }

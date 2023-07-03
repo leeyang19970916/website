@@ -78,8 +78,17 @@
   }
 }
 
-@mixin content-container-bg75(){
-  width: 75%;
+@mixin content-container-maxWidth(){
+  width: 90%;
   margin: 0 auto;
   background-color: white;
+}
+.active{
+  background: #24a8a7 !important;
+  border-radius: 16px;
+  color: white !important;
+  &:hover{
+    background: #3dc7c7 !important;
+  // color: rgb(241, 238, 238) !important;
+  }
 }

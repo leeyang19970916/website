@@ -10,7 +10,7 @@ function Footer(params) {
   <div class="copyright">
     Copyright © 2023 Sprinf iCare Corporation. All rights reserved.
   </div>`
-  dom.innerHTML=str
+  dom.innerHTML= `<div id='footer-container'>${str}</div>`
 }
 
 export default Footer

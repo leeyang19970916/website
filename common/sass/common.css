@@ -12037,15 +12037,31 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.active {
+  background: #24a8a7 !important;
+  border-radius: 16px;
+  color: white !important;
+}
+.active:hover {
+  background: #3dc7c7 !important;
+}
+
 header.header {
+  padding: 1rem 0;
+  width: 100%;
+  border-bottom: 1px solid gainsboro;
+  background-color: white;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.05);
+  margin-bottom: 3px;
+}
+header.header #header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   flex-direction: row;
-  padding: 1rem 1rem 1rem 1rem;
-  width: 100%;
-  border-bottom: 1px solid gainsboro;
+  width: 90%;
+  margin: 0 auto;
   background-color: white;
 }
 header.header .header-left {
@@ -12095,30 +12111,35 @@ header.header .header-right button.btnLink {
   letter-spacing: 0.01em;
   font-family: "Noto Sans TC", sans-serif;
   border-radius: 20px;
-  margin: 0 0.75rem;
+  margin-left: 1rem;
   border: 1px solid #53B6B7;
   padding: 0px 12px;
   white-space: nowrap;
 }
 
 footer {
-  background-color: #ffffff;
-  font-family: "Noto Sans TC";
+  padding: 1rem 0;
+  background-color: white;
+}
+footer #footer-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   flex-direction: row;
-  padding: 1.5rem 3rem;
+  width: 90%;
+  margin: 0 auto;
+  background-color: white;
+  font-family: "Noto Sans TC";
 }
 @media (max-width: 996px) {
-  footer {
+  footer #footer-container {
     padding: 1rem 0;
     flex-direction: column;
   }
 }
 @media (max-width: 576px) {
-  footer {
+  footer #footer-container {
     padding: 0 1rem 0.5rem 1rem;
     display: block;
   }

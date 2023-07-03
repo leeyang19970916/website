@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>主頁</title>
+    <link rel="stylesheet" href="/common/sass/common.css" />
+    <!-- <link rel="stylesheet" href="/reservation/css/reservation.css"> -->
+    <link rel="stylesheet" href="/index/index_fontPage.css" />
+  </head>
+
+  <body>
+    <div id="container-bg" class="border p-0">
+      <header class="header"></header>
+      <div class="marquee">1234564789</div>
+      <div id="search-container">
+        <div class="searchCard">
+          <div class="searchCard-option">
+            <div class="searchCard-option-item active">找診所</div>
+            <div class="searchCard-option-item">找診所</div>
+            <div class="searchCard-option-item">找診所</div>
+          </div>
+          <div class="addrInput-search">
+            <div class="addrInput-search-input">
+              <div class="cityZoneSelect"><span>台北市 / 大安區</span></div>
+              <div class="line">|</div>
+              <input type="text" class="input-custom" />
+            </div>
+            <div class="addrInput-search-btn">搜尋</div>
+            <div id="areaManager_Card">
+              <div class="areaList"></div>
+              <div class="cityList"></div>
+              <div class="districtList"></div>
+            </div>
+          </div>
+          <div class="keyword-search">
+            <div class="keyword-search-label">診所快選:</div>
+            <div class="keyword-search-list">
+              <div class="keyword-search-list-item">家醫科</div>
+              <div class="keyword-search-list-item">家醫科</div>
+              <div class="keyword-search-list-item">家醫科</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="heightTrans"></div>
+      <div id="indexPage-container">
+        <div class="major-container">
+          <div class="title-container">
+            <div class="title-container_title">醫師開講</div>
+            <div class="title-container_more">看更多</div>
+          </div>
+          <div class="content-container">
+            <div class="content-container-title">影片title</div>
+            <div class="content-container-video">影片本人</div>
+          </div>
+        </div>
+        <div class="major-container">
+          <div class="title-container">
+            <div class="title-container_title">醫師開講</div>
+            <div class="title-container_more">看更多</div>
+          </div>
+          <div class="content-container content-container-list">
+            <div class="contentList-item">
+              <div class="content-container-pic">影片本人</div>
+              <div class="content-container-content">
+                <span class="title">影片title</span>
+                <span class="date">2023年04月12日</span>
+              </div>
+            </div>
+            <div class="contentList-item">
+              <div class="content-container-pic">影片本人</div>
+              <div class="content-container-content">
+                <span class="title">影片title</span>
+                <span class="date">2023年04月12日</span>
+              </div>
+            </div>
+            <div class="contentList-item">
+              <div class="content-container-pic">影片本人</div>
+              <div class="content-container-content">
+                <span class="title">影片title</span>
+                <span class="date">2023年04月12日</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer></footer>
+    </div>
+  </body>
+</html>
+<!-- <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+<script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script> -->
+<!-- <script src="../../js/innerHeight.js"></script> -->
+<!-- <script src="../../js/cityZoneSelect.js"></script> -->
+<!-- <script src="../../component/Header.js"></script> -->
+<!-- <script src="../../component/Navbar.js"></script>
+<script src="../../component/Carousel.js"></script>
+<script src="../../component/HashTagContainer.js"></script>
+<script src="../../component/Title-line.js"></script> -->
+<!-- <script src="../../component/Footer.js"></script> -->
+
+<!-- <script type="module" src="/js/UI_render.js"></script>
+<script src="../../AreaManager.js"></script>
+<script src="/js/class/INPUT.js"></script>
+<script src="/js/class/PAGINATION.js"></script>
+<script src="/js/class/RESERVATION_SEARCH.js"></script> -->
+
+<script type="module" src="/common/js/Common_UI_Render.js"></script>
+<script src="/reservation/js/class/AREAMANAGER.js"></script>
+<script src="/index/areaManager_control.js"></script>
+<!-- <script src="/reservation/js/class/PAGINATION.js"></script> -->
+<!-- <script src="/reservation/js/class/RESERVATIONFILTER.js"></script> -->
+<script>
+  let areaManagerControl=new areaManager_control('#areaManager_Card')
+  // console.log(areaManagerControl,"areaManagerControl")
+</script>

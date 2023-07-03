@@ -1,0 +1,211 @@
+@import "../common/sass/include";
+$heightSetting: 250px;
+.header {
+  margin-bottom: 0 !important;
+}
+.marquee {
+  background-color: #0ecdca;
+  @include fontSize(1.25rem, white, 900);
+  @include dflex(center, center);
+  padding: 1rem 0;
+}
+#search-container {
+  background: radial-gradient(
+    100% 100% at 50% 100%,
+    #40686a 0%,
+    #289091 80.24%
+  );
+  height: $heightSetting;
+  position: relative;
+  .searchCard {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+    background-color: white;
+    @include dflex(center, start, wrap, column);
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    bottom: -20%;
+    // width: calc(90% / 3 * 2);
+    width: 75%;
+    padding: 2rem 3rem;
+    margin-bottom: 1rem;
+    .searchCard-option {
+      width: 100%;
+      @include dflex(start, center);
+      margin-bottom: 1rem;
+      .searchCard-option-item {
+        padding: 0.5rem 1rem;
+        border-radius: 50px;
+        margin-right: 1rem;
+        @include fontSize(1rem, #666, 400);
+        // background-color: #53b6b7;
+      }
+    }
+  }
+  .addrInput-search {
+    margin-bottom: 1rem;
+    height: 50px;
+    width: 100%;
+    @include dflex(start, center, nowrap);
+    white-space: nowrap;
+    position: relative;
+    .addrInput-search-input {
+      border: 1px #d9d9d9 solid;
+      border-radius: 10px;
+      height: 100%;
+      width: 100%;
+      @include dflex(start, center, nowrap);
+      @include fontSize(18px, #a7a7a7, 400);
+      .cityZoneSelect {
+        height: 100%;
+        width: 30%;
+        cursor: pointer;
+        @include dflex(center, center, nowrap);
+        span {
+        }
+      }
+      .line {
+        width: 2px;
+        color: transparent;
+        height: 70%;
+        background-color: #bbb9b9;
+      }
+      .input-custom {
+        border: 0;
+        border-radius: 10px;
+        height: 100%;
+        padding: 0 0.75rem;
+        width: 70%;
+        // font-size: 1.25rem;
+        @include fontSize(18px, #a7a7a7, 400);
+      }
+    }
+    .addrInput-search-btn {
+      width: 20%;
+      margin-left: 1rem;
+      border: 0;
+      cursor: pointer;
+      background-color: #53b6b7;
+      color: white;
+      border-radius: 20px;
+      @include dflex(center, center, nowrap);
+      height: 100%;
+      font-size: 18px;
+    }
+  }
+  .keyword-search {
+    @include dflex(start, center, wrap);
+    @include fontSize(1rem, #666666, 500);
+    .keyword-search-label {
+      white-space: nowrap;
+    }
+    .keyword-search-list {
+      @include dflex(start, center);
+      .keyword-search-list-item {
+        cursor: pointer;
+        background-color: #e2e2e2;
+        padding: 4px 16px;
+        border-radius: 4px;
+        margin: 0 0.5rem;
+      }
+    }
+  }
+}
+.heightTrans {
+  height: ($heightSetting / 2);
+}
+#indexPage-container {
+  @include content-container-maxWidth();
+  background-color: transparent;
+  @include dflex(space-between, null);
+  .major-container {
+    width: calc(50% - 1.5rem);
+    .title-container {
+      @include dflex(space-between, center);
+      padding-bottom: 0.25rem;
+      border-bottom: 1px solid #cdcdcd;
+      .title-container_title {
+        @include fontSize(1.75rem, #333, 900);
+      }
+      .title-container_more {
+        cursor: pointer;
+        @include fontSize(1rem, #666, 400);
+      }
+    }
+    .content-container {
+      margin-top: 2rem;
+      .content-container-title {
+        @include fontSize(24px, #333, 700);
+        letter-spacing: 0.48px;
+        margin-bottom: 0.5rem;
+      }
+      .content-container-video {
+        width: 100%;
+        background-color: rosybrown;
+        height: 150px;
+      }
+      &.content-container-list {
+        // @include dflex(null,center);
+        .contentList-item {
+          @include dflex(space-between, null);
+          width: 100%;
+          margin-bottom: 1rem;
+          .content-container-pic {
+            width: calc(100% / 3 - 0.5rem);
+            height: 100px;
+            background-color: indianred;
+          }
+          .content-container-content {
+            width: calc(100% / 3 * 2 - 0.5rem);
+            @include dflex(space-between, null, null, column);
+            .title {
+              @include fontSize(24px, #333, 700);
+              letter-spacing: 0.48px;
+            }
+            .date {
+              @include fontSize(1rem, #666, 400);
+              letter-spacing: 0.16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+#areaManager_Card {
+  position: absolute;
+  // width: 500px;
+  background-color: whitesmoke;
+  border-radius: 16px;
+  // height: 10px;
+  z-index: 10;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 1rem;
+  transition: all 1s;
+  width: 75%;
+  bottom: -100%;
+  .areaList,.cityList{
+    @include dflex(start,center,nowrap);
+    margin-bottom: 1rem;
+    .areaItem,.cityItem{
+      cursor: pointer;
+      @include fontSize(1rem,#24a8a7,bold);
+      background-color: #eefcfb;
+      border-radius: 16px;
+      padding: 4px 16px;
+      margin-right: 1rem;
+      
+    }
+    .cityItem{
+      @include fontSize(1rem,#333333,500);
+      background-color: transparent;
+      padding: 0;
+      &.active{
+        color: #24a8a7 !important;
+        background-color: transparent !important;
+
+      }
+    }
+  }
+}

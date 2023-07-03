@@ -21,21 +21,10 @@
 .borderBottom {
   border-bottom: #cdcdcd 1px solid;
 }
-.active{
-  background: #24a8a7 !important;
-  border-radius: 16px;
-  color: white !important;
-  &:hover{
-    background: #3dc7c7 !important;
-  // color: rgb(241, 238, 238) !important;
-  }
-}
-
-
 
 
 // container setting
 
 #index-search-container,#formal-container,#simple-container,#step-container,#search-container{
-  @include content-container-bg75();
+  @include content-container-maxWidth();
 }

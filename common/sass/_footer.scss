@@ -1,15 +1,20 @@
 footer {
-  background-color: #ffffff;
-  font-family: "Noto Sans TC";
-  @include dflex(space-between, center);
-  padding: 1.5rem 3rem;
-  @media (max-width: 996px) {
-    padding: 1rem 0;
-    flex-direction: column;
-  }
-  @media (max-width: 576px) {
-    padding: 0 1rem 0.5rem 1rem;
-    display: block;
+  padding: 1rem 0;
+  background-color: white;
+  #footer-container {
+    @include dflex(space-between, center);
+    @include content-container-maxWidth();
+    // background-color: #ffffff;
+    font-family: "Noto Sans TC";
+
+    @media (max-width: 996px) {
+      padding: 1rem 0;
+      flex-direction: column;
+    }
+    @media (max-width: 576px) {
+      padding: 0 1rem 0.5rem 1rem;
+      display: block;
+    }
   }
   .list {
     @include fontSize(1rem, #666666, 400);

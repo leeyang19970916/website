@@ -5,6 +5,15 @@ section.ad-loop {
   height: 150px;
 }
 
+.active {
+  background: #24a8a7 !important;
+  border-radius: 16px;
+  color: white !important;
+}
+.active:hover {
+  background: #3dc7c7 !important;
+}
+
 .content-container {
   padding: 1.5rem 2rem 0 2rem;
   background-color: white;
@@ -70,17 +79,8 @@ section.ad-loop {
   border-bottom: #cdcdcd 1px solid;
 }
 
-.active {
-  background: #24a8a7 !important;
-  border-radius: 16px;
-  color: white !important;
-}
-.active:hover {
-  background: #3dc7c7 !important;
-}
-
 #index-search-container, #formal-container, #simple-container, #step-container, #search-container {
-  width: 75%;
+  width: 90%;
   margin: 0 auto;
   background-color: white;
 }

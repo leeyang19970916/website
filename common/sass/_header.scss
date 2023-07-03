@@ -1,10 +1,17 @@
 header{
     &.header{
-        @include dflex(space-between,center) ;
-        padding: 1rem 1rem 1rem 1rem ;
+        padding: 1rem 0 ;
         width: 100%;
         border-bottom: 1px solid gainsboro;
         background-color: white;
+        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.05);
+        margin-bottom: 3px;
+        #header-container{
+
+            @include dflex(space-between,center) ;
+            @include content-container-maxWidth();
+
+        }
         .header-left{
             @include dflex(null,center) ;
             .header-nav{
@@ -36,7 +43,8 @@ header{
                 &.btnLink{
                     @include fontSize(1rem, #53B6B7,500);
                     border-radius: 20px;
-                    margin: 0 0.75rem;
+                    // margin: 0 0.75rem;
+                    margin-left: 1rem;
                     border: 1px solid #53B6B7;
                     padding: 0px 12px;
                     white-space: nowrap;
