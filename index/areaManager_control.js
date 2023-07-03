@@ -62,6 +62,8 @@ class areaManager_control {
     let vm=this.dom
     let districtDom=vm.querySelector('.districtList')
     let str=''
+    let districtDOM_title=`<div class="areaItem  active">區域</div>`
+    str+=districtDOM_title
     for (let i = 0; i < this.districtArray.length; i++) {
         const element = this.districtArray[i];
         console.log(element,"ele")
