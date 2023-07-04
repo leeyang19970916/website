@@ -18,7 +18,9 @@ class HEADER {
     </div>
     <div class="header-right">
           ${searchInput}${btnLink}
+          
     </div>
+    <div class='menuIcon' onclick='headerInstance.menuHandler()'>X</div>
     </div>`;
       this.dom.innerHTML = str;
     }
@@ -39,6 +41,14 @@ class HEADER {
       return `      <button class="btn btnLink ">追蹤臉書</button>
       <button class="btn btnLink  ">加入LINE</button>`;
     }
+    menuHandler(params) {
+      console.log("gogogog")
+    }
   }
+
+
+
+
   
   export default HEADER
+  

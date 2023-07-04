@@ -12053,6 +12053,7 @@ header.header {
   background-color: white;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.05);
   margin-bottom: 3px;
+  min-height: 5%;
 }
 header.header #header-container {
   display: flex;
@@ -12076,6 +12077,11 @@ header.header .header-left .header-nav {
   flex-wrap: wrap;
   flex-direction: row;
 }
+@media (max-width: 996px) {
+  header.header .header-left .header-nav {
+    display: none;
+  }
+}
 header.header .header-left .header-nav .header-nav-item {
   padding: 0 1rem;
   cursor: pointer;
@@ -12086,6 +12092,11 @@ header.header .header-right {
   justify-content: end;
   flex-wrap: wrap;
   flex-direction: row;
+}
+@media (max-width: 996px) {
+  header.header .header-right {
+    display: none;
+  }
 }
 header.header .header-right .search {
   display: flex;
@@ -12116,10 +12127,29 @@ header.header .header-right button.btnLink {
   padding: 0px 12px;
   white-space: nowrap;
 }
+@media (max-width: 996px) {
+  header.header .header-right button.btnLink {
+    font-size: calc(1rem * 0.75);
+  }
+}
+header.header .menuIcon {
+  display: none;
+}
+@media (max-width: 996px) {
+  header.header .menuIcon {
+    display: block;
+  }
+}
 
 footer {
   padding: 1rem 0;
   background-color: white;
+  min-height: 5%;
+}
+@media (max-width: 996px) {
+  footer {
+    padding: 0;
+  }
 }
 footer #footer-container {
   display: flex;
@@ -12134,14 +12164,7 @@ footer #footer-container {
 }
 @media (max-width: 996px) {
   footer #footer-container {
-    padding: 1rem 0;
     flex-direction: column;
-  }
-}
-@media (max-width: 576px) {
-  footer #footer-container {
-    padding: 0 1rem 0.5rem 1rem;
-    display: block;
   }
 }
 footer .list {
@@ -12155,7 +12178,12 @@ footer .list {
   flex-wrap: wrap;
   flex-direction: row;
 }
-@media (max-width: 576px) {
+@media (max-width: 996px) {
+  footer .list {
+    font-size: calc(1rem * 0.75);
+  }
+}
+@media (max-width: 996px) {
   footer .list {
     flex-direction: column;
   }
@@ -12164,7 +12192,7 @@ footer .list .footer-item {
   cursor: pointer;
   margin-right: 1.5rem;
 }
-@media (max-width: 576px) {
+@media (max-width: 996px) {
   footer .list .footer-item {
     margin: 0;
     margin-top: 1rem;
@@ -12179,16 +12207,19 @@ footer .copyright {
 }
 @media (max-width: 996px) {
   footer .copyright {
-    margin-top: 0.5rem;
+    font-size: calc(0.75rem * 0.75);
   }
 }
-@media (max-width: 576px) {
+@media (max-width: 996px) {
   footer .copyright {
-    margin: 1rem 0;
+    margin-top: 0.5rem;
     text-align: center;
   }
 }
 
 #container-bg {
   background-color: #f5f5f5;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
 }/*# sourceMappingURL=common.css.map */

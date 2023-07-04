@@ -35,6 +35,11 @@ section.ad-loop {
   font-family: "Noto Sans TC", sans-serif;
   text-align: center;
 }
+@media (max-width: 996px) {
+  .majorTitle {
+    font-size: calc(2rem * 0.75);
+  }
+}
 
 .minTitle {
   font-size: 20px;
@@ -48,6 +53,11 @@ section.ad-loop {
   flex-direction: row;
   white-space: nowrap;
   padding-bottom: 0.5rem;
+}
+@media (max-width: 996px) {
+  .minTitle {
+    font-size: calc(20px * 0.75);
+  }
 }
 
 .input-container {
@@ -67,6 +77,11 @@ section.ad-loop {
   font-family: "Noto Sans TC", sans-serif;
   white-space: nowrap;
   min-width: 120px;
+}
+@media (max-width: 996px) {
+  .input-container .label {
+    font-size: calc(18px * 0.75);
+  }
 }
 .input-container .cancelIcon {
   color: red;
@@ -117,6 +132,11 @@ section.ad-loop {
   cursor: pointer;
   padding: 2px 16px;
 }
+@media (max-width: 996px) {
+  .cardItem .cardItem-container .list-singleLine .listItem {
+    font-size: calc(1rem * 0.75);
+  }
+}
 .cardItem .cardItem-container .list-singleLine .listItem.listItem-zone {
   color: black;
   margin-right: 0.5rem;
@@ -140,6 +160,11 @@ section.ad-loop {
   line-height: initial;
   margin-left: 1rem;
 }
+@media (max-width: 996px) {
+  .unlimited_btn {
+    font-size: calc(1rem * 0.75);
+  }
+}
 
 #index-search-container {
   background-color: #f5f5f5;
@@ -158,6 +183,11 @@ section.searchResult .card .total {
   letter-spacing: 0.01em;
   font-family: "Noto Sans TC", sans-serif;
   text-align: end;
+}
+@media (max-width: 996px) {
+  section.searchResult .card .total {
+    font-size: calc(20px * 0.75);
+  }
 }
 section.searchResult .card .clinicList {
   padding: 1rem 0;
@@ -184,6 +214,11 @@ section.searchResult .card .clinicList .clinicItem .departmentList .departmentIt
   border: 1px solid #e2e2e2;
   border-radius: 4px;
 }
+@media (max-width: 996px) {
+  section.searchResult .card .clinicList .clinicItem .departmentList .departmentItem {
+    font-size: calc(1rem * 0.75);
+  }
+}
 section.searchResult .card .clinicList .clinicItem .inform {
   display: flex;
   justify-content: space-between;
@@ -196,6 +231,11 @@ section.searchResult .card .clinicList .clinicItem .inform {
   letter-spacing: 0.01em;
   font-family: "Noto Sans TC", sans-serif;
   padding-top: 0.5rem;
+}
+@media (max-width: 996px) {
+  section.searchResult .card .clinicList .clinicItem .inform {
+    font-size: calc(1rem * 0.75);
+  }
 }
 section.searchResult .card .clinicList .clinicItem .inform .informItem {
   white-space: nowrap;
@@ -360,6 +400,11 @@ ul {
   letter-spacing: 0.01em;
   font-family: "Noto Sans TC", sans-serif;
 }
+@media (max-width: 996px) {
+  .clinicImage .inform {
+    font-size: calc(18px * 0.75);
+  }
+}
 .clinicImage .inform .departmentList {
   padding-bottom: 1rem;
 }
@@ -376,6 +421,11 @@ ul {
   letter-spacing: 0.01em;
   font-family: "Noto Sans TC", sans-serif;
   letter-spacing: 0.08em;
+}
+@media (max-width: 996px) {
+  .content-container .inform-detail {
+    font-size: calc(20px * 0.75);
+  }
 }
 .content-container .inform-detail .phone,
 .content-container .inform-detail .address,
@@ -437,6 +487,11 @@ ul {
   padding: 1rem 2.5rem;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.05);
 }
+@media (max-width: 996px) {
+  .clinicDetail .title {
+    font-size: calc(28px * 0.75);
+  }
+}
 .clinicDetail .card-body {
   font-size: 20px;
   color: #666666;
@@ -448,6 +503,11 @@ ul {
   border: 0;
   box-shadow: none;
 }
+@media (max-width: 996px) {
+  .clinicDetail .card-body {
+    font-size: calc(20px * 0.75);
+  }
+}
 .clinicDetail .content {
   font-size: 20px;
   color: #666666;
@@ -456,6 +516,11 @@ ul {
   font-family: "Noto Sans TC", sans-serif;
   letter-spacing: 0.08em;
   padding: 1rem 0;
+}
+@media (max-width: 996px) {
+  .clinicDetail .content {
+    font-size: calc(20px * 0.75);
+  }
 }
 .clinicDetail .content ul {
   min-height: 300px;
@@ -504,6 +569,11 @@ ul {
   margin-right: 1rem;
   border-radius: 10px;
 }
+@media (max-width: 996px) {
+  #simple-container .simpleCard .departmentList .departmentItem {
+    font-size: calc(14px * 0.75);
+  }
+}
 #simple-container .simpleCard .clinicName,
 #simple-container .simpleCard .clinicTime {
   font-size: 40px;
@@ -513,6 +583,12 @@ ul {
   font-family: "Noto Sans TC", sans-serif;
   padding-bottom: 0.5rem;
   border-bottom: 1px solid #cdcdcd;
+}
+@media (max-width: 996px) {
+  #simple-container .simpleCard .clinicName,
+  #simple-container .simpleCard .clinicTime {
+    font-size: calc(40px * 0.75);
+  }
 }
 #simple-container .simpleCard .phone,
 #simple-container .simpleCard .address,
@@ -525,6 +601,13 @@ ul {
   letter-spacing: 0.08em;
   margin: 0.5rem 0;
   padding: 0;
+}
+@media (max-width: 996px) {
+  #simple-container .simpleCard .phone,
+  #simple-container .simpleCard .address,
+  #simple-container .simpleCard .alert {
+    font-size: calc(20px * 0.75);
+  }
 }
 #simple-container .simpleCard .clinicTime {
   font-size: 28px;
@@ -561,6 +644,11 @@ ul {
   flex-wrap: nowrap;
   flex-direction: row;
 }
+@media (max-width: 996px) {
+  .schedule .clinic-week {
+    font-size: calc(24px * 0.75);
+  }
+}
 .schedule .clinic-week .clinic-week-col {
   width: 11.4285714286%;
 }
@@ -586,6 +674,11 @@ ul {
   overflow: hidden;
   height: 60px;
   border: 1px dotted #e2e2e2;
+}
+@media (max-width: 996px) {
+  .schedule .clinic-week .clinic-week-col .item {
+    font-size: calc(1rem * 0.75);
+  }
 }
 .schedule .clinic-week .clinic-week-col .item.state {
   display: flex;
@@ -665,6 +758,11 @@ ul {
   flex-direction: row;
   display: flex;
   align-items: center;
+}
+@media (max-width: 996px) {
+  .schedule .clinic-doctor .doctor {
+    font-size: calc(20px * 0.75);
+  }
 }
 @media (max-width: 576px) {
   .schedule .clinic-doctor .doctor {
@@ -756,6 +854,11 @@ ul {
   border-radius: 50px;
   margin: 0 1rem;
 }
+@media (max-width: 996px) {
+  .resevation-container .btn-link {
+    font-size: calc(20px * 0.75);
+  }
+}
 .resevation-container .btn-link.nowCalled {
   background: #2b9293;
 }
@@ -802,6 +905,11 @@ ul {
   box-shadow: 0 0 0 5px white; /* 调整颜色和模糊程度 */
   z-index: 100;
 }
+@media (max-width: 996px) {
+  #step-container .stepItem {
+    font-size: calc(20px * 0.75);
+  }
+}
 #step-container .stepItem .stepItem-num {
   font-size: 1rem;
   color: #53b6b7;
@@ -818,6 +926,11 @@ ul {
   border-radius: 50px;
   width: 25px;
   height: 25px;
+}
+@media (max-width: 996px) {
+  #step-container .stepItem .stepItem-num {
+    font-size: calc(1rem * 0.75);
+  }
 }
 #step-container .stepItem .stepItem-name {
   letter-spacing: 2px;
@@ -851,6 +964,11 @@ ul {
   position: relative;
   z-index: 2;
 }
+@media (max-width: 996px) {
+  .fillIn_inform .title .title-name {
+    font-size: calc(28px * 0.75);
+  }
+}
 .fillIn_inform .title .title-line {
   position: absolute;
   right: 0;
@@ -881,6 +999,11 @@ ul {
   font-family: "Noto Sans TC", sans-serif;
   border: 1px solid rgba(205, 205, 205, 0.5);
 }
+@media (max-width: 996px) {
+  #doctorList .option-container .doctorItem {
+    font-size: calc(20px * 0.75);
+  }
+}
 
 #calendar .monthControl {
   width: 100%;
@@ -894,6 +1017,11 @@ ul {
   font-weight: 600;
   letter-spacing: 0.01em;
   font-family: "Noto Sans TC", sans-serif;
+}
+@media (max-width: 996px) {
+  #calendar .monthControl {
+    font-size: calc(20px * 0.75);
+  }
 }
 #calendar .date-week {
   margin-top: 1rem;
@@ -910,6 +1038,11 @@ ul {
   font-family: "Noto Sans TC", sans-serif;
   text-align: center;
   width: 14.2857142857%;
+}
+@media (max-width: 996px) {
+  #calendar .date-week .weekItem {
+    font-size: calc(20px * 0.75);
+  }
 }
 #calendar .date-week .weekItem.isWeekend {
   color: #9c0e4e;
@@ -940,6 +1073,11 @@ ul {
   border-radius: 4px;
   margin: 0.5rem;
   cursor: pointer;
+}
+@media (max-width: 996px) {
+  #calendar .date-day .dayItem {
+    font-size: calc(20px * 0.75);
+  }
 }
 #calendar .date-day .dayItem.none {
   cursor: initial;
@@ -974,6 +1112,11 @@ ul {
   font-family: "Noto Sans TC", sans-serif;
   letter-spacing: 14%;
 }
+@media (max-width: 996px) {
+  #time .time-container .time-title {
+    font-size: calc(20px * 0.75);
+  }
+}
 #time .time-container .time-list {
   display: flex;
   justify-content: start;
@@ -994,6 +1137,11 @@ ul {
   margin: 0.5rem;
   margin-left: 0;
   padding: 0.5rem 2rem;
+}
+@media (max-width: 996px) {
+  #time .time-container .time-list .timeItem {
+    font-size: calc(24px * 0.75);
+  }
 }
 
 .stepControl {
@@ -1021,6 +1169,11 @@ ul {
   letter-spacing: 0.14em;
   cursor: pointer;
 }
+@media (max-width: 996px) {
+  .stepControl .stepbtn {
+    font-size: calc(24px * 0.75);
+  }
+}
 .stepControl .stepbtn:hover {
   color: rgba(74, 74, 74, 0.7);
   border-color: rgba(74, 74, 74, 0.7);
@@ -1044,6 +1197,11 @@ ul {
   font-family: "Noto Sans TC", sans-serif;
   letter-spacing: 0.14em;
   margin-bottom: 1rem;
+}
+@media (max-width: 996px) {
+  #reservation-content .option-container .reservationContent-item {
+    font-size: calc(1.25rem * 0.75);
+  }
 }
 #reservation-content .option-container .reservationContent-item .reservationContent-item-label {
   white-space: nowrap;
@@ -1108,6 +1266,11 @@ ul {
   white-space: nowrap;
   min-width: 120px;
 }
+@media (max-width: 996px) {
+  #personal-inform .option-container .inform-input .inform-input-item .label {
+    font-size: calc(18px * 0.75);
+  }
+}
 #personal-inform .option-container .inform-input .inform-input-item .cancelIcon {
   color: red;
 }
@@ -1123,6 +1286,11 @@ ul {
   flex-wrap: nowrap;
   flex-direction: row;
   margin-right: 1rem;
+}
+@media (max-width: 996px) {
+  #personal-inform .option-container .inform-input .inform-input-item .label {
+    font-size: calc(1rem * 0.75);
+  }
 }
 #personal-inform .option-container .inform-input .inform-input-item .label .word {
   display: block;
@@ -1161,6 +1329,11 @@ ul {
   position: absolute;
   top: 6%;
 }
+@media (max-width: 996px) {
+  #personal-inform .option-container .inform-input .inform-input-item.form-check .form-check-label {
+    font-size: calc(1.25rem * 0.75);
+  }
+}
 
 .reservation-complete {
   font-size: 24px;
@@ -1171,6 +1344,11 @@ ul {
   letter-spacing: 3.36px;
   text-align: center;
   margin: 0 auto;
+}
+@media (max-width: 996px) {
+  .reservation-complete {
+    font-size: calc(24px * 0.75);
+  }
 }
 
 #reservation-complete .title {
@@ -1187,6 +1365,11 @@ ul {
   letter-spacing: 0.01em;
   font-family: "Noto Sans TC", sans-serif;
   letter-spacing: 2.8px;
+}
+@media (max-width: 996px) {
+  #reservation-complete .title .title-name {
+    font-size: calc(20px * 0.75);
+  }
 }
 #reservation-complete .option-container {
   width: 60%;
@@ -1207,6 +1390,11 @@ ul {
   font-family: "Noto Sans TC", sans-serif;
   letter-spacing: 2.8px;
   margin-bottom: 1.5rem;
+}
+@media (max-width: 996px) {
+  #reservation-complete .option-container .inform-content-container .informContent-item {
+    font-size: calc(1.25rem * 0.75);
+  }
 }
 #reservation-complete .option-container .inform-content-container .informContent-item .informContent-item-label {
   min-width: 150px;
@@ -1244,6 +1432,11 @@ ul {
   border-radius: 70px 70px 0 0;
   padding: 1rem 0;
   position: relative;
+}
+@media (max-width: 996px) {
+  .search-bar .search-bar-card .card-title {
+    font-size: calc(2rem * 0.75);
+  }
 }
 .search-bar .search-bar-card .card-title .icon {
   position: absolute;
@@ -1292,6 +1485,11 @@ ul {
   white-space: nowrap;
   min-width: 120px;
 }
+@media (max-width: 996px) {
+  .search-bar .search-bar-card .card-content .inform-input .inform-input-item .label {
+    font-size: calc(18px * 0.75);
+  }
+}
 .search-bar .search-bar-card .card-content .inform-input .inform-input-item .cancelIcon {
   color: red;
 }
@@ -1307,6 +1505,11 @@ ul {
   flex-wrap: nowrap;
   flex-direction: row;
   margin-right: 1rem;
+}
+@media (max-width: 996px) {
+  .search-bar .search-bar-card .card-content .inform-input .inform-input-item .label {
+    font-size: calc(1rem * 0.75);
+  }
 }
 .search-bar .search-bar-card .card-content .inform-input .inform-input-item .label .word {
   display: block;
@@ -1347,6 +1550,11 @@ ul {
   color: rgba(74, 74, 74, 0.7);
   border-color: rgba(74, 74, 74, 0.7);
 }
+@media (max-width: 996px) {
+  .search-bar .search-bar-card .card-content .search_btn {
+    font-size: calc(1.25rem * 0.75);
+  }
+}
 
 #search-container {
   margin-top: 1rem;
@@ -1363,6 +1571,11 @@ ul {
   font-family: "Noto Sans TC", sans-serif;
   letter-spacing: 0.8px;
   padding: 3rem 0rem;
+}
+@media (max-width: 996px) {
+  #search-container .search-list-card {
+    font-size: calc(1rem * 0.75);
+  }
 }
 #search-container .search-list-card .card-title {
   font-weight: 900;
@@ -1385,6 +1598,11 @@ ul {
   font-family: "Noto Sans TC", sans-serif;
   letter-spacing: 1.28px;
 }
+@media (max-width: 996px) {
+  #search-container .search-list-card .card-list section.list-item {
+    font-size: calc(16px * 0.75);
+  }
+}
 #search-container .search-list-card .card-list .num {
   border-radius: 8px 0px 0px 8px;
   border-right: 2px solid var(--primary, #53b6b7);
@@ -1400,6 +1618,11 @@ ul {
   flex-wrap: nowrap;
   flex-direction: row;
   padding: 0 0.75rem;
+}
+@media (max-width: 996px) {
+  #search-container .search-list-card .card-list .num {
+    font-size: calc(1.25rem * 0.75);
+  }
 }
 #search-container .search-list-card .card-list .content {
   padding-left: 0.75rem;
@@ -1423,6 +1646,11 @@ ul {
   padding: 2px 8px;
   margin-right: 0.75rem;
   background: #efefef;
+}
+@media (max-width: 996px) {
+  #search-container .search-list-card .card-list .content .department-list .department-item {
+    font-size: calc(14px * 0.75);
+  }
 }
 #search-container .search-list-card .card-list .content .list-item-content-container {
   display: flex;
@@ -1456,6 +1684,11 @@ ul {
   border-radius: 16px;
   border: 1px solid var(--primary-dark, #2B9293);
   padding: 4px 16px;
+}
+@media (max-width: 996px) {
+  #search-container .search-list-card .card-list .list-item-end-btn .cancel-button {
+    font-size: calc( * 0.75);
+  }
 }
 #search-container .search-list-card .card-list .list-item-line {
   height: 1px;

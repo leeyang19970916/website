@@ -25,6 +25,9 @@
   font-weight: $fw;
   letter-spacing: 0.01em;
   font-family: 'Noto Sans TC', sans-serif;
+  @media (max-width: 996px) {
+    font-size: calc(#{$fz} * 0.75);
+  }
 }
 
 @mixin input() {

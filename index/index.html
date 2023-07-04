@@ -12,6 +12,7 @@
 
   <body>
     <div id="container-bg" class="border p-0">
+      <div id="backgroundContainer"  onclick="containerHandler()"></div>
       <header class="header"></header>
       <div class="marquee">1234564789</div>
       <div id="search-container">
@@ -23,7 +24,7 @@
           </div>
           <div class="addrInput-search">
             <div class="addrInput-search-input">
-              <div class="cityZoneSelect"><span>台北市 / 大安區</span></div>
+              <div onclick="containerHandler()" class="cityZoneSelect"><span>台北市 / 大安區</span></div>
               <div class="line">|</div>
               <input type="text" class="input-custom" />
             </div>
@@ -31,7 +32,10 @@
             <div id="areaManager_Card">
               <div class="areaList"></div>
               <div class="cityList"></div>
-              <div class="districtList"></div>
+              <div class="district">
+                <div class="district_title active">區域</div>
+                <div class="districtList"></div>
+              </div>
             </div>
           </div>
           <div class="keyword-search">
@@ -109,11 +113,21 @@
 <script src="/js/class/RESERVATION_SEARCH.js"></script> -->
 
 <script type="module" src="/common/js/Common_UI_Render.js"></script>
+<script src="/common/js/HEIGHT.js"></script>
 <script src="/reservation/js/class/AREAMANAGER.js"></script>
 <script src="/index/areaManager_control.js"></script>
+<script src="/reservation/js/class/CLASSHANDLER.js"></script>
 <!-- <script src="/reservation/js/class/PAGINATION.js"></script> -->
 <!-- <script src="/reservation/js/class/RESERVATIONFILTER.js"></script> -->
 <script>
   let areaManagerControl=new areaManager_control('#areaManager_Card')
-  // console.log(areaManagerControl,"areaManagerControl")
+let innerHeight=new HEIGHT('container-bg')
+  // let cityZoneSelectDOM=document.querySelector(".cityZoneSelect")
+  function containerHandler(){
+    let dom=document.querySelector("#areaManager_Card")
+    let backgroundContainerDom=document.querySelector("#backgroundContainer")
+    new singleClassControl(dom,'show')
+    new singleClassControl(backgroundContainerDom,'show')
+
+  }
 </script>

@@ -28,3 +28,28 @@ class CLASSHANDLER {
     this.targetDom.classList.add(`${className}`);
   }
 }
+
+class singleClassControl{
+  constructor (targetDom,className='active'){
+    this.targetDom=targetDom,
+    this.className=className
+    this.judge()
+  }
+  judge(){
+    let isExist=this.targetDom.classList.contains(`${this.className}`)
+    if(isExist){
+      this.remove()
+    }else{
+      this.add()
+    }
+  }
+  add(){
+    this.targetDom.classList.add(`${this.className}`)
+  }
+  remove(){
+    this.targetDom.classList.remove(`${this.className}`)
+
+  }
+
+
+}
