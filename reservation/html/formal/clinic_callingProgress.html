@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>診所ㄉ叫號進度</title>
+    <link rel="stylesheet" href="/common/sass/common.css" />
+    <link rel="stylesheet" href="/reservation/scss/reservation.css" />
+  </head>
+
+  <body>
+    <div id="container-bg" class="border p-0">
+      <header class="header"></header>
+      <div id="callingProgress-container">
+        <section class="section-container inform">
+            <div class="title">泛亞皮膚科整形外科診所</div>
+            <div class="content">
+                <div class="phone">02-278915348</div>
+                <div class="addr">台北市中正區濟南路二段48巷3之2號1樓</div>
+            </div>
+        </section>
+
+        <section class="section-container callingProgress">
+            <div class="title">看診進度</div>
+            <div class="content">
+                <div class="doctorList">02-278915348</div>
+                <div class="calling-container">
+                    <div class="callingCard">
+                        <div class="title">目前叫號</div>
+                        <div class="content">
+                            <div class="over">過號</div>
+                            <div class="number">128</div>
+                        </div>
+                    </div>
+                    <div class="update-btn">叫號刷新</div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <div class="content-container">
+          <div class="inform-detail">
+            <div class="phone">02-82822809</div>
+            <div class="address">
+              新北市蘆洲區長安街30、32號1樓市蘆洲區長安街30號
+            </div>
+            <div class="facebook">愛管家小雸科診所 紛絲專頁</div>
+          </div>
+
+        </div>
+        <section class="ad-loop">ad廣告輪播</section>
+        <section class="clinicDetail">
+            <div class="title">
+              <div
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseExample"
+                aria-expanded="false"
+                aria-controls="collapseExample"
+              >
+                注意事項
+              </div>
+              <span
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseExample"
+                aria-expanded="false"
+                aria-controls="collapseExample"
+              >
+                ></span
+              >
+            </div>
+            <div class="collapse" id="collapseExample">
+              <div class="card card-body">
+                Some placeholder content for the collapse component. This panel
+                is hidden by default but revealed when the user activates the
+                relevant trigger.
+              </div>
+            </div>
+          </section>
+      </div>
+
+      <footer></footer>
+    </div>
+  </body>
+</html>
+
+<script type="module" src="/common/js/Common_UI_Render.js"></script>
+<script src="/reservation/js/class/PAGINATION.js"></script>
+<script src="/reservation/js/class/SCHEDULE.js"></script>
+<script>
+  // page
+  let page = new PAGINATION(5);
+</script>
+<script>
+  let SleepData = ["02", "61", "43", "52", "33", "32"];
+  let schedule = new SCHEDULE(SleepData);
+</script>

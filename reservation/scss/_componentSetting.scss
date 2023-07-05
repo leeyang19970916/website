@@ -7,13 +7,13 @@
 }
 .minTitle {
   @include fontSize(20px, #333333, 700);
-  @include dflex(null,center);
+  @include dflex(null, center);
   white-space: nowrap;
   padding-bottom: 0.5rem;
 }
 .input-container {
   @include input();
-  margin:  0;
+  margin: 0;
   .form-control {
     width: 50%;
   }
@@ -22,9 +22,13 @@
   border-bottom: #cdcdcd 1px solid;
 }
 
-
 // container setting
 
-#index-search-container,#formal-container,#simple-container,#step-container,#search-container{
+#index-search-container,
+#formal-container,
+#simple-container,
+#step-container,
+#search-container,
+#callingProgress-container {
   @include content-container-maxWidth();
 }
