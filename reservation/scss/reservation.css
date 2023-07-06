@@ -1703,6 +1703,7 @@ ul {
 
 #callingProgress-container {
   padding: 1.25rem 1rem;
+  max-width: 996px;
 }
 #callingProgress-container .section-container .title {
   font-size: 1.5rem;
@@ -1739,8 +1740,47 @@ ul {
 #callingProgress-container .section-container .content .addr {
   padding: 0.5rem 0;
 }
+#callingProgress-container .section-container .content .doctorList-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  margin: 1rem 0;
+}
+#callingProgress-container .section-container .content .doctorList-container .doctorList {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  width: 100%;
+}
+#callingProgress-container .section-container .content .doctorList-container .doctorList .doctorItem {
+  font-size: 1rem;
+  color: #c0c0c0;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  font-family: "Noto Sans TC", sans-serif;
+  width: 25%;
+  text-align: center;
+  padding-bottom: 0.5rem;
+  padding: 0 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #cdcdcd;
+  cursor: pointer;
+}
+@media (max-width: 996px) {
+  #callingProgress-container .section-container .content .doctorList-container .doctorList .doctorItem {
+    font-size: calc(1rem * 0.75);
+  }
+}
+#callingProgress-container .section-container .content .doctorList-container .doctorList .doctorItem.show {
+  color: #53b6b7 !important;
+  border-bottom: 2px solid #53b6b7 !important;
+}
 #callingProgress-container .section-container .content .calling-container .callingCard {
-  width: 90%;
+  width: 50%;
   margin: 0 auto;
   border-radius: 16px;
   display: flex;
@@ -1817,7 +1857,7 @@ ul {
   border: 1px solid #ea4438;
   background: #fff;
   font-size: 1rem;
-  color: #EA4438;
+  color: #ea4438;
   font-weight: 500;
   letter-spacing: 0.01em;
   font-family: "Noto Sans TC", sans-serif;
@@ -1827,9 +1867,55 @@ ul {
   flex-wrap: wrap;
   flex-direction: row;
   width: 10%;
+  padding: 0.25rem 0;
+  white-space: nowrap;
 }
 @media (max-width: 996px) {
   #callingProgress-container .section-container .content .calling-container .update-btn {
     font-size: calc(1rem * 0.75);
+  }
+}
+
+.schedule-container {
+  transform: none;
+}
+.schedule-container .content {
+  padding: 0.5rem 0 !important;
+}
+.schedule-container .schedule {
+  border: none;
+  padding: 0;
+}
+.schedule-container .schedule .clinic-week-col:first-child {
+  background-color: wheat;
+  min-width: 30%;
+}
+.schedule-container .schedule .clinic-week-col .item {
+  min-height: 60px;
+}
+.schedule-container .schedule .clinic-week-col .item .stateName {
+  padding: 0;
+  font-size: 16px;
+  color: #4a4a4a;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  font-family: "Noto Sans TC", sans-serif;
+}
+@media (max-width: 996px) {
+  .schedule-container .schedule .clinic-week-col .item .stateName {
+    font-size: calc(16px * 0.75);
+  }
+}
+.schedule-container .schedule .clinic-week-col .item .range {
+  padding: 0;
+  font-size: 12px;
+  color: #4a4a4a;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  font-family: "Noto Sans TC", sans-serif;
+}
+@media (max-width: 996px) {
+  .schedule-container .schedule .clinic-week-col .item .range {
+    font-size: calc(12px * 0.75);
   }
 }/*# sourceMappingURL=reservation.css.map */

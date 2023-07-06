@@ -1,5 +1,6 @@
 #callingProgress-container {
   padding: 1.25rem 1rem;
+  max-width: 996px;
   .section-container {
     .title {
       @include fontSize(1.5rem, #53b6b7, 900);
@@ -17,9 +18,32 @@
       .addr {
         padding: 0.5rem 0;
       }
+      .doctorList-container {
+        @include dflex(center, center, nowrap);
+        margin: 1rem 0;
+        .doctorList {
+          @include dflex(start, center, nowrap);
+          width: 100%;
+          .doctorItem {
+            @include fontSize(1rem, #c0c0c0, 500);
+            width: calc(100% / 4);
+            text-align: center;
+            padding-bottom: 0.5rem;
+            padding: 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #cdcdcd;
+            cursor: pointer;
+            &.show {
+              color: #53b6b7 !important;
+              border-bottom: 2px solid #53b6b7 !important;
+              // background-color: transparent !important;
+            }
+          }
+        }
+      }
       .calling-container {
         .callingCard {
-          width: 90%;
+          width: 50%;
           margin: 0 auto;
           border-radius: 16px;
           @include dflex(null, center);
@@ -31,7 +55,6 @@
             @include fontSize(1.25rem, white, 900);
             @include dflex(center, center);
             background: #ffa800;
-
             padding: 8px 16px;
             border-radius: 16px 0 0 16px;
           }
@@ -58,9 +81,39 @@
           border-radius: 3px;
           border: 1px solid #ea4438;
           background: #fff;
-          @include fontSize(1rem,#EA4438,500);
-          @include dflex(center,center);
+          @include fontSize(1rem, #ea4438, 500);
+          @include dflex(center, center);
           width: 10%;
+          padding: 0.25rem 0;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+}
+.schedule-container {
+  transform: none;
+  .content {
+    padding: 0.5rem 0 !important;
+  }
+  .schedule {
+    border: none;
+    padding: 0;
+    .clinic-week-col {
+      &:first-child {
+        background-color: wheat;
+        min-width: 30%;
+      }
+      .item {
+        min-height: 60px;
+        // height: auto;
+        .stateName {
+          padding: 0;
+          @include fontSize(16px, #4a4a4a, 400);
+        }
+        .range {
+          padding: 0;
+          @include fontSize(12px, #4a4a4a, 400);
         }
       }
     }
