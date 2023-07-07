@@ -12065,6 +12065,11 @@ header.header #header-container {
   margin: 0 auto;
   background-color: white;
 }
+@media (max-width: 996px) {
+  header.header #header-container {
+    width: 95%;
+  }
+}
 header.header .header-left {
   display: flex;
   align-items: center;
@@ -12129,7 +12134,7 @@ header.header .header-right button.btnLink {
 }
 @media (max-width: 996px) {
   header.header .header-right button.btnLink {
-    font-size: calc(1rem * 0.75);
+    font-size: 14px;
   }
 }
 header.header .menuIcon {
@@ -12164,6 +12169,11 @@ footer #footer-container {
 }
 @media (max-width: 996px) {
   footer #footer-container {
+    width: 95%;
+  }
+}
+@media (max-width: 996px) {
+  footer #footer-container {
     flex-direction: column;
   }
 }
@@ -12180,7 +12190,7 @@ footer .list {
 }
 @media (max-width: 996px) {
   footer .list {
-    font-size: calc(1rem * 0.75);
+    font-size: 14px;
   }
 }
 @media (max-width: 996px) {

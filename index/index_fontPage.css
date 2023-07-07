@@ -93,7 +93,7 @@
 }
 @media (max-width: 996px) {
   #search-container .searchCard .searchCard-option .searchCard-option-item {
-    font-size: calc(1rem * 0.75);
+    font-size: 14px;
   }
 }
 @media screen and (max-width: 996px) {
@@ -225,7 +225,7 @@
 }
 @media (max-width: 996px) {
   #search-container .keyword-search {
-    font-size: calc(1rem * 0.75);
+    font-size: 14px;
   }
 }
 #search-container .keyword-search .keyword-search-label {
@@ -265,6 +265,11 @@
   justify-content: space-between;
   flex-wrap: wrap;
   flex-direction: row;
+}
+@media (max-width: 996px) {
+  #indexPage-container {
+    width: 95%;
+  }
 }
 @media screen and (max-width: 996px) {
   #indexPage-container {
@@ -316,7 +321,7 @@
 }
 @media (max-width: 996px) {
   #indexPage-container .major-container .title-container .title-container_more {
-    font-size: calc(1rem * 0.75);
+    font-size: 14px;
   }
 }
 #indexPage-container .major-container .content-container {
@@ -403,7 +408,7 @@
 }
 @media (max-width: 996px) {
   #indexPage-container .major-container .content-container.content-container-list .contentList-item .content-container-content .date {
-    font-size: calc(1rem * 0.75);
+    font-size: 14px;
   }
 }
 @media screen and (max-width: 996px) {
@@ -485,7 +490,7 @@
   #areaManager_Card .areaList .cityItem,
   #areaManager_Card .cityList .areaItem,
   #areaManager_Card .cityList .cityItem {
-    font-size: calc(1rem * 0.75);
+    font-size: 14px;
   }
 }
 #areaManager_Card .areaList .cityItem,
@@ -501,7 +506,7 @@
 @media (max-width: 996px) {
   #areaManager_Card .areaList .cityItem,
   #areaManager_Card .cityList .cityItem {
-    font-size: calc(1rem * 0.75);
+    font-size: 14px;
   }
 }
 #areaManager_Card .areaList .cityItem.active,
@@ -528,7 +533,7 @@
 }
 @media (max-width: 996px) {
   #areaManager_Card .district .district_title {
-    font-size: calc(1rem * 0.75);
+    font-size: 14px;
   }
 }
 #areaManager_Card .district .districtList {
@@ -565,7 +570,7 @@
 }
 @media (max-width: 996px) {
   #areaManager_Card .district .districtList .districtItem {
-    font-size: calc(1rem * 0.75);
+    font-size: 14px;
   }
 }
 @media (max-width: 996px) {

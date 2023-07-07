@@ -1,13 +1,22 @@
 section {
   &.searchResult {
     margin: 2rem 0;
+    @media (max-width: 996px) {
+      margin: 1rem 0;
+    }
     .card {
+      @media (max-width: 996px) {
+        padding: 1rem 0.5rem;
+      }
       .total {
         @include fontSize(20px, #666666, 400);
         text-align: end;
       }
       .clinicList {
         padding: 1rem 0;
+        @media (max-width: 996px) {
+          padding: 0.5rem 0;
+        }
         .clinicItem {
           border-bottom: #cdcdcd 1px solid;
           padding: 0.5rem 0;
@@ -26,12 +35,25 @@ section {
             @include dflex(space-between, center, nowrap);
             @include fontSize(1rem, #666666, 900);
             padding-top: 0.5rem;
+            @media (max-width: 996px) {
+              flex-direction: column;
+              justify-content: start;
+              align-items: start;
+            }
             .informItem {
               white-space: nowrap;
+              @media (max-width: 996px) {
+                padding-bottom: 0.25rem;
+              }
               &.btn-detail {
                 padding: 4px 16px;
                 border-radius: 16px;
                 border: 1px solid gray;
+                @media (max-width: 996px) {
+                  font-size: 14px;
+                  width: 30%;
+                  margin: 0 0 0 auto;
+                }
               }
             }
           }

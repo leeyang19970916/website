@@ -1,6 +1,9 @@
 #callingProgress-container {
-  padding: 1.25rem 1rem;
-  max-width: 996px;
+  // padding: 1.25rem 1rem;
+  margin: 1rem auto;
+  padding: 1rem 0.75rem;
+  max-width: 390px;
+  border-radius: 8px;
   .section-container {
     .title {
       @include fontSize(1.5rem, #53b6b7, 900);
@@ -8,25 +11,25 @@
       border-radius: 8px 8px 0px 0px;
       border-bottom: 1px solid #53b6b7;
       background: rgba(238, 252, 251, 1);
-      padding: 0.25rem 1rem;
+      padding: 0.25rem 0.75rem;
     }
     .content {
       @include fontSize(1rem, #4a4a4a, 500);
       letter-spacing: 1.12px;
-      padding: 0.5rem 1rem;
+      padding: 0.5rem 0.75rem;
       .phone,
       .addr {
-        padding: 0.5rem 0;
+        padding: 0.25rem 0;
       }
       .doctorList-container {
         @include dflex(center, center, nowrap);
-        margin: 1rem 0;
+        margin: 0.5rem 0 1rem 0;
         .doctorList {
           @include dflex(start, center, nowrap);
           width: 100%;
           .doctorItem {
             @include fontSize(1rem, #c0c0c0, 500);
-            width: calc(100% / 4);
+            width: calc(100% / 3);
             text-align: center;
             padding-bottom: 0.5rem;
             padding: 0 1rem;
@@ -43,12 +46,12 @@
       }
       .calling-container {
         .callingCard {
-          width: 50%;
+          width: 90%;
           margin: 0 auto;
           border-radius: 16px;
           @include dflex(null, center);
           box-shadow: 4px 0px 4px 0px rgba(0, 0, 0, 0.25);
-          height: 60px;
+          height: 50px;
           .title {
             height: 100%;
             width: 40%;
@@ -63,15 +66,15 @@
             width: 60%;
             border-radius: 0 16px 16px 0;
             background: #193737;
-            @include dflex(center, center);
+            @include dflex(end, center);
             padding: 0 1rem;
             .over {
               @include fontSize(1rem, gray, 600);
-              padding-top: 0.75rem;
+              padding-top: 5px;
             }
             .number {
               padding-left: 0.5rem;
-              line-height: 50%;
+              // line-height: 50%;
               @include fontSize(1.75rem, #ffa800, 900);
             }
           }
@@ -83,7 +86,7 @@
           background: #fff;
           @include fontSize(1rem, #ea4438, 500);
           @include dflex(center, center);
-          width: 10%;
+          width: 30%;
           padding: 0.25rem 0;
           white-space: nowrap;
         }
@@ -101,21 +104,42 @@
     padding: 0;
     .clinic-week-col {
       &:first-child {
-        background-color: wheat;
         min-width: 30%;
       }
+      width: calc((100% - 30%) / 7);
       .item {
         min-height: 60px;
-        // height: auto;
-        .stateName {
+        span {
           padding: 0;
-          @include fontSize(16px, #4a4a4a, 400);
+          font-size: 0.5rem;
+        }
+        .active {
+          height: 10px;
+          width: 10px;
+        }
+        .stateName {
+          padding: 0 !important;
+          font-size: 0.5rem;
         }
         .range {
           padding: 0;
-          @include fontSize(12px, #4a4a4a, 400);
+          font-size: 0.25rem !important;
         }
       }
     }
+  }
+}
+
+.clinicDetail-progress {
+  .title {
+    @include fontSize(1.5rem, #2b9293, 400);
+    padding: 0.25rem 0.75rem;
+  }
+
+  .card {
+    @include fontSize(1rem, #4a4a4a, 400);
+    letter-spacing: 1.92px;
+    margin-top: 0.25rem;
+    padding: 0.25rem 0.75rem;
   }
 }

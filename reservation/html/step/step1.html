@@ -11,7 +11,7 @@
   </head>
 
   <body>
-    <div id="container-bg" class=" border p-0">
+    <div id="container-bg" class="border p-0">
       <header class="header"></header>
       <div id="step-container">
         <div class="step"></div>
@@ -79,6 +79,22 @@
               </div>
             </div>
           </div>
+          <div class="option-container-pd">
+            <div class="time-container">
+              <select class="form-select" aria-label="Default select example">
+                <option value="1" selected>早診</option>
+                <option value="2">午診</option>
+                <option value="3">晚診</option>
+              </select>
+
+              <div class="time-list">
+                <div class="timeItem active">9:00</div>
+                <div class="timeItem">9:00</div>
+                <div class="timeItem">9:00</div>
+                <div class="timeItem">9:00</div>
+              </div>
+            </div>
+          </div>
         </section>
 
         <section class="stepControl">
@@ -109,7 +125,7 @@
 </script>
 <script>
   // 跳頁來這邊 得到clinicID
-  let clinicID=123546
+  let clinicID = 123546;
   let reservation = new RESERVATION_DATE(clinicID);
   console.log(reservation, "reservation");
 </script>

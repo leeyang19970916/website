@@ -1,11 +1,13 @@
 #step-container {
   .step {
     @include dflex(space-between, center, nowrap);
-    // margin-bottom: 1.5rem;
     position: relative;
     padding: 2rem 0;
     width: 90%;
     margin: 0 auto 0rem auto;
+    @media (max-width: 996px) {
+      padding: 0.5rem 0;
+    }
   }
   .line {
     position: absolute;
@@ -24,9 +26,11 @@
     border-radius: 10px 10px 0px 0px;
     padding: 0.75rem 0;
     background-color: white;
-    box-shadow: 0 0 0 5px white; /* 调整颜色和模糊程度 */
-
-    // margin: 1rem 0;
+    box-shadow: 0 0 0 5px white;
+    @media (max-width: 996px) {
+      flex-direction: column;
+      border: none !important;
+    }
     z-index: 100;
     .stepItem-num {
       @include fontSize(1rem, #53b6b7, 400);
@@ -40,15 +44,28 @@
     }
     .stepItem-name {
       letter-spacing: 2px;
+      @media (max-width: 996px) {
+        margin-top: 0.5rem;
+        text-align: center;
+      }
     }
     &.active {
       background: #53b6b7 !important;
       color: white !important;
       border-bottom: 3px solid #2b9293 !important;
-      // 3px solid #2B9293
+      @media (max-width: 996px) {
+        background-color: white !important;
+        color: #53b6b7 !important;
+        border: none;
+        border-bottom: none !important;
+      }
       .stepItem-num {
         background-color: white !important;
         color: #53b6b7 !important;
+        @media (max-width: 996px) {
+          background-color: #53b6b7 !important;
+          color: white !important;
+        }
       }
     }
   }
@@ -57,10 +74,14 @@
   width: 90%;
   padding: 0 1rem;
   margin: 1rem auto;
+  @media (max-width: 996px) {
+    margin: 0.5rem auto;
+    padding: 0;
+  }
   .title {
     position: relative;
     .title-name {
-      @include fontSize(28px, gray, 900);
+      @include fontSize(28px, #4a4a4a, 900);
       background-color: white;
       display: inline-block;
       position: relative;
@@ -79,6 +100,9 @@
   .option-container {
     @include dflex(start, center, wrap);
     margin: 1rem 0;
+    @media (max-width: 996px) {
+      margin: 0.5rem 0;
+    }
   }
 }
 #doctorList {
@@ -90,6 +114,9 @@
       border-radius: 10px;
       @include fontSize(20px, rgba(74, 74, 74, 0.3), 400);
       border: 1px solid rgba(205, 205, 205, 0.5);
+      @media (max-width: 996px) {
+        padding: 0.25rem 0.75rem;
+      }
     }
   }
 }
@@ -98,6 +125,10 @@
     width: 100%;
     @include dflex(space-between, center, wrap);
     @include fontSize(20px, #24a8a7, 600);
+    @media (max-width: 996px) {
+      width: 75%;
+      margin: 0 auto;
+    }
   }
   .date-week {
     margin-top: 1rem;
@@ -124,6 +155,9 @@
       border-radius: 4px;
       margin: 0.5rem;
       cursor: pointer;
+      @media (max-width: 996px) {
+        height: 30px;
+      }
       &.none {
         cursor: initial;
       }
@@ -150,8 +184,31 @@
   .option-container {
     flex-direction: column;
     align-items: start;
+    @media (max-width: 996px) {
+      display: none;
+    }
+  }
+  .option-container-pd {
+    display: none;
+    @media (max-width: 996px) {
+      display: flex;
+      width: 100%;
+      text-align: center;
+    }
+    .form-select {
+      width: 100%;
+      border-radius: 16px;
+      border: 1px solid #666;
+      padding: 0.5rem 2rem 0.5rem 0.5rem;
+      width: calc(100% / 3 - 0.5rem);
+      margin: 0.75rem 0;
+    }
   }
   .time-container {
+    @media (max-width: 996px) {
+      width: 100%;
+    }
+
     .time-title {
       @include fontSize(20px, gray, bold);
       letter-spacing: 14%;
@@ -167,17 +224,31 @@
         margin: 0.5rem;
         margin-left: 0;
         padding: 0.5rem 2rem;
+        @media (max-width: 996px) {
+          padding: 0.5rem;
+          width: calc(100% / 3 - 0.5rem);
+        }
       }
     }
   }
 }
 .stepControl {
-  @include dflex(center, center);
+  @include dflex(center, center, nowrap);
   margin-bottom: 2rem;
+  @media (max-width: 996px) {
+    // margin-bottom: 1rem;
+    @include dflex(space-between, center, nowrap);
+    width: 90%;
+    margin: 0 auto 1rem auto;
+  }
   .stepbtn {
     @include fontSize(24px, rgb(74, 74, 74, 30%), bold);
-    letter-spacing: 14%;
     @include button();
+    @media (max-width: 996px) {
+      margin: 0;
+      width: calc(50% - 1rem);
+      padding: 0.5rem;
+    }
   }
 }
 
@@ -187,6 +258,10 @@
     flex-direction: column;
     justify-content: start;
     align-items: start;
+    @media (max-width: 996px) {
+      width: 90%;
+      margin: 0.5rem auto;
+    }
     .reservationContent-item {
       @include dflex(start, center, wrap);
       @include fontSize(1.25rem, #4a4a4a, 400);
@@ -211,26 +286,51 @@
     .first_followUp {
       width: 100%;
       @include dflex(center, center, nowrap);
+      @media (max-width: 996px) {
+        width: 90%;
+        margin: 0 auto;
+        // @include dflex(space-between, center, nowrap);
+        justify-content: space-between;
+        flex-wrap: wrap;
+      }
       .first_followUpBtn {
         @include button();
-        // padding: 0.5rem 3.5rem;
         width: 30%;
         font-size: 1.25rem;
+        @media (max-width: 996px) {
+          width: calc(100% / 2 - 0.5rem);
+          // font-size: 1rem;
+          padding: 0.5rem 0;
+        }
       }
     }
     .inform-input {
       @include dflex(center, null, nowrap, column);
       width: 100%;
       margin: 1.5rem 0 0 0;
+      @media (max-width: 996px) {
+        // margin-top: 1rem;
+        width: 90%;
+        margin: 1rem auto 0 auto;
+      }
       .inform-input-item {
         @include input();
         width: 50%;
         margin-left: auto;
         margin-right: auto;
+        @media (max-width: 996px) {
+          width: 100%;
+          margin-bottom: 1rem;
+          @include dflex(start, start, nowrap, column);
+          // flex-direction: column;
+        }
         .label {
           @include fontSize(1rem, gray, 400);
           @include dflex(space-between, center, nowrap);
           margin-right: 1rem;
+          @media (max-width: 996px) {
+            margin-bottom: 0.5rem;
+          }
           .word {
             display: block;
           }
@@ -240,15 +340,26 @@
           width: 75%;
           border-radius: 16px;
           border: 1px solid #c0c0c0;
+          @media (max-width: 996px) {
+            width: 100%;
+          }
         }
         &.form-check {
           position: relative;
           width: 40%;
           white-space: nowrap;
+          @media (max-width: 996px) {
+            // margin: 0 !important;
+            // width: 100% !important;
+          }
           .form-check-input {
             width: 25px;
             height: 25px;
             border-color: rgb(74, 74, 74, 0.7);
+            @media (max-width: 996px) {
+              width: 20px;
+              height: 20px;
+            }
             &:focus {
               box-shadow: 0 0 0 2px rgb(74, 74, 74, 0.3);
             }
@@ -263,6 +374,11 @@
             @include fontSize(1.25rem, #4a4a4a, bold);
             position: absolute;
             top: 6%;
+            @media (max-width: 996px) {
+              padding: 0;
+              font-size: 12px;
+              top: 22%;
+            }
           }
         }
       }
@@ -288,18 +404,35 @@
     margin: 2rem auto 3.5rem auto;
     justify-content: space-between;
     align-items: start;
-    // margin: 1. 0;
+    @media (max-width: 996px) {
+      width: 90%;
+      margin: 1rem auto;
+      flex-direction: column;
+      align-items: center;
+    }
     .inform-content-container {
+      @media (max-width: 996px) {
+        // width: 100%;
+      }
       .informContent-item {
         @include dflex(start, center, nowrap);
         @include fontSize(1.25rem, #4a4a4a, 400);
         letter-spacing: 2.8px;
         margin-bottom: 1.5rem;
+        @media (max-width: 996px) {
+          margin-bottom: 1rem ;
+          // width: 100%;
+        }
         .informContent-item-label {
           min-width: 150px;
           text-align: end;
           white-space: nowrap;
           padding-right: 1.5rem;
+          @media (max-width: 996px) {
+            text-align: start;
+            min-width: none;
+            padding-right: 1rem;
+          }
         }
         .informContent-item-value {
           white-space: nowrap;
@@ -307,5 +440,11 @@
         }
       }
     }
+  }
+}
+.stepIcon-container{
+  @include dflex (start,start,wrap,column);
+  @media (max-width: 996px) {
+    flex-direction: row;
   }
 }
