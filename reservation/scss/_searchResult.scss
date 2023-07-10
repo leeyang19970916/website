@@ -44,13 +44,18 @@ section {
               white-space: nowrap;
               @media (max-width: 996px) {
                 padding-bottom: 0.25rem;
+                font-weight: bold;
+                letter-spacing: 1px;
+                white-space: pre-wrap;
               }
               &.btn-detail {
                 padding: 4px 16px;
                 border-radius: 16px;
+                @include fontSize(1rem,#666,400);
                 border: 1px solid gray;
+                white-space: nowrap;
                 @media (max-width: 996px) {
-                  font-size: 14px;
+                  
                   width: 30%;
                   margin: 0 0 0 auto;
                 }

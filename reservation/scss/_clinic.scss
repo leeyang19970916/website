@@ -1,9 +1,18 @@
+#formal-container {
+  @media (max-width: 996px) {
+    width: 100%;
+    margin-top: 0.25rem;
+  }
+}
 .clinicImage {
   @include dflex(space-between, end, wrap);
   padding: 0 1rem;
   background-color: #53b6b7;
   @include backgroundImage("../image/卡比.jpg");
   height: 500px;
+  @media (max-width: 996px) {
+    display: none;
+  }
   .inform {
     @include fontSize(18px, white, 700);
     .departmentList {
@@ -16,20 +25,38 @@
     }
   }
 }
+
 .content-container {
+  @media (max-width: 996px) {
+    padding: 0;
+    width: 95%;
+    margin: 0 auto;
+  }
   .inform-detail {
     @include fontSize(20px, #666666, 500);
     letter-spacing: 0.08em;
+    @media (max-width: 996px) {
+      padding: 0.5rem 0;
+    }
     .phone,
     .address,
     .facebook {
       margin-bottom: 0.75rem;
+      @media (max-width: 996px) {
+        margin-bottom: 0.25rem;
+      }
     }
   }
   .conditionList {
     --triangle: 20px;
+    @media (max-width: 996px) {
+      --triangle: 15px;
+    }
     @include dflex(start, center, wrap);
     padding: 0 var(--triangle);
+    @media (max-width: 996px) {
+      padding-top: 0.5rem;
+    }
     .conditionItem {
       font-size: 1rem;
       @include dflex(center, center, nowrap);
@@ -64,6 +91,9 @@
     border-bottom: 1px solid #cdcdcd;
     padding: 1rem 2.5rem;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.05);
+    @media (max-width: 996px) {
+      padding: 0.5rem 0;
+    }
   }
   .card-body {
     @include fontSize(20px, #666666, 400);
@@ -71,6 +101,10 @@
     background-color: transparent;
     border: 0;
     box-shadow: none;
+    @media (max-width: 996px) {
+      padding: 0.5rem 0;
+      margin-top: 0.5rem;
+    }
   }
   .content {
     @include fontSize(20px, #666666, 400);
@@ -93,14 +127,24 @@
 
 #simple-container {
   margin: 2rem auto;
+  @media (max-width: 996px) {
+    margin: 1rem auto;
+  }
   .simpleCard {
     background-color: white;
     box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.05);
     border-radius: 10px;
     padding: 1.5rem 0;
+    @media (max-width: 996px) {
+      padding: 1rem 0;
+    }
     .simpleCard-container {
       width: 90%;
       margin: 0 auto;
+      @media (max-width: 996px) {
+        width: 100%;
+        padding: 0 1rem;
+      }
     }
     .departmentList {
       @include dflex(null, center, wrap);
@@ -111,25 +155,103 @@
         @include fontSize(14px, #666666, null);
         margin-right: 1rem;
         border-radius: 10px;
+        @media (max-width: 996px) {
+          margin-right: 0.5rem;
+          padding: 4px 0.5rem;
+        }
       }
     }
     .clinicName,
     .clinicTime {
-      @include fontSize(40px, #53b6b7, 900);
+      @include fontSize(2rem, #53b6b7, 900);
       padding-bottom: 0.5rem;
       border-bottom: 1px solid #cdcdcd;
+      @media (max-width: 996px) {
+        padding-bottom: 0.25rem;
+      }
     }
     .phone,
     .address,
     .alert {
-      @include fontSize(20px, #666666, 7 00);
+      @include fontSize(20px, #666666, 500);
       letter-spacing: 0.08em;
       margin: 0.5rem 0;
       padding: 0;
-      // margin-bottom: 1rem;
+      @media (max-width: 996px) {
+        margin: 0.25rem 0;
+      }
     }
     .clinicTime {
-      font-size: 28px;
+      @include fontSize(1.75rem, #53b6b7, 900);
+    }
+  }
+}
+
+
+
+
+
+// RWD
+.clinicImage_pd {
+  display: none;
+  @media (max-width: 996px) {
+    display: block;
+    width: 95%;
+    margin: 0 auto;
+    padding-top: 15px;
+    .departmentList{
+      @include dflex(start,center,wrap);
+      position: relative;
+      padding-top: 0.5rem;
+      .departmentItem{
+        @include fontSize(1.75rem,#53B6B7,700);
+        letter-spacing: 0.16px;
+        padding-right: 0.5rem;
+      }
+      .line{
+        transform: translate(0px, -2px);
+
+      }
+    }
+    .clinicName{
+      @include fontSize(2.25rem,#53B6B7,900);
+      border-bottom: 2px solid #53B6B7;
+    }
+  }
+}
+#container-bg{
+  @media (max-width: 996px) {
+    position: relative;
+    .h-pd{
+      height: 52px;
+      // padding: 0.25rem 0;
+    }
+  }
+  .btn-container-pd{
+    display: none;
+    // background-color: white;
+    @media (max-width: 996px) {
+      @include dflex(space-between,center,nowrap);
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      height: 50px;
+      right: 0;
+      .progress-link,.reservation-link{
+        height: 100%;
+        width: 50%;
+        text-align: center;
+        @include fontSize(1.75rem,white,700);
+        @include dflex (center,center,nowrap);
+        letter-spacing: 0.05em;
+        white-space: nowrap;
+      }
+      .progress-link{
+        background-color: #2b9293;
+      }
+      .reservation-link{
+        background-color: #53B6B7;
+      }
     }
   }
 }

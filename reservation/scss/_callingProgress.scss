@@ -94,42 +94,43 @@
     }
   }
 }
-.schedule-container {
-  transform: none;
-  .content {
-    padding: 0.5rem 0 !important;
-  }
-  .schedule {
-    border: none;
-    padding: 0;
-    .clinic-week-col {
-      &:first-child {
-        min-width: 30%;
-      }
-      width: calc((100% - 30%) / 7);
-      .item {
-        min-height: 60px;
-        span {
-          padding: 0;
-          font-size: 0.5rem;
+#callingProgress-container {
+  .schedule-container {
+    transform: none;
+    .content {
+      padding: 0.5rem 0;
+    }
+    .schedule {
+      border: none;
+      padding: 0;
+      .clinic-week-col {
+        &:first-child {
+          min-width: 30%;
         }
-        .active {
-          height: 10px;
-          width: 10px;
-        }
-        .stateName {
-          padding: 0 !important;
-          font-size: 0.5rem;
-        }
-        .range {
-          padding: 0;
-          font-size: 0.25rem !important;
+        width: calc((100% - 30%) / 7);
+        .item {
+          min-height: 60px;
+          span {
+            padding: 0;
+            font-size: 0.75rem;
+          }
+          .active {
+            height: 10px;
+            width: 10px;
+          }
+          .stateName {
+            padding: 0 ;
+            font-size: 0.75rem;
+          }
+          .range {
+            padding: 0;
+            font-size: 0.75rem;
+          }
         }
       }
     }
   }
 }
-
 .clinicDetail-progress {
   .title {
     @include fontSize(1.5rem, #2b9293, 400);

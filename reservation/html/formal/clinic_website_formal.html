@@ -11,7 +11,7 @@
 
   <body>
     <div id="container-bg" class="border p-0">
-      <header class="header"></header>
+      <header class="header"></header> 
       <div id="formal-container">
         <div class="clinicImage">
           <div class="inform">
@@ -30,6 +30,17 @@
             </div>
           </div>
         </div>
+        <div class="clinicImage_pd">
+          <div><img class="w-100" src="../../image/卡比.jpg" alt="" /></div>
+          <div class="departmentList">
+            <div class="departmentItem">家醫科</div>
+            <div class="departmentItem line">|</div>
+            <div class="departmentItem">小兒科</div>
+            <div class="departmentItem line">|</div>
+            <div class="departmentItem">耳鼻喉科</div>
+          </div>
+          <div class="clinicName">愛管家小兒科診所</div>
+        </div>
         <div class="content-container">
           <div class="inform-detail">
             <div class="phone">02-82822809</div>
@@ -38,7 +49,9 @@
             </div>
             <div class="facebook">愛管家小雸科診所 紛絲專頁</div>
           </div>
-
+          <div id="schedule-pd" class="schedule">
+            <div class="clinic-week"></div>
+          </div>
           <div class="conditionList">
             <span class="conditionItem">週六看診</span
             ><span class="conditionItem">週六看診</span
@@ -169,8 +182,12 @@
 
         <section class="ad-loop">ad廣告輪播</section>
       </div>
-
+<div class="btn-container-pd">
+  <div class="progress-link">現場看診進度</div>
+  <div class="reservation-link">立即預約</div>
+</div>
       <footer></footer>
+      <div class="h-pd"></div>
     </div>
   </body>
 </html>
@@ -183,6 +200,9 @@
   let page = new PAGINATION(5);
 </script>
 <script>
+
   let SleepData = ["02", "61", "43", "52", "33", "32"];
   let schedule = new SCHEDULE(SleepData);
+  let schedule_pd_DOM=document.querySelector("#schedule-pd.schedule .clinic-week")
+  let schedule_pd = new SCHEDULE(SleepData).changeDom(schedule_pd_DOM);
 </script>

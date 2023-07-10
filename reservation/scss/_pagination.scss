@@ -36,7 +36,7 @@ ul {
   justify-content: center;
   color: var(--greyDark);
   cursor: initial;
-  &.state{
+  &.state {
     cursor: initial;
   }
   span {
@@ -84,6 +84,9 @@ ul {
     margin: 0.25rem 0.5rem;
     font-size: 1rem;
     cursor: pointer;
+    @media (max-width: 996px) {
+      margin: 2px 0.25rem;
+    }
   }
 
   &__dots {
@@ -101,6 +104,12 @@ ul {
     // height: 1.5rem;
     padding: 0.5rem 0.75rem;
     border-radius: 0.4rem;
+    @media (max-width: 996px) {
+      padding: 0;
+      width: 30px;
+      height: 30px;
+      border-radius: 50px;
+    }
 
     &:hover {
       color: var(--primary);

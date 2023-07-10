@@ -5,6 +5,10 @@ class SCHEDULE {
       this.week = ["日", "一", "二", "三", "四", "五", "六"];
       this.initUIRender();
     }
+    changeDom(newDom){
+      this.dom=newDom
+      this.initUIRender();
+    }
     initUIRender() {
       let initField = this.initField();
       let initWeek = this.initWeek();
@@ -55,7 +59,7 @@ class SCHEDULE {
       for (let i = 0; i < this.data.length; i++) {
           const element = this.data[i];
           let dom=document.querySelector(`[data-id="${element}"]`)
-          console.log(dom,"dom")
+          console.log(dom,"dommm",element,"element")
           dom.innerHTML=`<span class="">休</span>`
       }
     }
