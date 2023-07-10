@@ -3,11 +3,22 @@ class SCHEDULE {
       (this.dom = document.querySelector(".schedule .clinic-week")),
       (this.data = data);
       this.week = ["日", "一", "二", "三", "四", "五", "六"];
+      this.mediaScreen="pc"
       this.initUIRender();
+
     }
     changeDom(newDom){
-      this.dom=newDom
+      this.dom=newDom;
       this.initUIRender();
+    }
+    changeMediaScreen(){
+      if (this.mediaScreen==="pc") {
+        this.mediaScreen="pd"
+      }else{
+        this.mediaScreen="pc"
+      }
+      return this
+
     }
     initUIRender() {
       let initField = this.initField();
@@ -56,12 +67,20 @@ class SCHEDULE {
       return str;
     }
     initDataUIRender(){
+      if (this.mediaScreen==="pd") {
+        for (let i = 0; i < this.data.length; i++) {
+          const element = this.data[i];
+          let dom=document.querySelector(`#schedule-pd .clinic-week [data-id="${element}"]`)
+          dom.innerHTML=`<span class="">休</span>`
+      }
+        return
+      }
       for (let i = 0; i < this.data.length; i++) {
           const element = this.data[i];
           let dom=document.querySelector(`[data-id="${element}"]`)
-          console.log(dom,"dommm",element,"element")
           dom.innerHTML=`<span class="">休</span>`
       }
+
     }
   }
   

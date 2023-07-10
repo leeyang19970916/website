@@ -578,12 +578,17 @@ ul {
 }
 @media (max-width: 996px) {
   .content-container .conditionList {
-    --triangle: 15px;
+    --triangle: 0.75rem;
   }
 }
 @media (max-width: 996px) {
   .content-container .conditionList {
     padding-top: 0.5rem;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
   }
 }
 .content-container .conditionList .conditionItem {
@@ -600,6 +605,11 @@ ul {
   margin: 0.5rem 0;
   margin-right: calc(1rem + var(--triangle));
   position: relative;
+}
+@media (max-width: 996px) {
+  .content-container .conditionList .conditionItem {
+    margin-right: calc(0.5rem + var(--triangle));
+  }
 }
 .content-container .conditionList .conditionItem::before {
   content: "";

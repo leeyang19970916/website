@@ -50,12 +50,13 @@
   .conditionList {
     --triangle: 20px;
     @media (max-width: 996px) {
-      --triangle: 15px;
+      --triangle: 0.75rem;
     }
     @include dflex(start, center, wrap);
     padding: 0 var(--triangle);
     @media (max-width: 996px) {
       padding-top: 0.5rem;
+      @include dflex(start, center, wrap);
     }
     .conditionItem {
       font-size: 1rem;
@@ -67,6 +68,11 @@
       margin: 0.5rem 0;
       margin-right: calc(1rem + var(--triangle));
       position: relative;
+      @media (max-width: 996px) {
+        // padding: 0 0.5rem;
+        margin-right: calc(0.5rem + var(--triangle));
+        // margin: 0.5rem 0;
+      }
       &::before {
         content: "";
         position: absolute;

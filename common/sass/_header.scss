@@ -1,73 +1,108 @@
-header{
-    &.header{
-        padding: 1rem 0 ;
-        width: 100%;
-        border-bottom: 1px solid gainsboro;
-        background-color: white;
-        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.05);
-        margin-bottom: 3px;
-        min-height: 5%;
-        @media screen and (max-width:996px) { 
-            
-          }
-        #header-container{
-
-            @include dflex(space-between,center) ;
-            @include content-container-maxWidth();
-
-        }
-        .header-left{
-            @include dflex(null,center) ;
-            .header-nav{
-                @include dflex(null,center) ;
-                @media (max-width: 996px) {
-                    display: none;
-                  }
-                .header-nav-item{
-                    padding: 0 1rem;
-                    cursor: pointer;
-                    font-weight: 700;
-                }
-            }
-        }
-        .header-right{
-            @include dflex(end,null) ;
-            @media (max-width: 996px) {
-                display: none;
-              }
-            .search{
-                @include dflex(null,center) ;
-                position: relative;
-                .seacrh-icon{
-                    position: absolute;
-                    top: 50%;
-                    right: 0;
-                    transform: translate(0%, -50%);
-                }
-            }
-            .form-control{
-                border-radius: 50px;
-                min-width: 250px
-            }
-            button{
-                &.btnLink{
-                    @include fontSize(1rem, #53B6B7,500);
-                    border-radius: 20px;
-                    // margin: 0 0.75rem;
-                    margin-left: 1rem;
-                    border: 1px solid #53B6B7;
-                    padding: 0px 12px;
-                    white-space: nowrap;
-
-                }
-            }
-        }
-        .menuIcon{
-            display: none;
-            @media (max-width: 996px) {
-                display: block;
-              }
-
-        }
+header {
+  &.header {
+    padding: 1rem 0;
+    width: 100%;
+    border-bottom: 1px solid gainsboro;
+    background-color: white;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.05);
+    margin-bottom: 3px;
+    min-height: 5%;
+    @media screen and (max-width: 996px) {
     }
+    #header-container {
+      @include dflex(start, center, nowrap);
+      @include content-container-maxWidth();
+      @media screen and (max-width: 996px) {
+        justify-content: space-between;
+    }
+    }
+    .header-left {
+      @include dflex(null, center);
+      // .header-nav{
+      //     @include dflex(null,center) ;
+      //     @media (max-width: 996px) {
+      //         display: none;
+      //       }
+      //     .header-nav-item{
+      //         padding: 0 1rem;
+      //         cursor: pointer;
+      //         font-weight: 700;
+      //     }
+      // }
+    }
+    .header-right {
+      width: 100%;
+      background-color: lightblue;
+      border-radius: 0 0 10px 10px;
+      // @include dflex(end,null) ;
+      // @media (max-width: 996px) {
+      //   }
+      // .search{
+      //     @include dflex(null,center) ;
+      //     position: relative;
+      //     .seacrh-icon{
+      //         position: absolute;
+      //         top: 50%;
+      //         right: 0;
+      //         transform: translate(0%, -50%);
+      //     }
+      // }
+      // .form-control{
+      //     border-radius: 50px;
+      //     min-width: 250px
+      // }
+      // button{
+      //     &.btnLink{
+      //         @include fontSize(1rem, #53B6B7,500);
+      //         border-radius: 20px;
+      //         // margin: 0 0.75rem;
+      //         margin-left: 1rem;
+      //         border: 1px solid #53B6B7;
+      //         padding: 0px 12px;
+      //         white-space: nowrap;
+
+      //     }
+      // }
+      @include dflex(space-between, center, nowrap);
+      @media (max-width: 996px) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        @include dflex(start, center, nowrap,column);
+      }
+      .header-nav {
+        @include dflex(start, center, nowrap);
+        @include fontSize(1rem, #333, 400);
+        @media screen and (max-width: 996px) {
+            flex-direction: column;
+        }
+        .header-nav-item {
+          padding: 0 1rem;
+          cursor: pointer;
+          @media screen and (max-width: 996px) {
+            padding: 1rem 0;
+        }
+        }
+      }
+      .header-link {
+        @include dflex(start, center, nowrap);
+        .btnLink-item {
+          // padding: 0 0.25rem ;
+          margin: 0 0.25rem;
+
+          @include fontSize(1rem, #53b6b7, 400);
+          border-radius: 20px;
+          border: 1px solid #53b6b7;
+          background-color: white;
+        }
+      }
+    }
+    .menuIcon {
+      display: none;
+      @media (max-width: 996px) {
+        display: block;
+      }
+    }
+  }
 }
