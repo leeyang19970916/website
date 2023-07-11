@@ -116,7 +116,11 @@
                     </div>
                     <div class="reservationItem">
                       <label class="label" for="">預約時間</label>
-                      <span>早診 09:00</span>
+                      <span>早診 </span>
+                      <span>|</span>
+                      <span>09:00</span>
+                      <span>|</span>
+                      <span class="reservationItem_number">50號</span>
                     </div>
                     <div class="reservationItem">
                       <label class="label" for="">預約醫師</label>
@@ -145,19 +149,17 @@
   // post API ID/Date
 
   // get list
-function postAPItoSearch(params) {
-  let userDate=document.querySelector(".userDate").value || false
-  let userID=document.querySelector(".userID").value || false
-  if (!userDate || !userID) {
-    console.log("id或是生日不能為空值")
+  function postAPItoSearch(params) {
+    let userDate = document.querySelector(".userDate").value || false;
+    let userID = document.querySelector(".userID").value || false;
+    if (!userDate || !userID) {
+      console.log("id或是生日不能為空值");
+    }
+    console.log(userDate, userID);
   }
-  console.log(userDate,userID)
-}
-
-
 </script>
 <script>
-// cancel reservation
-// post API reservationID
-// delete finish
+  // cancel reservation
+  // post API reservationID
+  // delete finish
 </script>
