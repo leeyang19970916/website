@@ -1,6 +1,5 @@
 .schedule-container {
   transform: translate(0px, 130px);
-  // width: 50%;
 }
 .item {
   width: auto;
@@ -20,14 +19,11 @@
     text-align: center;
     @include fontSize(24px, #4a4a4a, 400);
     @include dflex(null, null, nowrap);
-
     .clinic-week-col {
       &:first-child {
-        // width: calc(100% / 8);
         min-width: 20%;
       }
       width: calc(80% / 7);
-      // border: 1px solid #000;
       &:first-child .item {
         border-left: none;
       }
@@ -38,8 +34,6 @@
         @include fontSize(1rem, null, 900);
         &.state {
           @include dflex(center, center, nowrap, column);
-          // font-size: 1.25rem;
-
           .stateName {
             padding-top: 10px;
           }
@@ -60,7 +54,10 @@
         // width: auto;
         @include dflex(center, center, nowrap);
         overflow: hidden;
-        height: 60px;
+        height: 65px;
+        @media (max-width: 576px) {
+          height: 75px;
+        }
         border: 1px dotted #e2e2e2;
         &:first-child {
           border-top: none;
@@ -227,5 +224,10 @@
         }
       }
     }
+  }
+}
+#simple-container{
+  #schedule-pd{
+    display: block;
   }
 }

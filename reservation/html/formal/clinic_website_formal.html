@@ -11,7 +11,7 @@
 
   <body>
     <div id="container-bg" class="border p-0">
-      <header class="header"></header> 
+      <header class="header"></header>
       <div id="formal-container">
         <div class="clinicImage">
           <div class="inform">
@@ -43,11 +43,27 @@
         </div>
         <div class="content-container">
           <div class="inform-detail">
-            <div class="phone">02-82822809</div>
-            <div class="address">
-              新北市蘆洲區長安街30、32號1樓市蘆洲區長安街30號
+            <div class="phone">
+              <img
+                class="iconSetting"
+                src="/reservation/image/icon/phone_icon.svg"
+                alt=""
+              />02-82822809
             </div>
-            <div class="facebook">愛管家小雸科診所 紛絲專頁</div>
+            <div class="address">
+              <img
+                class="iconSetting"
+                src="/reservation/image/icon/address_icon.svg"
+                alt=""
+              />新北市蘆洲區長安街30、32號1樓市蘆洲區長安街30號
+            </div>
+            <div class="facebook">
+              <img
+                class="iconSetting"
+                src="/reservation/image/icon/facebook_icon.svg"
+                alt=""
+              />愛管家小雸科診所 紛絲專頁
+            </div>
           </div>
           <div id="schedule-pd" class="schedule">
             <div class="clinic-week"></div>
@@ -100,79 +116,26 @@
             </div>
           </section>
           <section class="clinicDetail announce">
-            <div class="title">門診公告</div>
+            <div class="title">診所公告</div>
             <div class="content">
-              <ul class="list">
-                <li>
-                  <div>
-                    2023-06-01
-                    <span class="itemContent">Korem ipsum dolor sit amet</span>
+              <div class="announceList">
+                <div class="announceItem">
+                  <div class="announce-date">2023-06-03</div>
+                  <div class="announce-content">
+                    端午連假期間，本所於6/22（星期四）休診至6/25（星期日）。
+                    就醫民眾如有調整預約時段之需求，請留意您的看診或治療時間。
+                    愛管家小兒科診所與您同慶端午，祝福您平安健康！
                   </div>
-                  <div
-                    class="more"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#collapseExample1"
-                    aria-expanded="false"
-                    aria-controls="collapseExample1"
-                  >
-                    more>
+                </div>
+                <div class="announceItem">
+                  <div class="announce-date">2023-06-03</div>
+                  <div class="announce-content">
+                    端午連假期間，本所於6/22（星期四）休診至6/25（星期日）。
+                    就醫民眾如有調整預約時段之需求，請留意您的看診或治療時間。
+                    愛管家小兒科診所與您同慶端午，祝福您平安健康！
                   </div>
-                  <div class="collapse" id="collapseExample1">
-                    <div class="card card-body">
-                      Some placeholder content for the collapse component. This
-                      panel is hidden by default but revealed when the user
-                      activates the relevant trigger.
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div>
-                    2023-06-01
-                    <span class="itemContent">Korem ipsum dolor sit amet</span>
-                  </div>
-                  <div
-                    class="more"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#collapseExample1"
-                    aria-expanded="false"
-                    aria-controls="collapseExample1"
-                  >
-                    more>
-                  </div>
-                  <div class="collapse" id="collapseExample1">
-                    <div class="card card-body">
-                      Some placeholder content for the collapse component. This
-                      panel is hidden by default but revealed when the user
-                      activates the relevant trigger.
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div>
-                    2023-06-01
-                    <span class="itemContent">Korem ipsum dolor sit amet</span>
-                  </div>
-                  <div
-                    class="more"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#collapseExample1"
-                    aria-expanded="false"
-                    aria-controls="collapseExample1"
-                  >
-                    more>
-                  </div>
-                  <div class="collapse" id="collapseExample1">
-                    <div class="card card-body">
-                      Some placeholder content for the collapse component. This
-                      panel is hidden by default but revealed when the user
-                      activates the relevant trigger.
-                    </div>
-                  </div>
-                </li>
-              </ul>
+                </div>
+              </div>
               <section id="pagination" class="pagination">
                 <ul class="page"></ul>
               </section>
@@ -182,10 +145,10 @@
 
         <section class="ad-loop">ad廣告輪播</section>
       </div>
-<div class="btn-container-pd">
-  <div class="progress-link">現場看診進度</div>
-  <div class="reservation-link">立即預約</div>
-</div>
+      <div class="btn-container-pd">
+        <div class="progress-link">現場看診進度</div>
+        <div class="reservation-link">立即預約</div>
+      </div>
       <footer></footer>
       <div class="h-pd"></div>
     </div>
@@ -200,9 +163,10 @@
   let page = new PAGINATION(5);
 </script>
 <script>
-
   let SleepData = ["02", "61", "43", "52", "33", "32"];
   let schedule = new SCHEDULE(SleepData);
-  let schedule_pd_DOM=document.querySelector("#schedule-pd.schedule .clinic-week")
-  let schedule_pd = new SCHEDULE(SleepData).changeMediaScreen().changeDom(schedule_pd_DOM);
+  let schedule_pd_DOM = document.querySelector(
+    "#schedule-pd.schedule .clinic-week"
+  );
+  let schedule_pd = new SCHEDULE(SleepData).changeDom(schedule_pd_DOM);
 </script>

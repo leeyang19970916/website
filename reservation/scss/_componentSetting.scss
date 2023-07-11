@@ -21,6 +21,9 @@
 .borderBottom {
   border-bottom: #cdcdcd 1px solid;
 }
+.iconSetting{
+  @include iconSetting()
+}
 
 // container setting
 

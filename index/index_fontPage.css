@@ -1,10 +1,10 @@
 .active {
-  background: #24a8a7 !important;
+  background: #24a8a7;
   border-radius: 16px;
-  color: white !important;
+  color: white;
 }
 .active:hover {
-  background: #3dc7c7 !important;
+  background: #3dc7c7;
 }
 
 .header {

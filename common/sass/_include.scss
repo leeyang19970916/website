@@ -102,11 +102,15 @@
   }
 }
 .active {
-  background: #24a8a7 !important;
+  background: #24a8a7 ;
   border-radius: 16px;
-  color: white !important;
+  color: white ;
   &:hover {
-    background: #3dc7c7 !important;
+    background: #3dc7c7 ;
     // color: rgb(241, 238, 238) !important;
   }
+}
+@mixin iconSetting(){
+  margin-right: 0.25rem;
+  transform: translate(0px, -10%);
 }
