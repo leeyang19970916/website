@@ -83,15 +83,17 @@
                 </label>
                 <input type="text" class="form-control" />
               </div>
+              <div class="inform-input-item error-message">
+                <img src="/reservation/image/icon/alert_icon.svg" alt="">輸入資料格式或內容錯誤，請重新輸入
+              </div>
               <div class="inform-input-item form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
                 <label class="form-check-label" for="flexCheckChecked">
-                    我已知道並同意診所的約診注意事項
+                  我已了解並同意診所的<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked><span data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="form-check_alert">約診注意事項</span>
+
                                 </label>
             </div>
           </div>
         </section>
-
         <section class="stepControl">
           <div class="stepbtn">上一步</div>
           <div class="stepbtn active">確認預約</div>
@@ -99,6 +101,21 @@
         <section class="ad-loop">adlooper</section>
       </div>
       <footer></footer>
+    </div>
+    <div class="modal fade" id="staticBackdrop" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">注意事項</h5>
+          </div>
+          <div class="modal-body">
+            1561651651651fdgsdfgsdfgmjasdpm
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
@@ -129,4 +146,10 @@ function changeVisit(state){
     new CLASSHANDLER(target,'first_followUp')
 
 }
+// let alertDom=document.querySelector(".form-check_alert")
+// alertDom.addEventListener("click",alertHandler)
+// function alertHandler(e) {
+//   e.preventDefault()
+//   alert("1238458")
+// }
 </script>

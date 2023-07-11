@@ -12242,6 +12242,7 @@ footer {
 @media (max-width: 996px) {
   footer {
     padding: 0;
+    padding-bottom: 2rem;
   }
 }
 footer #footer-container {

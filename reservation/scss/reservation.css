@@ -1347,7 +1347,7 @@ ul {
   padding: 0.75rem 0;
   background-color: white;
   box-shadow: 0 0 0 5px white;
-  z-index: 100;
+  z-index: 20;
 }
 @media (max-width: 996px) {
   #step-container .stepItem {
@@ -1739,6 +1739,9 @@ ul {
     padding: 0.5rem;
   }
 }
+.stepControl .stepbtn.active {
+  color: white;
+}
 
 #reservation-content .option-container {
   flex-direction: column;
@@ -1922,15 +1925,39 @@ ul {
     width: 100%;
   }
 }
+#personal-inform .option-container .inform-input .inform-input-item.error-message {
+  margin-right: 0.25rem;
+  transform: translate(0px, -10%);
+  color: rgb(156, 14, 78);
+  width: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
 #personal-inform .option-container .inform-input .inform-input-item.form-check {
   position: relative;
-  width: 40%;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-wrap: wrap;
+  flex-direction: row;
   white-space: nowrap;
+}
+#personal-inform .option-container .inform-input .inform-input-item.form-check .form-check_alert {
+  color: #4a4a4a;
+  text-decoration: underline;
+  cursor: pointer;
 }
 #personal-inform .option-container .inform-input .inform-input-item.form-check .form-check-input {
   width: 25px;
   height: 25px;
   border-color: rgba(74, 74, 74, 0.7);
+  margin-right: 0.25rem;
+  transform: translate(0px, -10%);
 }
 @media (max-width: 996px) {
   #personal-inform .option-container .inform-input .inform-input-item.form-check .form-check-input {
@@ -2072,6 +2099,32 @@ ul {
   .stepIcon-container {
     flex-direction: row;
   }
+}
+
+.modal-backdrop {
+  background-color: transparent;
+}
+
+.modal .modal-header {
+  background-color: #24a8a7;
+}
+.modal .modal-title {
+  font-size: 1rem;
+  color: white;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  font-family: "Noto Sans TC", sans-serif;
+}
+@media (max-width: 996px) {
+  .modal .modal-title {
+    font-size: 14px;
+  }
+}
+.modal .modal-footer {
+  padding: 0.25rem 0;
+}
+.modal .modal-footer .btn {
+  width: 25%;
 }
 
 .search-bar {

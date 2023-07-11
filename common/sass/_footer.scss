@@ -4,6 +4,7 @@ footer {
   min-height: 5%;
   @media (max-width: 996px) {
     padding: 0;
+    padding-bottom: 2rem;
   }
   #footer-container {
     @include dflex(space-between, center);

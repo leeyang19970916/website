@@ -31,7 +31,7 @@
       flex-direction: column;
       border: none !important;
     }
-    z-index: 100;
+    z-index: 20;
     .stepItem-num {
       @include fontSize(1rem, #53b6b7, 400);
       @include dflex(center, center, nowrap);
@@ -249,6 +249,9 @@
       width: calc(50% - 1rem);
       padding: 0.5rem;
     }
+    &.active {
+      color: white;
+    }
   }
 }
 
@@ -344,10 +347,26 @@
             width: 100%;
           }
         }
+        &.error-message{
+          // display: none;
+          @include iconSetting();
+          color:rgba(156, 14, 78, 1);
+          width: 100%;
+          margin: 0;
+          @include dflex(center,center,nowrap)
+
+        }
         &.form-check {
           position: relative;
-          width: 40%;
+          // width: 40%;
+          width: auto;
+          @include dflex(center, start);
           white-space: nowrap;
+          .form-check_alert {
+            color: #4a4a4a;
+            text-decoration: underline;
+            cursor: pointer;
+          }
           @media (max-width: 996px) {
             // margin: 0 !important;
             // width: 100% !important;
@@ -356,6 +375,8 @@
             width: 25px;
             height: 25px;
             border-color: rgb(74, 74, 74, 0.7);
+            // transform: translate(0 ,1%);
+            @include iconSetting;
             @media (max-width: 996px) {
               width: 20px;
               height: 20px;
@@ -420,7 +441,7 @@
         letter-spacing: 2.8px;
         margin-bottom: 1.5rem;
         @media (max-width: 996px) {
-          margin-bottom: 1rem ;
+          margin-bottom: 1rem;
           // width: 100%;
         }
         .informContent-item-label {
@@ -442,9 +463,29 @@
     }
   }
 }
-.stepIcon-container{
-  @include dflex (start,start,wrap,column);
+.stepIcon-container {
+  @include dflex(start, start, wrap, column);
   @media (max-width: 996px) {
     flex-direction: row;
+  }
+}
+
+.modal-backdrop {
+  background-color: transparent;
+}
+
+.modal {
+  .modal-header {
+    background-color: #24a8a7;
+  }
+  .modal-title {
+    @include fontSize(1rem, white, 400);
+  }
+  .modal-footer{
+    padding: 0.25rem 0;
+    .btn{
+      width: 25%;
+      // margin: 0 auto;
+    }
   }
 }
