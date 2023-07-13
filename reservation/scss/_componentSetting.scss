@@ -16,6 +16,16 @@
   margin: 0;
   .form-control {
     width: 50%;
+    @media (max-width: 996px) {
+      width: 100%;
+    }
+  }
+  .keyword{
+    border-radius: 16px;
+  }
+  .fa-xmark{
+    color: rgba(183, 183, 183, 1);
+    transform: translate(-30px ,0);
   }
 }
 .borderBottom {

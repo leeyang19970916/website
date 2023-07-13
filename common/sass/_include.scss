@@ -21,7 +21,7 @@
 
 @mixin fontSize($fz, $color, $fw) {
   $font-size: $fz;
-  
+
   font-size: $fz;
   color: $color;
   font-weight: $fw;
@@ -34,7 +34,7 @@
     } @else {
       $font-size: calc(#{$fz} * 0.75);
     }
-    
+
     font-size: $font-size;
   }
 }
@@ -62,7 +62,7 @@
   margin: 0 1rem;
   color: rgb(74, 74, 74, 30%);
   // font-size: 24px;
-  @include fontSize(1.25rem,null ,500 );
+  @include fontSize(1.25rem, null, 500);
   letter-spacing: 0.14em;
   cursor: pointer;
   // width: 100%;
@@ -102,15 +102,15 @@
   }
 }
 .active {
-  background: #24a8a7 ;
+  background: #24a8a7;
   border-radius: 16px;
-  color: white ;
+  color: white;
   &:hover {
-    background: #3dc7c7 ;
+    background: #3dc7c7;
     // color: rgb(241, 238, 238) !important;
   }
 }
-@mixin iconSetting(){
+@mixin iconSetting() {
   margin-right: 0.25rem;
   transform: translate(0px, -10%);
 }

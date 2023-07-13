@@ -1,5 +1,10 @@
 .schedule-container {
-  transform: translate(0px, 130px);
+  transform: translate(0px, 100px);
+}
+#formal-container {
+  .schedule-container{
+    width: auto;
+  }
 }
 .item {
   width: auto;
@@ -13,11 +18,11 @@
   border: 1px solid #e2e2e2;
   border-radius: 10px;
   width: 100%;
-  padding: 1rem 1.25rem;
+  padding: 0.5rem 0.75rem;
   .clinic-week {
     width: 100%;
     text-align: center;
-    @include fontSize(24px, #4a4a4a, 400);
+    @include fontSize(1rem, #4a4a4a, 400);
     @include dflex(null, null, nowrap);
     .clinic-week-col {
       &:first-child {
@@ -31,7 +36,7 @@
         border-right: none;
       }
       .item {
-        @include fontSize(1rem, null, 900);
+        @include fontSize(1rem, null, 400);
         &.state {
           @include dflex(center, center, nowrap, column);
           .stateName {
@@ -54,9 +59,9 @@
         // width: auto;
         @include dflex(center, center, nowrap);
         overflow: hidden;
-        height: 65px;
+        height: 60px;
         @media (max-width: 576px) {
-          height: 75px;
+          height: 70px;
         }
         border: 1px dotted #e2e2e2;
         &:first-child {
@@ -68,8 +73,8 @@
         }
         .active {
           padding: 0;
-          width: 20px;
-          height: 20px;
+          width: 15px;
+          height: 15px;
           background: #53b6b7;
           border-radius: 50%;
           &.isWeekend {
@@ -172,12 +177,12 @@
 
 .resevation-container {
   @include dflex(center, center);
-  margin-top: 1.5rem;
+  margin-top: 1rem;
   .btn-link {
-    @include fontSize(20px, white, 500);
+    @include fontSize(1.25rem, white, 500);
     text-decoration: none;
     letter-spacing: 0.08em;
-    padding: 10px 20px;
+    padding: 0.5rem 0.75rem;
     border: 1.5px solid #2b9293;
     box-shadow: 0px 4px 4px rgba(102, 102, 102, 0.15);
     border-radius: 50px;

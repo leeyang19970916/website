@@ -2,7 +2,9 @@ class HEADER {
   constructor(dom) {
     this.dom = document.querySelector("header");
     this.list = ["預約掛號", "查詢掛號", "健康報", "商城", "APP下載"];
+    this.now_title="預約掛號"
     this.initRender();
+
   }
 
   initRender() {
@@ -34,7 +36,7 @@ class HEADER {
   navUI() {
     let str = "";
     this.list.forEach((item) => {
-      str += `<div class="header-nav-item activing" onclick="redirectTo('reservation')">${item}</div>`;
+      str += `<div class="header-nav-item ${item===this.now_title ? 'activing' :""}" onclick="redirectTo('reservation')">${item}</div>`;
     });
     return str;
   }

@@ -21,13 +21,12 @@
       padding-bottom: 1rem;
     }
     .clinicName {
-      @include fontSize(2.75rem, white, 700);
+      @include fontSize(2.25rem, white, 700);
       letter-spacing: 0.02em;
       padding-bottom: 1rem;
     }
   }
   .schedule-container {
-    // width: 50%;
     width: 60%;
     @media (max-width: 1200px) {
       .clinic-week-col {
@@ -54,7 +53,7 @@
     margin: 0 auto;
   }
   .inform-detail {
-    @include fontSize(20px, #666666, 500);
+    @include fontSize(1rem, #666666, 500);
     letter-spacing: 0.08em;
     @media (max-width: 996px) {
       padding: 0.5rem 0;
@@ -62,6 +61,8 @@
     .phone,
     .address,
     .facebook {
+      cursor: pointer;
+      @include dflex(start,start,nowrap);
       margin-bottom: 0.75rem;
       @media (max-width: 996px) {
         margin-bottom: 0.25rem;
@@ -116,7 +117,7 @@
     @include fontSize(1.5rem, #2b9293, 900);
     @include dflex(space-between, end);
     border-bottom: 1px solid #53b6b7;
-    padding: 1rem 2.5rem;
+    padding: 1rem 1rem;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.05);
     @media (max-width: 996px) {
       padding: 0.5rem 0;
@@ -124,10 +125,11 @@
   }
   .card-body {
     @include fontSize(20px, #666666, 400);
-    padding: 1rem 2.5rem;
+    padding: 1rem 1rem;
     background-color: transparent;
     border: 0;
     box-shadow: none;
+    margin: 0;
     @media (max-width: 996px) {
       padding: 0.5rem 0;
       margin-top: 0.5rem;
@@ -161,7 +163,6 @@
           padding: 0.75rem 0;
         }
         .announce-date {
-          font-weight: bold;
           width: 20%;
           margin-bottom: 0.5rem;
           @media (max-width: 996px) {
@@ -224,7 +225,8 @@
     .phone,
     .address,
     .alert {
-      @include fontSize(20px, #666, 500);
+      @include fontSize(1.25rem, #666, 500);
+      @include dflex(start,start,nowrap);
       letter-spacing: 1.6px;
       margin: 0.5rem 0;
       padding: 0;

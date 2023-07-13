@@ -114,6 +114,9 @@
       border-radius: 10px;
       @include fontSize(20px, rgba(74, 74, 74, 0.3), 400);
       border: 1px solid rgba(205, 205, 205, 0.5);
+      &.active {
+        color: white;
+      }
       @media (max-width: 996px) {
         padding: 0.25rem 0.75rem;
       }
@@ -122,12 +125,17 @@
 }
 #calendar {
   .monthControl {
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
     @include dflex(space-between, center, wrap);
     @include fontSize(20px, #24a8a7, 600);
     @media (max-width: 996px) {
       width: 75%;
       margin: 0 auto;
+      img{
+        width: 20px;
+        height: 20px;
+      }
     }
   }
   .date-week {
@@ -224,6 +232,9 @@
         margin: 0.5rem;
         margin-left: 0;
         padding: 0.5rem 2rem;
+        &.active {
+          color: white;
+        }
         @media (max-width: 996px) {
           padding: 0.5rem;
           width: calc(100% / 3 - 0.5rem);
@@ -347,14 +358,13 @@
             width: 100%;
           }
         }
-        &.error-message{
+        &.error-message {
           // display: none;
           @include iconSetting();
-          color:rgba(156, 14, 78, 1);
+          color: rgba(156, 14, 78, 1);
           width: 100%;
           margin: 0;
-          @include dflex(center,center,nowrap)
-
+          @include dflex(center, center, nowrap);
         }
         &.form-check {
           position: relative;
@@ -464,9 +474,25 @@
   }
 }
 .stepIcon-container {
-  @include dflex(start, start, wrap, column);
+  @include dflex(center, center, wrap, column);
   @media (max-width: 996px) {
     flex-direction: row;
+    width: 100%;
+  }
+  .stepIcon-container-iconItem{
+    @include dflex(center,center,nowrap,column);
+    margin-bottom: 1rem;
+    @media (max-width: 996px) {
+      width:calc(100% / 3);
+    }
+    .stepIcon-container-iconItem-image{
+      padding-bottom: 0.5rem;
+
+    }
+    .stepIcon-container-iconItem-name{
+      @include fontSize( 1rem,#4A4A4A,500);
+      white-space: nowrap;
+    }
   }
 }
 
@@ -481,11 +507,21 @@
   .modal-title {
     @include fontSize(1rem, white, 400);
   }
-  .modal-footer{
+  .modal-footer {
     padding: 0.25rem 0;
-    .btn{
+    .btn {
       width: 25%;
       // margin: 0 auto;
     }
   }
+}
+.arrowIcon {
+  font-size: 2rem;
+  border: #24a8a7 3px solid;
+  border-radius: 50%;
+  background-color: #24a8a7;
+  color: white;
+  padding-top: 2px;
+  padding-left: 1px;
+  padding-right: 1px;
 }

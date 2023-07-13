@@ -103,22 +103,6 @@ class CALENDAR {
         str += ` <div  class="dayItem none"></div>`;
       }
     }
-    // for (let i = 1; i <= this.lastDay; i++) {
-    //   if (this.today.month === this.month) {
-    //     if (i < this.today.day) {
-    //       str += `<div  class="dayItem disable"> <span class="">${i}</span> </div>`;
-    //     } else {
-    //       if (i == this.currentDay) {
-    //         console.log(this.currentDay, "this.currentDaythis.currentDay");
-    //         str += `<div class="dayItem" onclick='changeDay(event)'> <span class="active">${i}</span></div>`;
-    //       } else {
-    //         str += `<div  class="dayItem" onclick='changeDay(event)'> <span class="">${i}</span> </div>`;
-    //       }
-    //     }
-    //   } else {
-    //     str += `<div  class="dayItem" onclick='changeDay(event)'> <span class="">${i}</span> </div>`;
-    //   }
-    // }
     for (let i = 1; i <= this.lastDay; i++) {
       if (this.today.month === this.month) {
         if (i < this.today.day) {
@@ -144,17 +128,4 @@ class CALENDAR {
 }
 function changeDay(event) {
   console.log(event.currentTarget,"到底點了誰RRRR")
-  // let dom = event.currentTarget;
-  // let span = dom.querySelector("span");
-  // let oldActiveDom =
-  //   document.querySelector("#calendar .date-day .dayItem .active") || null;
-  // if (oldActiveDom) {
-  //   if (oldActiveDom.innerHTML === span.innerHTML) {
-  //     return;
-  //   }
-  // }
-
-  // reservation.initDate.currentDay = span.innerHTML;
-  // new CLASSHANDLER(span, "date-day");
-  // reservation.initRender()
 }

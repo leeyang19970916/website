@@ -136,20 +136,20 @@ ul {
       }
     }
   }
-  .prevIcon,
-  .nextIcon {
-    background: #ffffff;
-    border: 0.5px solid #4a4a4a;
-    border-radius: 8px;
-    padding: 0.5rem 0.5rem;
-    cursor: pointer;
-    &.dis {
-      background: #edebeb;
-      color: white;
-      border: none;
-    }
-    // transform: matrix(1, 0, 0, -1, 0, 0);
-  }
+  // .prevIcon,
+  // .nextIcon {
+  //   background: #ffffff;
+  //   border: 0.5px solid #4a4a4a;
+  //   border-radius: 8px;
+  //   padding: 0.5rem 0.5rem;
+  //   cursor: pointer;
+  //   &.dis {
+  //     background: #edebeb;
+  //     color: white;
+  //     border: none;
+  //   }
+  //   // transform: matrix(1, 0, 0, -1, 0, 0);
+  // }
 }
 
 #simple-container {
@@ -157,5 +157,21 @@ ul {
     transform: none;
     width: 100%;
     margin: 1rem 0;
+  }
+}
+
+#pagination {
+  .pagination_arrow {
+    cursor: pointer;
+    color: #23adad;
+    margin: 0 1rem;
+    font-size: 1.25rem;
+    @media (max-width: 996px) {
+      margin: 0 0.5rem;
+    }
+    &.disable{
+      cursor: auto;
+      color: Gray;
+    }
   }
 }

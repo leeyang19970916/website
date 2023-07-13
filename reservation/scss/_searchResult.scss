@@ -33,7 +33,7 @@ section {
           }
           .inform {
             @include dflex(space-between, center, nowrap);
-            @include fontSize(1rem, #666666, 900);
+            @include fontSize(1rem, #666666, 400);
             padding-top: 0.5rem;
             @media (max-width: 996px) {
               flex-direction: column;
@@ -54,6 +54,10 @@ section {
                 @include fontSize(1rem,#666,400);
                 border: 1px solid gray;
                 white-space: nowrap;
+                &:hover{
+                  color: white;
+                  background-color:#8c8989;
+                }
                 @media (max-width: 996px) {
                   
                   width: 30%;

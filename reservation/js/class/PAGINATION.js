@@ -10,13 +10,16 @@ class PAGINATION {
       if (this.nowPage===1) {
           disabled=true
       }
-      return `<li class="prevIcon ${disabled ? 'dis': ''}"  > < </li>`;
+      return `<i class="fa-solid fa-chevron-left pagination_arrow prevIcon"></i>`
+      // return `<span> <i class="fa-solid fa-chevron-left"></i></span>`
+      // return `<li class="prevIcon ${disabled ? 'dis': ''}"  > < </li>`;
     }
     nextUI() {
       let disabled=false
       if (this.nowPage===this.totalPage) {
           disabled=true
       }
+      return `<i class="fa-solid fa-chevron-right pagination_arrow nextIcon"></i>`
       return `<li class="nextIcon  ${disabled ? 'dis': ''}" >></li>`;
     }
     pageChange(action) {
