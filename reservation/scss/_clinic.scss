@@ -62,7 +62,7 @@
     .address,
     .facebook {
       cursor: pointer;
-      @include dflex(start,start,nowrap);
+      @include dflex(start, start, nowrap);
       margin-bottom: 0.75rem;
       @media (max-width: 996px) {
         margin-bottom: 0.25rem;
@@ -163,7 +163,10 @@
           padding: 0.75rem 0;
         }
         .announce-date {
-          width: 20%;
+          // width: 20%;
+          width: auto;
+          white-space: nowrap;
+          margin-right: 1rem;
           margin-bottom: 0.5rem;
           @media (max-width: 996px) {
             width: 100%;
@@ -226,7 +229,7 @@
     .address,
     .alert {
       @include fontSize(1.25rem, #666, 500);
-      @include dflex(start,start,nowrap);
+      @include dflex(start, start, nowrap);
       letter-spacing: 1.6px;
       margin: 0.5rem 0;
       padding: 0;

@@ -165,7 +165,7 @@ section.ad-loop {
 }
 .cardItem .cardItem-container .list-singleLine .listItem {
   font-size: 1rem;
-  color: #666666;
+  color: #666;
   font-weight: 400;
   letter-spacing: 0.01em;
   font-family: "Noto Sans TC", sans-serif;
@@ -796,7 +796,9 @@ ul {
   }
 }
 .clinicDetail .content .announceList .announceItem .announce-date {
-  width: 20%;
+  width: auto;
+  white-space: nowrap;
+  margin-right: 1rem;
   margin-bottom: 0.5rem;
 }
 @media (max-width: 996px) {

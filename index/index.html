@@ -12,7 +12,7 @@
 
   <body>
     <div id="container-bg" class="border p-0">
-      <div id="backgroundContainer"  onclick="containerHandler()"></div>
+      <div id="backgroundContainer" onclick="containerHandler()"></div>
       <header class="header"></header>
       <div class="marquee">1234564789</div>
       <div id="search-container">
@@ -24,7 +24,9 @@
           </div>
           <div class="addrInput-search">
             <div class="addrInput-search-input">
-              <div onclick="containerHandler()" class="cityZoneSelect"><span>台北市 / 大安區</span></div>
+              <div onclick="containerHandler()" class="cityZoneSelect">
+                <span>台北市 / 大安區</span>
+              </div>
               <div class="line">|</div>
               <input type="text" class="input-custom" />
             </div>
@@ -95,39 +97,19 @@
     </div>
   </body>
 </html>
-<!-- <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
-<script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script> -->
-<!-- <script src="../../js/innerHeight.js"></script> -->
-<!-- <script src="../../js/cityZoneSelect.js"></script> -->
-<!-- <script src="../../component/Header.js"></script> -->
-<!-- <script src="../../component/Navbar.js"></script>
-<script src="../../component/Carousel.js"></script>
-<script src="../../component/HashTagContainer.js"></script>
-<script src="../../component/Title-line.js"></script> -->
-<!-- <script src="../../component/Footer.js"></script> -->
-
-<!-- <script type="module" src="/js/UI_render.js"></script>
-<script src="../../AreaManager.js"></script>
-<script src="/js/class/INPUT.js"></script>
-<script src="/js/class/PAGINATION.js"></script>
-<script src="/js/class/RESERVATION_SEARCH.js"></script> -->
-
 <script type="module" src="/common/js/Common_UI_Render.js"></script>
 <script src="/common/js/HEIGHT.js"></script>
 <script src="/reservation/js/class/AREAMANAGER.js"></script>
 <script src="/index/areaManager_control.js"></script>
 <script src="/reservation/js/class/CLASSHANDLER.js"></script>
-<!-- <script src="/reservation/js/class/PAGINATION.js"></script> -->
-<!-- <script src="/reservation/js/class/RESERVATIONFILTER.js"></script> -->
 <script>
-  let areaManagerControl=new areaManager_control('#areaManager_Card')
-let innerHeight=new HEIGHT('container-bg')
+  let areaManagerControl = new areaManager_control("#areaManager_Card");
+  let innerHeight = new HEIGHT("container-bg");
   // let cityZoneSelectDOM=document.querySelector(".cityZoneSelect")
-  function containerHandler(){
-    let dom=document.querySelector("#areaManager_Card")
-    let backgroundContainerDom=document.querySelector("#backgroundContainer")
-    new singleClassControl(dom,'show')
-    new singleClassControl(backgroundContainerDom,'show')
-
+  function containerHandler() {
+    let dom = document.querySelector("#areaManager_Card");
+    let backgroundContainerDom = document.querySelector("#backgroundContainer");
+    new singleClassControl(dom, "show");
+    new singleClassControl(backgroundContainerDom, "show");
   }
 </script>
