@@ -63,10 +63,14 @@
     .facebook {
       cursor: pointer;
       @include dflex(start, start, nowrap);
+      letter-spacing: 1.6px;
       margin-bottom: 0.75rem;
       @media (max-width: 996px) {
         margin-bottom: 0.25rem;
       }
+    }
+    .facebook {
+      color: #4d94bd;
     }
   }
   .conditionList {
@@ -106,6 +110,9 @@
         border-top: var(--triangle) solid transparent;
         border-bottom: var(--triangle) solid transparent;
         border-right: var(--triangle) solid #e7e4e4;
+      }
+      .bit_icon {
+        margin-right: 0.25rem;
       }
     }
   }
@@ -229,12 +236,18 @@
     .address,
     .alert {
       @include fontSize(1.25rem, #666, 500);
-      @include dflex(start, start, nowrap);
+      @include dflex(start, center, nowrap);
       letter-spacing: 1.6px;
       margin: 0.5rem 0;
       padding: 0;
+
       @media (max-width: 996px) {
+        align-items: start;
         margin: 0.25rem 0;
+
+      }
+      .iconSetting{
+        transform: translate(0px, 0%);
       }
     }
     .alert {

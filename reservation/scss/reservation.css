@@ -636,6 +636,7 @@ ul {
   align-items: start;
   flex-wrap: nowrap;
   flex-direction: row;
+  letter-spacing: 1.6px;
   margin-bottom: 0.75rem;
 }
 @media (max-width: 996px) {
@@ -644,6 +645,9 @@ ul {
   .content-container .inform-detail .facebook {
     margin-bottom: 0.25rem;
   }
+}
+.content-container .inform-detail .facebook {
+  color: #4d94bd;
 }
 .content-container .conditionList {
   --triangle: 20px;
@@ -700,6 +704,9 @@ ul {
   border-top: var(--triangle) solid transparent;
   border-bottom: var(--triangle) solid transparent;
   border-right: var(--triangle) solid #e7e4e4;
+}
+.content-container .conditionList .conditionItem .bit_icon {
+  margin-right: 0.25rem;
 }
 
 .clinicDetail {
@@ -899,7 +906,7 @@ ul {
   font-family: "Noto Sans TC", sans-serif;
   display: flex;
   justify-content: start;
-  align-items: start;
+  align-items: center;
   flex-wrap: nowrap;
   flex-direction: row;
   letter-spacing: 1.6px;
@@ -917,8 +924,14 @@ ul {
   #simple-container .simpleCard .phone,
   #simple-container .simpleCard .address,
   #simple-container .simpleCard .alert {
+    align-items: start;
     margin: 0.25rem 0;
   }
+}
+#simple-container .simpleCard .phone .iconSetting,
+#simple-container .simpleCard .address .iconSetting,
+#simple-container .simpleCard .alert .iconSetting {
+  transform: translate(0px, 0%);
 }
 #simple-container .simpleCard .alert {
   color: #ff6b00;
@@ -1305,6 +1318,7 @@ ul {
   box-shadow: 0px 4px 4px rgba(102, 102, 102, 0.15);
   border-radius: 50px;
   margin: 0 1rem;
+  cursor: pointer;
 }
 @media (max-width: 996px) {
   .resevation-container .btn-link {
@@ -1577,6 +1591,9 @@ ul {
     width: 20px;
     height: 20px;
   }
+}
+#calendar .date {
+  margin: 0 auto;
 }
 #calendar .date-week {
   margin-top: 1rem;
@@ -1901,6 +1918,9 @@ ul {
     padding: 0.5rem 0;
   }
 }
+#personal-inform .option-container .first_followUp .first_followUpBtn.active {
+  color: white;
+}
 #personal-inform .option-container .inform-input {
   display: flex;
   justify-content: center;
@@ -1996,7 +2016,7 @@ ul {
   transform: translate(0px, -10%);
   color: rgb(156, 14, 78);
   width: 100%;
-  margin: 0;
+  margin: 1rem 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2185,7 +2205,7 @@ ul {
 }
 .stepIcon-container .stepIcon-container-iconItem .stepIcon-container-iconItem-name {
   font-size: 1rem;
-  color: #4A4A4A;
+  color: #4a4a4a;
   font-weight: 500;
   letter-spacing: 0.01em;
   font-family: "Noto Sans TC", sans-serif;
@@ -2259,7 +2279,7 @@ ul {
 }
 .search-bar .search-bar-card {
   position: absolute;
-  top: 20%;
+  top: 15%;
   left: 50%;
   transform: translate(-50%, 0%);
   width: 67.5%;
@@ -2425,6 +2445,7 @@ ul {
 .search-bar .search-bar-card .card-content .error-message .icon {
   margin-right: 0.25rem;
   transform: translate(0px, -10%);
+  transform: translate(0px, -5%);
 }
 @media (max-width: 996px) {
   .search-bar .search-bar-card .card-content .error-message .icon {

@@ -132,11 +132,14 @@
     @media (max-width: 996px) {
       width: 75%;
       margin: 0 auto;
-      img{
+      img {
         width: 20px;
         height: 20px;
       }
     }
+  }
+  .date {
+    margin: 0 auto;
   }
   .date-week {
     margin-top: 1rem;
@@ -307,6 +310,7 @@
         justify-content: space-between;
         flex-wrap: wrap;
       }
+
       .first_followUpBtn {
         @include button();
         width: 30%;
@@ -315,6 +319,9 @@
           width: calc(100% / 2 - 0.5rem);
           // font-size: 1rem;
           padding: 0.5rem 0;
+        }
+        &.active {
+          color: white;
         }
       }
     }
@@ -363,7 +370,7 @@
           @include iconSetting();
           color: rgba(156, 14, 78, 1);
           width: 100%;
-          margin: 0;
+          margin: 1rem 0;
           @include dflex(center, center, nowrap);
         }
         &.form-check {
@@ -479,18 +486,17 @@
     flex-direction: row;
     width: 100%;
   }
-  .stepIcon-container-iconItem{
-    @include dflex(center,center,nowrap,column);
+  .stepIcon-container-iconItem {
+    @include dflex(center, center, nowrap, column);
     margin-bottom: 1rem;
     @media (max-width: 996px) {
-      width:calc(100% / 3);
+      width: calc(100% / 3);
     }
-    .stepIcon-container-iconItem-image{
+    .stepIcon-container-iconItem-image {
       padding-bottom: 0.5rem;
-
     }
-    .stepIcon-container-iconItem-name{
-      @include fontSize( 1rem,#4A4A4A,500);
+    .stepIcon-container-iconItem-name {
+      @include fontSize(1rem, #4a4a4a, 500);
       white-space: nowrap;
     }
   }

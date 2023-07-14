@@ -84,10 +84,10 @@
                 <input type="text" class="form-control" />
               </div>
               <div class="inform-input-item error-message">
-                <img src="/reservation/image/icon/alert_icon.svg" alt="">輸入資料格式或內容錯誤，請重新輸入
+                <img src="/reservation/image/icon/notice_icon.svg" alt="">輸入資料格式或內容錯誤，請重新輸入
               </div>
               <div class="inform-input-item form-check">
-                <label class="form-check-label" for="flexCheckChecked">
+                <label class="form-check-label">
                   我已了解並同意診所的<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked><span data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="form-check_alert">約診注意事項</span>
 
                                 </label>
@@ -152,4 +152,9 @@ function changeVisit(state){
 //   e.preventDefault()
 //   alert("1238458")
 // }
+let noticeDOM=document.querySelector(".form-check .form-check_alert")
+noticeDOM.addEventListener('click', (event) => {
+  event.stopPropagation(); // 阻止事件冒泡
+  // 在这里触发打开模态框的逻辑
+});
 </script>
