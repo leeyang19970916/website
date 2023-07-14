@@ -13,11 +13,7 @@
     <div id="container-bg" class="border p-0">
       <header class="header"></header>
       <section class="search-bar">
-        <img
-          src="/reservation/image/Frame 772.png"
-          class="image"
-          alt=""
-        />
+        <img src="/reservation/image/Frame 772.png" class="image" alt="" />
         <div class="search-bar-card">
           <div class="card-title">
             <span class="icon left"></span>
@@ -45,6 +41,7 @@
                 </label>
                 <input type="text" class="form-control userDate" />
               </div>
+              <div class="error-message"></div>
               <div class="search_btn" onclick="postAPItoSearch()">送出查詢</div>
             </div>
           </div>
@@ -87,7 +84,13 @@
                     </div>
                   </div>
                   <div class="list-item-end-btn">
-                    <div class="cancel-button">取消預約</div>
+                    <div
+                      class="cancel-button"
+                      data-bs-toggle="modal"
+                      data-bs-target="#exampleModal"
+                    >
+                      取消預約
+                    </div>
                   </div>
                 </div>
               </div>
@@ -140,10 +143,72 @@
 
       <footer></footer>
     </div>
+    <div
+      class="modal fade cancelModal"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+    >  
+
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="warning_icon"><img src="/reservation/image/icon/warning-triangle_icon.svg" alt=""></div>
+            <div class="title">確定要取消這筆預約嗎？</div>
+            <div class="inform-container">
+            <div class="inform-item">
+              <label class="label inform-item-label">預約診所</label>
+              <div class="value inform-item-value">
+                <div>愛管家小兒科診所</div>
+                <div>台北市內湖區民權東路六段168號</div>
+              </div>
+            </div>
+
+
+            <div class="inform-item">
+              <label class="label inform-item-label">預約日期</label>
+              <div class="value inform-item-value">
+                2023年06月08日
+              </div>
+            </div>
+            <div class="inform-item">
+              <label class="label inform-item-label">預約時間</label>
+              <div class="value inform-item-value">
+                早診 09:00 35號
+              </div>
+            </div>
+
+            <div class="inform-item">
+              <label class="label inform-item-label">預約醫師</label>
+              <div class="value inform-item-value">
+                王敏恩 醫師
+              </div>
+            </div>
+
+          </div>
+          <div class="warning-message">★取消掛號後資料將無法復原</div>
+          <div  class="cancelConfirm-button" data-bs-dismiss="modal">確定取消</div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
 
 <script type="module" src="/common/js/Common_UI_Render.js"></script>
+<script type="module" src="/reservation/js/reservation.js"></script>
+<script src="/reservation/js/error_message.js"></script>
 <script>
   // 送出查詢
   // post API ID/Date
@@ -162,4 +227,8 @@
   // cancel reservation
   // post API reservationID
   // delete finish
+</script>
+<script>
+  let dom = document.querySelector(".error-message");
+  error_message(dom);
 </script>

@@ -114,3 +114,30 @@
   margin-right: 0.25rem;
   transform: translate(0px, -10%);
 }
+@mixin label_value() {
+  @include fontSize(1rem, #666, 400);
+  margin: 0.5rem 0;
+  width: 100%;
+  @media (max-width: 996px) {
+    width: 95%;
+    margin: 0.5rem auto;
+    justify-content: start;
+  }
+  .label {
+    color: #53b6b7;
+    margin-right: 0.25rem;
+    letter-spacing: 1.28px;
+    width: 20%;
+    white-space: nowrap;
+    @media (max-width: 996px) {
+      width: 25%;
+    }
+  }
+  .value {
+    width: 50%;
+    white-space: nowrap;
+    // @media (max-width: 996px) {
+    //   width: auto;
+    // }
+  }
+}

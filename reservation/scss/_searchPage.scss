@@ -1,6 +1,5 @@
-$minHeight:280px;
+$minHeight: 280px;
 .search-bar {
-
   // height: 300px;
   // background-color: #4c932b;
   // width: 95%;
@@ -10,7 +9,7 @@ $minHeight:280px;
   @media (max-width: 996px) {
     overflow: hidden;
   }
-  .image{
+  .image {
     width: 100%;
     @media (max-width: 996px) {
       width: auto;
@@ -37,12 +36,16 @@ $minHeight:280px;
     }
     .card-title {
       text-align: center;
-      @include fontSize(1.5rem, white, 900);
+      @include fontSize(1.5rem, white, 700);
       letter-spacing: 3px;
       background-color: #24a8a7;
       border-radius: 36px 36px 0 0;
-      padding: 1rem 0;
+      padding: 1.5rem 0;
       position: relative;
+      @media (max-width: 996px) {
+        padding-bottom: 0;
+        letter-spacing: 0.4px;
+      }
       .icon {
         position: absolute;
         background-color: white;
@@ -51,13 +54,28 @@ $minHeight:280px;
         width: 30px;
         height: 60px;
         top: -50%;
+        transition: all 0.5s;
+        transform: translate(0, 20%);
+        @media (max-width: 996px) {
+          width: 20px;
+          height: 40px;
+          transform: translate(0, 10%);
+        }
         &.left {
           left: 10%;
+
           // transform: translateX(-50%);
+          @media (max-width: 996px) {
+            left: 30%;
+          }
         }
         &.right {
           right: 10%;
+
           // transform: translateX(-50%);
+          @media (max-width: 996px) {
+            right: 30%;
+          }
         }
       }
     }
@@ -99,6 +117,18 @@ $minHeight:280px;
           }
         }
       }
+      .error-message {
+        @include fontSize(1rem, #9c0e4e, 400);
+        margin: 0 auto;
+        .icon {
+          @include iconSetting();
+          @media (max-width: 996px) {
+            width: 18px;
+            height: 18px;
+            transform: translate(0px, -5%);
+          }
+        }
+      }
       .search_btn {
         // width: 100%;
         @include button();
@@ -114,6 +144,7 @@ $minHeight:280px;
         @media (max-width: 996px) {
           // width: 75%;
           margin: 0 auto;
+          margin-top: 0.5rem;
           min-width: 120px;
           white-space: nowrap;
         }
@@ -124,10 +155,10 @@ $minHeight:280px;
 
 #search-container {
   // margin-top: 1rem;
-  .heightControl{
-    height: calc($minHeight / 5 * 4) ;
+  .heightControl {
+    height: calc($minHeight / 5 * 4);
     @media (max-width: 996px) {
-      height: calc($minHeight / 3) ;
+      height: calc($minHeight / 3);
     }
   }
   .search-list-card {
@@ -150,6 +181,9 @@ $minHeight:280px;
       letter-spacing: 0.2px;
     }
     .card-list {
+      @media (max-width: 996px) {
+        margin-top: 1rem;
+      }
       section {
         &.list-item {
           padding: 1rem 0;
@@ -247,6 +281,68 @@ $minHeight:280px;
         background-color: #cdcdcd;
         @media (max-width: 996px) {
           display: none;
+        }
+      }
+    }
+  }
+}
+
+.modal {
+  &.cancelModal {
+    .modal-content {
+      border-radius: 16px;
+      .modal-header {
+        border-radius: 16px;
+        background-color: white;
+        border: none;
+      }
+      .modal-body {
+        padding: 0;
+        .warning_icon {
+          border-radius: 50%;
+          padding: 1px 4px 7px;
+          background: #eefcfb;
+          display: flex;
+          justify-content: center;
+          width: 40px;
+          height: 40px;
+          margin: 0 auto;
+        }
+        .title {
+          @include fontSize(1.5rem, #53b6b7, 500);
+          letter-spacing: 1.92px;
+          margin: 0 auto;
+          border-bottom: 0.5px solid #c0c0c0;
+          text-align: center;
+          padding-bottom: 0.5rem;
+        }
+        .inform-container {
+          width: 75%;
+          margin: 1.5rem auto;
+          @media (max-width: 996px) {
+            width: 100%;
+          }
+          .inform-item {
+            @include label_value();
+            @include dflex(center, start);
+          }
+        }
+        .warning-message{
+          text-align: center;
+          @include fontSize(1rem,#9c0e4e,400)
+        }
+        .cancelConfirm-button{
+          cursor: pointer;
+          @include fontSize(1rem,white,500);
+          letter-spacing: 2.24px;
+          background-color:#53b6b7;
+          border-radius: 10px;
+          padding: 0.5rem 0px;
+          width: 25%;
+          margin: 1rem auto;
+          text-align: center;
+          white-space: nowrap;
+          // min-width: 20%;
         }
       }
     }
