@@ -1564,7 +1564,7 @@ ul {
 }
 
 #calendar .monthControl {
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -1582,18 +1582,28 @@ ul {
     font-size: calc(20px * 0.75);
   }
 }
+#calendar .monthControl .monthControl-item {
+  width: 14.2857142857%;
+  text-align: center;
+  white-space: nowrap;
+}
+@media (max-width: 390px) {
+  #calendar .monthControl .monthControl-item {
+    width: auto;
+  }
+}
 @media (max-width: 996px) {
-  #calendar .monthControl {
-    width: 75%;
-    margin: 0 auto;
-  }
   #calendar .monthControl img {
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
   }
+}
+#calendar .monthControl .prev, #calendar .monthControl .next {
+  cursor: pointer;
 }
 #calendar .date {
   margin: 0 auto;
+  width: 100%;
 }
 #calendar .date-week {
   margin-top: 1rem;
@@ -1675,6 +1685,12 @@ ul {
   flex-wrap: wrap;
   flex-direction: row;
   border-radius: 50px;
+}
+@media (max-width: 996px) {
+  #calendar .date-day .dayItem span.active {
+    height: 30px;
+    width: 30px;
+  }
 }
 
 #time .option-container {
@@ -1867,7 +1883,8 @@ ul {
 }
 
 #personal-inform .option-container .first_followUp {
-  width: 100%;
+  min-width: 50%;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1876,7 +1893,7 @@ ul {
 }
 @media (max-width: 996px) {
   #personal-inform .option-container .first_followUp {
-    width: 90%;
+    width: 95%;
     margin: 0 auto;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -1895,8 +1912,8 @@ ul {
   font-family: "Noto Sans TC", sans-serif;
   letter-spacing: 0.14em;
   cursor: pointer;
-  width: 30%;
   font-size: 1.25rem;
+  padding: 0.5rem 1rem;
 }
 @media (max-width: 996px) {
   #personal-inform .option-container .first_followUp .first_followUpBtn {
@@ -1931,7 +1948,7 @@ ul {
 }
 @media (max-width: 996px) {
   #personal-inform .option-container .inform-input {
-    width: 90%;
+    width: 95%;
     margin: 1rem auto 0 auto;
   }
 }
@@ -2119,9 +2136,8 @@ ul {
   }
 }
 #reservation-complete .option-container {
-  width: 60%;
   margin: 2rem auto 3.5rem auto;
-  justify-content: space-between;
+  justify-content: center;
   align-items: start;
 }
 @media (max-width: 996px) {
@@ -2130,6 +2146,14 @@ ul {
     margin: 1rem auto;
     flex-direction: column;
     align-items: center;
+  }
+}
+#reservation-complete .option-container .inform-content-container {
+  margin-right: 2rem;
+}
+@media (max-width: 996px) {
+  #reservation-complete .option-container .inform-content-container {
+    margin: 0;
   }
 }
 #reservation-complete .option-container .inform-content-container .informContent-item {
@@ -2529,7 +2553,7 @@ ul {
   letter-spacing: 0.01em;
   font-family: "Noto Sans TC", sans-serif;
   letter-spacing: 0.8px;
-  padding: 3rem 0rem;
+  padding: 0 0rem;
 }
 @media (max-width: 996px) {
   #search-container .search-list-card {

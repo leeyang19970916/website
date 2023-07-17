@@ -163,7 +163,7 @@ $minHeight: 280px;
     margin: 0 auto;
     @include fontSize(1rem, #666, 400);
     letter-spacing: 0.8px;
-    padding: 3rem 0rem;
+    padding: 0 0rem;
     @media (max-width: 996px) {
       width: 90%;
     }

@@ -125,21 +125,33 @@
 }
 #calendar {
   .monthControl {
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     @include dflex(space-between, center, wrap);
     @include fontSize(20px, #24a8a7, 600);
-    @media (max-width: 996px) {
-      width: 75%;
-      margin: 0 auto;
-      img {
-        width: 20px;
-        height: 20px;
+    .monthControl-item{
+      width: calc(100% / 7);
+      text-align: center;
+      white-space: nowrap;
+      @media (max-width: 390px) {
+        width: auto;
       }
+    }
+    @media (max-width: 996px) {
+      // width: 75%;
+      // margin: 0 auto;
+      img {
+        width: 30px;
+        height: 30px;
+      }
+    }
+    .prev,.next{
+      cursor: pointer;
     }
   }
   .date {
     margin: 0 auto;
+    width: 100%;
   }
   .date-week {
     margin-top: 1rem;
@@ -186,6 +198,10 @@
           height: 50px;
           @include dflex(center, center, wrap);
           border-radius: 50px;
+          @media (max-width: 996px) {
+            height: 30px;
+            width: 30px;
+          }
         }
       }
     }
@@ -301,10 +317,11 @@
 #personal-inform {
   .option-container {
     .first_followUp {
-      width: 100%;
+      min-width: 50%;
+      margin: 0 auto;
       @include dflex(center, center, nowrap);
       @media (max-width: 996px) {
-        width: 90%;
+        width: 95%;
         margin: 0 auto;
         // @include dflex(space-between, center, nowrap);
         justify-content: space-between;
@@ -313,8 +330,10 @@
 
       .first_followUpBtn {
         @include button();
-        width: 30%;
+        // width: calc(100% / 2 - 2rem);
+        // width: 30%;
         font-size: 1.25rem;
+        padding: 0.5rem 1rem;
         @media (max-width: 996px) {
           width: calc(100% / 2 - 0.5rem);
           // font-size: 1rem;
@@ -331,7 +350,7 @@
       margin: 1.5rem 0 0 0;
       @media (max-width: 996px) {
         // margin-top: 1rem;
-        width: 90%;
+        width: 95%;
         margin: 1rem auto 0 auto;
       }
       .inform-input-item {
@@ -438,9 +457,9 @@
     }
   }
   .option-container {
-    width: 60%;
+    // width: 60%;
     margin: 2rem auto 3.5rem auto;
-    justify-content: space-between;
+    justify-content: center;
     align-items: start;
     @media (max-width: 996px) {
       width: 90%;
@@ -449,7 +468,9 @@
       align-items: center;
     }
     .inform-content-container {
+      margin-right: 2rem;
       @media (max-width: 996px) {
+        margin: 0;
         // width: 100%;
       }
       .informContent-item {

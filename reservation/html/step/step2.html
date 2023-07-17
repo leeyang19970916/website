@@ -43,9 +43,10 @@
           </div>
           <div class="option-container">
             <div class="first_followUp">
+              <div class="first_followUpBtn followUp" onclick="changeVisit('followUp')">我是複診患者</div>
+
               <div class="first_followUpBtn first" onclick="changeVisit('first')">我是初診患者</div>
 
-              <div class="first_followUpBtn followUp" onclick="changeVisit('followUp')">我是複診患者</div>
             </div>
             <div class="inform-input">
               <div class="inform-input-item">
@@ -87,10 +88,12 @@
                 <img src="/reservation/image/icon/notice_icon.svg" alt="">輸入資料格式或內容錯誤，請重新輸入
               </div>
               <div class="inform-input-item form-check">
-                <label class="form-check-label">
-                  我已了解並同意診所的<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked><span data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="form-check_alert">約診注意事項</span>
-
-                                </label>
+                <div class="form-check-label">
+                  我已了解並同意診所的<input class="form-check-input " type="checkbox" value="" id="flexCheckChecked" checked>
+           
+                  <span data-bs-toggle="modal" data-bs-target="#staticBackdrop" class="form-check_alert">約診注意事項</span>
+                </div>
+                
             </div>
           </div>
         </section>

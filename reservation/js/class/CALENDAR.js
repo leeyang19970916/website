@@ -1,5 +1,6 @@
 class CALENDAR {
   constructor() {
+    this.activeDay=18, //待確認
     (this.currentDate = new Date()),
       (this.monthNamesArr = [
         "1月",
@@ -50,7 +51,7 @@ class CALENDAR {
       this.currentDate.getMonth(),
       1
     ).getDay();
-
+    this.prevIconStyle()
     this.getHoliday();
   }
   getHoliday() {
@@ -71,6 +72,7 @@ class CALENDAR {
     this.currentDate.setMonth(this.currentDate.getMonth() + 1);
     // this.currentDate.setDate(1);
     this.calculateDays();
+    
     return this;
   }
   prevMonth() {
@@ -82,6 +84,17 @@ class CALENDAR {
     // this.currentDate.setDate(1);
     this.calculateDays();
     return this;
+  }
+  prevIconStyle(){
+    let dom=document.querySelector(".prev")
+    // console.log(this.month,"month")
+    if (this.today.month !== this.month) {
+      dom.innerHTML=`<img src='/reservation/image/icon/prev_icon.svg'>`
+      dom.style.cursor='pointer';
+    }else{
+      dom.innerHTML=` <img src="/reservation/image/icon/prev_disabled_icon.svg" alt="">`
+      dom.style.cursor='auto';
+    }
   }
   initRender() {
     this.monthUI();
@@ -108,7 +121,8 @@ class CALENDAR {
         if (i < this.today.day) {
           str += `<div  class="dayItem disable"> <span class="">${i}</span> </div>`;
         } else {
-            str += `<div  class="dayItem" onclick='changeDay(event)'> <span class="">${i}</span> </div>`;
+          console.log(i,"iiii")
+            str += `<div  class="dayItem" onclick='changeDay(event)'> <span class="${this.activeDay==i ? 'active': ''}">${i}</span> </div>`;
           
         }
       } else {
@@ -127,5 +141,12 @@ class CALENDAR {
   }
 }
 function changeDay(event) {
-  console.log(event.currentTarget,"到底點了誰RRRR")
+  let oldAcitveDom=document.querySelector(".date-day .active")
+
+  oldAcitveDom.classList.remove("active")
+
+  let newActiveDom=event.currentTarget.querySelector('span')
+  newActiveDom.classList.add('active')
+  // console.log(oldAcitveDom,"activeDOM",newActiveDom.innerHTML)
+  this.activeDay=newActiveDom.innerHTML
 }
