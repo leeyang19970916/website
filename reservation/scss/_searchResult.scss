@@ -23,7 +23,7 @@ section {
           .departmentList {
             @include dflex(null, center, wrap);
             .departmentItem {
-              @include fontSize(1rem, #666666, 400);
+              @include fontSize(14px, #666666, 400);
               margin-right: 0.5rem;
               padding: 0.25rem;
               background-color: #efefef;
@@ -33,7 +33,7 @@ section {
           }
           .inform {
             @include dflex(space-between, center, nowrap);
-            @include fontSize(1rem, #666666, 400);
+            @include fontSize(20px, #666666, 400);
             padding-top: 0.5rem;
             @media (max-width: 996px) {
               flex-direction: column;
@@ -44,7 +44,6 @@ section {
               white-space: nowrap;
               @media (max-width: 996px) {
                 padding-bottom: 0.25rem;
-                font-weight: bold;
                 letter-spacing: 1px;
                 white-space: pre-wrap;
               }

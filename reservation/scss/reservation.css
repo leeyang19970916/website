@@ -172,7 +172,9 @@ section.ad-loop {
   margin: 0.5rem;
   margin-right: 0.25rem;
   cursor: pointer;
-  padding: 2px 16px;
+  padding: 4px 16px;
+  min-width: 85px;
+  text-align: center;
 }
 @media (max-width: 996px) {
   .cardItem .cardItem-container .list-singleLine .listItem {
@@ -181,6 +183,7 @@ section.ad-loop {
 }
 .cardItem .cardItem-container .list-singleLine .listItem.active {
   color: white;
+  background-color: #53b6b7;
 }
 @media (max-width: 996px) {
   .cardItem .cardItem-container .list-singleLine .listItem {
@@ -192,6 +195,7 @@ section.ad-loop {
   color: black;
   margin-right: 0.5rem;
   padding: 0;
+  min-width: initial;
 }
 @media (max-width: 996px) {
   .cardItem .cardItem-container .list-singleLine .listItem.listItem-zone {
@@ -226,7 +230,7 @@ section.ad-loop {
 }
 .unlimited_btn.active {
   color: white;
-  background-color: #24a8a7;
+  background-color: #53b6b7;
 }
 
 #index-search-container {
@@ -242,7 +246,7 @@ section.ad-loop {
 }
 
 .search_btn {
-  background-color: #24A8A7;
+  background-color: #24a8a7;
   color: white;
   border-radius: 8px;
   border: none;
@@ -299,7 +303,7 @@ section.searchResult .card .clinicList .clinicItem .departmentList {
   flex-direction: row;
 }
 section.searchResult .card .clinicList .clinicItem .departmentList .departmentItem {
-  font-size: 1rem;
+  font-size: 14px;
   color: #666666;
   font-weight: 400;
   letter-spacing: 0.01em;
@@ -312,7 +316,7 @@ section.searchResult .card .clinicList .clinicItem .departmentList .departmentIt
 }
 @media (max-width: 996px) {
   section.searchResult .card .clinicList .clinicItem .departmentList .departmentItem {
-    font-size: 14px;
+    font-size: calc(14px * 0.75);
   }
 }
 section.searchResult .card .clinicList .clinicItem .inform {
@@ -321,7 +325,7 @@ section.searchResult .card .clinicList .clinicItem .inform {
   align-items: center;
   flex-wrap: nowrap;
   flex-direction: row;
-  font-size: 1rem;
+  font-size: 20px;
   color: #666666;
   font-weight: 400;
   letter-spacing: 0.01em;
@@ -330,7 +334,7 @@ section.searchResult .card .clinicList .clinicItem .inform {
 }
 @media (max-width: 996px) {
   section.searchResult .card .clinicList .clinicItem .inform {
-    font-size: 14px;
+    font-size: calc(20px * 0.75);
   }
 }
 @media (max-width: 996px) {
@@ -346,7 +350,6 @@ section.searchResult .card .clinicList .clinicItem .inform .informItem {
 @media (max-width: 996px) {
   section.searchResult .card .clinicList .clinicItem .inform .informItem {
     padding-bottom: 0.25rem;
-    font-weight: bold;
     letter-spacing: 1px;
     white-space: pre-wrap;
   }
@@ -391,7 +394,7 @@ section.searchResult .card .clinicList .clinicItem .inform .informItem.btn-detai
   --primary: #23adad;
   --greyLight: #23adade1;
   --greyLight-2: #cbe0dd;
-  --greyDark: #2d4848;
+  --greyDark: rgba(74, 74, 74, 1);
 }
 
 ul {
@@ -521,9 +524,9 @@ ul {
     margin: 0 0.5rem;
   }
 }
-#pagination .pagination_arrow.disable {
+#pagination .pagination_arrow.disabled {
   cursor: auto;
-  color: Gray;
+  color: rgb(205, 205, 205);
 }
 
 @media (max-width: 996px) {

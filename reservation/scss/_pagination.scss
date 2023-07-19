@@ -7,7 +7,7 @@
   --primary: #23adad;
   --greyLight: #23adade1;
   --greyLight-2: #cbe0dd;
-  --greyDark: #2d4848;
+  --greyDark: rgba(74, 74, 74, 1);
 }
 ul {
   list-style-type: none;
@@ -169,9 +169,9 @@ ul {
     @media (max-width: 996px) {
       margin: 0 0.5rem;
     }
-    &.disable{
+    &.disabled{
       cursor: auto;
-      color: Gray;
+      color: rgba(205, 205, 205, 1);
     }
   }
 }

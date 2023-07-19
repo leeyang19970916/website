@@ -7,7 +7,7 @@
   margin-top: 1rem;
   border: none;
   @media (max-width: 996px) {
-    padding: 0.5rem 1rem
+    padding: 0.5rem 1rem;
   }
 }
 .cardItem {
@@ -24,9 +24,12 @@
         margin: 0.5rem;
         margin-right: 0.25rem;
         cursor: pointer;
-        padding: 2px 16px;
-        &.active{
+        padding: 4px 16px;
+        min-width: 85px;
+        text-align: center;
+        &.active {
           color: white;
+          background-color: #53b6b7;
         }
         @media (max-width: 996px) {
           padding: 2px 0.5rem;
@@ -37,6 +40,7 @@
           color: black;
           margin-right: 0.5rem;
           padding: 0;
+          min-width:initial;
           // width: 100%;
           @media (max-width: 996px) {
             display: flex;
@@ -61,9 +65,9 @@
   padding: 2px 1rem;
   line-height: initial;
   margin-left: 1rem;
-  &.active{
+  &.active {
     color: white;
-    background-color: #24a8a7;
+    background-color: #53b6b7;
   }
 }
 #index-search-container {
@@ -75,13 +79,13 @@
     }
   }
 }
-.search_btn{
-  background-color: #24A8A7;
+.search_btn {
+  background-color: #24a8a7;
   color: white;
   border-radius: 8px;
   border: none;
   padding: 0.5rem;
   @media (max-width: 996px) {
-   padding: 0.25rem;
+    padding: 0.25rem;
   }
 }
