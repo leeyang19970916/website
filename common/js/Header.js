@@ -1,12 +1,11 @@
 class HEADER {
-  constructor(dom) {
+  constructor(page) {
     this.dom = document.querySelector("header");
     this.list = ["預約掛號", "查詢掛號", "健康報", "商城", "APP下載"];
-    this.now_title="預約掛號"
+    this.now_page=page || "預約掛號"
     this.initRender();
 
   }
-
   initRender() {
     let navUI = this.navUI();
     let searchInput = this.searchInput();
@@ -36,7 +35,7 @@ class HEADER {
   navUI() {
     let str = "";
     this.list.forEach((item) => {
-      str += `<div class="header-nav-item ${item===this.now_title ? 'activing' :""}" onclick="redirectTo('reservation')">${item}</div>`;
+      str += `<div class="header-nav-item ${item===this.now_page ? 'activing' :""}" onclick="redirect('${item}')">${item}</div>`;
     });
     return str;
   }
@@ -61,5 +60,20 @@ class HEADER {
     menuDom.classList.toggle("show");
   }
 }
+function redirect(p){
 
-export default HEADER;
+let now_page=h_page.now_page
+console.log(now_page,"efe")
+if (now_page===p) {
+  return
+}
+
+if (p==='預約掛號') {
+  window.location.href=`/reservation/html/index.html`
+
+}
+if (p==='查詢掛號') {
+  window.location.href=`/reservation/html/search_reservation.html`
+}
+}
+// export default HEADER;
