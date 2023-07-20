@@ -53,89 +53,6 @@
           <div class="card-title">查詢結果</div>
           <div class="card-record">共3筆 預約紀錄</div>
           <div class="card-list">
-            <section id="reservationID" class="list-item">
-              <div class="num">1</div>
-              <div class="content">
-                <div class="department-list">
-                  <div class="department-item">小兒科</div>
-                  <div class="department-item">小兒科</div>
-                  <div class="department-item">小兒科</div>
-                </div>
-                <div class="list-item-content-container">
-                  <div class="list-item-start-clinic">
-                    <div class="clinic clinicName">愛管家聯合診所</div>
-                    <div class="clinic clinicPhone">02-1234567</div>
-                    <div class="clinic clinicAddr">
-                      台北市內湖區民權東路六段168號
-                    </div>
-                  </div>
-                  <div class="list-item-center-reservation">
-                    <div class="reservationItem">
-                      <label class="label" for="">預約日期</label>
-                      <span>2023 年 06 月 08 日</span>
-                    </div>
-                    <div class="reservationItem">
-                      <label class="label" for="">預約時間</label>
-                      <span>早診 09:00</span>
-                    </div>
-                    <div class="reservationItem">
-                      <label class="label" for="">預約醫師</label>
-                      <span>陳曉明 <span>醫師</span></span>
-                    </div>
-                  </div>
-                  <div class="list-item-end-btn">
-                    <div
-                      class="cancel-button"
-                      data-bs-toggle="modal"
-                      data-bs-target="#exampleModal"
-                    >
-                      取消預約
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-            <div class="list-item-line"></div>
-            <section id="reservationID" class="list-item">
-              <div class="num">1</div>
-              <div class="content">
-                <div class="department-list">
-                  <div class="department-item">小兒科</div>
-                  <div class="department-item">小兒科</div>
-                  <div class="department-item">小兒科</div>
-                </div>
-                <div class="list-item-content-container">
-                  <div class="list-item-start-clinic">
-                    <div class="clinic clinicName">愛管家聯合診所</div>
-                    <div class="clinic clinicPhone">02-1234567</div>
-                    <div class="clinic clinicAddr">
-                      台北市內湖區民權東路六段168號
-                    </div>
-                  </div>
-                  <div class="list-item-center-reservation">
-                    <div class="reservationItem">
-                      <label class="label" for="">預約日期</label>
-                      <span>2023 年 06 月 08 日</span>
-                    </div>
-                    <div class="reservationItem">
-                      <label class="label" for="">預約時間</label>
-                      <span>早診 </span>
-                      <span>|</span>
-                      <span>09:00</span>
-                      <span>|</span>
-                      <span class="reservationItem_number">50號</span>
-                    </div>
-                    <div class="reservationItem">
-                      <label class="label" for="">預約醫師</label>
-                      <span>陳曉明 <span>醫師</span></span>
-                    </div>
-                  </div>
-                  <div class="list-item-end-btn">
-                    <div class="cancel-button">取消預約</div>
-                  </div>
-                </div>
-              </div>
-            </section>
           </div>
         </div>
         <section class="ad-loop">ad廣告輪播</section>
@@ -145,14 +62,13 @@
     </div>
     <div
       class="modal fade cancelModal"
-      id="exampleModal"
+      id="removeModal"
       tabindex="-1"
-      aria-labelledby="exampleModalLabel"
+      aria-labelledby="removeModalLabel"
       aria-hidden="true"
       data-bs-backdrop="static"
       data-bs-keyboard="false"
-    >  
-
+    >
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
@@ -164,41 +80,19 @@
             ></button>
           </div>
           <div class="modal-body">
-            <div class="warning_icon"><img src="/reservation/image/icon/warning-triangle_icon.svg" alt=""></div>
+            <div class="warning_icon">
+              <img
+                src="/reservation/image/icon/warning-triangle_icon.svg"
+                alt=""
+              />
+            </div>
             <div class="title">確定要取消這筆預約嗎？</div>
             <div class="inform-container">
-            <div class="inform-item">
-              <label class="label inform-item-label">預約診所</label>
-              <div class="value inform-item-value">
-                <div>愛管家小兒科診所</div>
-                <div>台北市內湖區民權東路六段168號</div>
-              </div>
             </div>
-
-
-            <div class="inform-item">
-              <label class="label inform-item-label">預約日期</label>
-              <div class="value inform-item-value">
-                2023年06月08日
-              </div>
+            <div class="warning-message">★取消掛號後資料將無法復原</div>
+            <div class="cancelConfirm-button" data-bs-dismiss="modal" onclick="removeConfirm()">
+              確定取消
             </div>
-            <div class="inform-item">
-              <label class="label inform-item-label">預約時間</label>
-              <div class="value inform-item-value">
-                早診 09:00 35號
-              </div>
-            </div>
-
-            <div class="inform-item">
-              <label class="label inform-item-label">預約醫師</label>
-              <div class="value inform-item-value">
-                王敏恩 醫師
-              </div>
-            </div>
-
-          </div>
-          <div class="warning-message">★取消掛號後資料將無法復原</div>
-          <div  class="cancelConfirm-button" data-bs-dismiss="modal">確定取消</div>
           </div>
         </div>
       </div>
@@ -211,28 +105,184 @@
 <script type="module" src="/reservation/js/reservation.js"></script>
 <script src="/reservation/js/error_message.js"></script>
 <script>
-    let h_page= new HEADER('查詢掛號')
+  let h_page = new HEADER("查詢掛號");
 </script>
 <script>
-  // 送出查詢
-  // post API ID/Date
-
-  // get list
+  // post API 送出查詢
   function postAPItoSearch(params) {
     let userDate = document.querySelector(".userDate").value || false;
     let userID = document.querySelector(".userID").value || false;
+    let errorDom = document.querySelector(".error-message");
     if (!userDate || !userID) {
-      console.log("id或是生日不能為空值");
+      error_message(errorDom);
+    } else {
+      error_message(errorDom, "hide");
+      // post API 拿到資料們
+      reservedListUIRender(data);
     }
-    console.log(userDate, userID);
   }
 </script>
+
 <script>
-  // cancel reservation
-  // post API reservationID
-  // delete finish
+  // post API 取消預約掛號
 </script>
+
 <script>
-  let dom = document.querySelector(".error-message");
-  error_message(dom);
+  let containerDom = document.querySelector("#search-container");
+
+  let data = [
+    {
+      reservationID: 15414148698619,
+      name: "丁文內科診所",
+      clinicID: "q848212",
+      clinicName: "愛管家聯合診所",
+      doctor: "莊耀熙",
+      department: ["小兒科", "小兒科", "小兒科"],
+      tel: "02-124848215469",
+      address: "台北市內湖區民權東路六段168號",
+      date: "2023年06月08日",
+      day: {
+        state: "早診",
+        time: "09:00",
+      },
+      num: 41,
+    },
+    {
+      reservationID: 159686619,
+      name: "丁文內科診所",
+      clinicID: "q848212",
+      clinicName: "愛管家聯合診所",
+      doctor: "莊耀熙",
+      department: ["小兒科", "小兒科", "小兒科"],
+      tel: "02-124848215469",
+      address: "台北市內湖區民權東路六段168號",
+      date: "2023年06月08日",
+      day: {
+        state: "早診",
+        time: "09:00",
+      },
+      num: 41,
+    },
+    {
+      reservationID: 75878515619,
+      name: "丁文內科診所",
+      clinicID: "q848212",
+      clinicName: "愛管家聯合診所",
+      doctor: "莊耀熙",
+      department: ["小兒科", "小兒科", "小兒科"],
+      tel: "02-124848215469",
+      address: "台北市內湖區民權東路六段168號",
+      date: "2023年06月08日",
+      day: {
+        state: "早診",
+        time: "09:00",
+      },
+      // num: 41,
+    },
+  ];
+  reservedListUIRender()
+  function reservedListUIRender() {
+    let length=data.length
+    let recordDom=containerDom.querySelector(".search-list-card .card-record")
+    if (length===0) {
+      recordDom.innerHTML='查無紀錄'
+      return
+    }
+    recordDom.innerHTML=`共 ${length}筆 預約紀錄`
+
+    let listDom=containerDom.querySelector(".card-list")
+    let string=""
+    for (let i = 0; i < data.length; i++) {
+      let e=data[i]
+      string+=` <section id="${e.reservationID}" class="list-item">
+              <div class="num">${i+1}</div>
+              <div class="content">
+                <div class="department-list">
+                  ${e.department.map(d => `<div class="department-item">${d}</div>`).join('')}
+                </div>
+                <div class="list-item-content-container">
+                  <div class="list-item-start-clinic">
+                    <div class="clinic clinicName">${e.clinicName}</div>
+                    <div class="clinic clinicPhone">${e.tel}</div>
+                    <div class="clinic clinicAddr">
+                      ${e.address}
+                    </div>
+                  </div>
+                  <div class="list-item-center-reservation">
+                    <div class="reservationItem">
+                      <label class="label" for="">預約日期</label>
+                      <span>${e.date}</span>
+                    </div>
+                    <div class="reservationItem">
+                      <label class="label" for="">預約時間</label>
+                      <span>${e.day.state} </span>
+                      <span class="break-line">|</span>
+                      <span>${e.day.time}</span>
+                      ${e.num ? `<span class="break-line">|</span>
+                      <span class="reservationItem_number">${e.num} 號</span> ` : ''}
+                    </div>
+                    <div class="reservationItem">
+                      <label class="label" for="">預約醫師</label>
+                      <span>${e.doctor} <span>醫師</span></span>
+                    </div>
+                  </div>
+                  <div class="list-item-end-btn">
+                    <div
+                      class="cancel-button"
+                      data-bs-toggle="modal"
+                      data-bs-target="#removeModal"
+                      onclick='openModal(${e.reservationID})'
+                    >
+                      取消預約
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            ${ i===data.length-1 ? `` : '<div class="list-item-line"></div>'}`
+    }
+    listDom.innerHTML=string
+  }
+  function openModal(rId) {
+    let reservationInform=data.filter(d=>d.reservationID===rId)[0]
+    let {clinicName,address,date,day,doctor,num,reservationID}=reservationInform
+    let modalDom=document.querySelector("#removeModal")
+    console.log(reservationInform,"reservationInform")
+    let informContainerDom=modalDom.querySelector(".inform-container")
+    let str=`<div class="inform-item" id='${reservationID}'>
+              <label class="label inform-item-label">預約診所</label>
+              <div class="value inform-item-value">
+                <div>${clinicName}</div>
+                <div>${address}</div>
+              </div>
+            </div>
+            <div class="inform-item">
+              <label class="label inform-item-label">預約日期</label>
+              <div class="value inform-item-value">${date}</div>
+            </div>
+            <div class="inform-item">
+              <label class="label inform-item-label">預約時間</label>
+              <div class="value inform-item-value">${day.state} ${day.time} ${num ? `${num} 號`: ''}</div>
+            </div>
+
+            <div class="inform-item">
+              <label class="label inform-item-label">預約醫師</label>
+              <div class="value inform-item-value">${doctor} 醫師</div>
+            </div>
+              `
+              informContainerDom.innerHTML=str
+              let confirm_btn=document.querySelector(".cancelConfirm-button")
+              confirm_btn.setAttribute("id",reservationID)
+  }
+
+  function removeConfirm(params) {
+    let t=event.target
+    let rid=t.getAttribute('id')
+    console.log(rid,"rid")
+    // post delete reservation
+    // 如果success 會拿回該預約ID 在渲染UI
+    let domItem=document.querySelector('.card-list .list-item')
+    console.log(domItem,"domItemdomItemdomItem")
+    domItem.remove()
+  }
 </script>

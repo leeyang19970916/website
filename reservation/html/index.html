@@ -7,142 +7,122 @@
     <title>預約掛號首頁index</title>
     <link rel="stylesheet" href="/common/sass/common.css" />
     <link rel="stylesheet" href="/reservation/scss/reservation.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
 
   <body>
-    <div  id="container-bg"  class=" border p-0">
+    <div id="container-bg" class="border p-0">
       <header class="header"></header>
       <div id="index-search-container">
         <section class="ad-loop">ad廣告輪播</section>
-          <div class="majorTitle">預約掛號</div>
-          <div class="card">
-            <div class="cardItem">
-              <div class="minTitle">搜尋關鍵字</div>
-              <div class="input-container input_keyWordValue">
-                <input 
-                  type="text "
-                  
-                  placeholder="關鍵字搜尋..."
-                  class="form-control keyword"
-                />
-                <i class="fa-solid fa-xmark cancelIcon"></i>
-              </div>
+        <div class="majorTitle">預約掛號</div>
+        <div class="card">
+          <div class="cardItem">
+            <div class="minTitle">搜尋關鍵字</div>
+            <div class="input-container input_keyWordValue">
+              <input
+                type="text "
+                placeholder="關鍵字搜尋..."
+                class="form-control keyword"
+              />
+              <i class="fa-solid fa-xmark cancelIcon"></i>
             </div>
-            <div class="cardItem">
-              <div class="minTitle borderBottom">選擇城市</div>
-              <div class="cardItem-container city-container">
-                <div class="list-singleLine">
-                  <div class="listItem listItem-zone">北部</div>
-                  <div class="listItem listItem-city">基隆市</div>
-                  <div class="listItem listItem-city">基隆市</div>
-                  <div class="listItem listItem-city">基隆市</div>
-                  <div class="listItem listItem-city active">基隆市</div>
-                </div>
-                <div class="list-singleLine">
-                  <div class="listItem listItem-zone">北部</div>
-                  <div class="listItem listItem-city">基隆市</div>
-                  <div class="listItem listItem-city">基隆市</div>
-                  <div class="listItem listItem-city">基隆市</div>
-                  <div class="listItem listItem-city active">基隆市</div>
-                </div>
-              </div>
-            </div>
-
-            <div id="district" class="cardItem">
-              <div class="minTitle borderBottom">
-                選擇區域(可複選)
-                <div class="unlimited_btn district active" onclick="optionSelect('district','reset')">不限</div>
-              </div>
-              <div class="cardItem-container district-container">
-                <div class="list-singleLine">
-                  <div class="listItem listItem-zone">北部</div>
-                  <div class="listItem listItem-city">基隆市</div>
-                  <div class="listItem listItem-city">基隆市</div>
-                  <div class="listItem listItem-city">基隆市</div>
-                  <div class="listItem listItem-city active">基隆市</div>
-                </div>
-              </div>
-            </div>
-
-            <div id="department" class="cardItem">
-              <div class="minTitle borderBottom">
-                選擇科別(可複選)
-                <div class="unlimited_btn department active"  onclick="optionSelect('department','reset')">不限</div>
-              </div>
-              <div class="cardItem-container department-container">
-                <div class="list-singleLine">
-                  <div class="listItem listItem-zone">北部</div>
-                  <div class="listItem listItem-city">基隆市</div>
-                  <div class="listItem listItem-city">基隆市</div>
-                  <div class="listItem listItem-city">基隆市</div>
-                  <div class="listItem listItem-city active">基隆市</div>
-                </div>
-              </div>
-            </div>
-
-            <div id="condition" class="cardItem">
-              <div class="minTitle borderBottom">
-                更多條件(可複選)
-                <div class="unlimited_btn condition active"  onclick="optionSelect('condition','reset')">不限</div>
-              </div>
-              <div class="cardItem-container condition-container">
-                <div class="list-singleLine">
-                  <div class="listItem listItem-zone">北部</div>
-                  <div class="listItem listItem-city">基隆市</div>
-                  <div class="listItem listItem-city">基隆市</div>
-                  <div class="listItem listItem-city">基隆市</div>
-                  <div class="listItem listItem-city active">基隆市</div>
-                </div>
-              </div>
-            </div>
-            <button class="search_btn">搜尋</button>
           </div>
+          <div class="cardItem">
+            <div class="minTitle borderBottom">選擇城市</div>
+            <div class="cardItem-container city-container">
+              <div class="list-singleLine">
+                <div class="listItem listItem-zone">北部</div>
+                <div class="listItem listItem-city">基隆市</div>
+                <div class="listItem listItem-city">基隆市</div>
+                <div class="listItem listItem-city">基隆市</div>
+                <div class="listItem listItem-city active">基隆市</div>
+              </div>
+              <div class="list-singleLine">
+                <div class="listItem listItem-zone">北部</div>
+                <div class="listItem listItem-city">基隆市</div>
+                <div class="listItem listItem-city">基隆市</div>
+                <div class="listItem listItem-city">基隆市</div>
+                <div class="listItem listItem-city active">基隆市</div>
+              </div>
+            </div>
+          </div>
+
+          <div id="district" class="cardItem">
+            <div class="minTitle borderBottom">
+              選擇區域(可複選)
+              <div
+                class="unlimited_btn district active"
+                onclick="optionSelect('district','reset')"
+              >
+                不限
+              </div>
+            </div>
+            <div class="cardItem-container district-container">
+              <div class="list-singleLine">
+                <div class="listItem listItem-zone">北部</div>
+                <div class="listItem listItem-city">基隆市</div>
+                <div class="listItem listItem-city">基隆市</div>
+                <div class="listItem listItem-city">基隆市</div>
+                <div class="listItem listItem-city active">基隆市</div>
+              </div>
+            </div>
+          </div>
+
+          <div id="department" class="cardItem">
+            <div class="minTitle borderBottom">
+              選擇科別(可複選)
+              <div
+                class="unlimited_btn department active"
+                onclick="optionSelect('department','reset')"
+              >
+                不限
+              </div>
+            </div>
+            <div class="cardItem-container department-container">
+              <div class="list-singleLine">
+                <div class="listItem listItem-zone">北部</div>
+                <div class="listItem listItem-city">基隆市</div>
+                <div class="listItem listItem-city">基隆市</div>
+                <div class="listItem listItem-city">基隆市</div>
+                <div class="listItem listItem-city active">基隆市</div>
+              </div>
+            </div>
+          </div>
+
+          <div id="condition" class="cardItem">
+            <div class="minTitle borderBottom">
+              更多條件(可複選)
+              <div
+                class="unlimited_btn condition active"
+                onclick="optionSelect('condition','reset')"
+              >
+                不限
+              </div>
+            </div>
+            <div class="cardItem-container condition-container">
+              <div class="list-singleLine">
+                <div class="listItem listItem-zone">北部</div>
+                <div class="listItem listItem-city">基隆市</div>
+                <div class="listItem listItem-city">基隆市</div>
+                <div class="listItem listItem-city">基隆市</div>
+                <div class="listItem listItem-city active">基隆市</div>
+              </div>
+            </div>
+          </div>
+          <button class="search_btn">搜尋</button>
+        </div>
         <section class="searchResult">
           <div class="majorTitle">搜尋結果</div>
           <div class="card">
             <div class="total">共38間診所</div>
             <div class="clinicList">
-              <div class="clinicItem">
-                <div class="departmentList">
-                  <div class="departmentItem department">家醫科</div>
-                  <div class="departmentItem department">家醫科</div>
-                  <div class="departmentItem department">家醫科</div>
-                </div>
-                <div class="inform">
-                  <div class="informItem name">丁文內科診所</div>
-                  <div class="informItem tel">02-12345678</div>
-                  <div class="informItem address">新北市蘆洲區長安街23號</div>
-                  <div class="informItem btn btn-detail">詳細內容</div>
-                </div>
-              </div>
-
-              <div class="clinicItem">
-                <div class="departmentList">
-                  <div class="departmentItem department">家醫科</div>
-                  <div class="departmentItem department">家醫科</div>
-                  <div class="departmentItem department">家醫科</div>
-                </div>
-                <div class="inform">
-                  <div class="informItem name">丁文內科診所</div>
-                  <div class="informItem tel">02-12345678</div>
-                  <div class="informItem address">新北市蘆洲區長安街23號</div>
-                  <div class="informItem btn btn-detail">詳細內容</div>
-                </div>
-              </div>
-              <div class="clinicItem">
-                <div class="departmentList">
-                  <div class="departmentItem department">家醫科</div>
-                  <div class="departmentItem department">家醫科</div>
-                  <div class="departmentItem department">家醫科</div>
-                </div>
-                <div class="inform">
-                  <div class="informItem name">丁文內科診所</div>
-                  <div class="informItem tel">02-12345678</div>
-                  <div class="informItem address">新北市蘆洲區長安街23號</div>
-                  <div class="informItem btn btn-detail">詳細內容</div>
-                </div>
-              </div>
             </div>
             <section id="pagination" class="pagination">
               <ul class="page"></ul>
@@ -179,15 +159,15 @@
 <script src="/reservation/js/class/RESERVATIONFILTER.js"></script>
 <script>
   // HEADER.js
-  let h_page= new HEADER('預約掛號')
+  let h_page = new HEADER("預約掛號");
 </script>
 <script>
   // page
-  let page=new PAGINATION(5)
-  let reservationFilter=new RESERVATIONFILTER()
+
+  let reservationFilter = new RESERVATIONFILTER();
 </script>
 <script>
-    let dataOBJ = {
+  let dataOBJ = {
     keyword: "",
     city: "臺北市",
     district: [],
@@ -197,18 +177,14 @@
   // areaManager
   let manager = new AREAMANAGER();
   manager
-    .onAreaChange((initial, items) => {
-
-    })
-    .onCityChange((initial, items) => {
-    })
+    .onAreaChange((initial, items) => {})
+    .onCityChange((initial, items) => {})
     .onDistrictChange((initial, items) => {
-      districtUIRender(initial,items)
+      districtUIRender(initial, items);
     })
     .start();
 
-
-    const initCityUIRender = () => {
+  const initCityUIRender = () => {
     let dom = document.querySelector(".cardItem-container.city-container");
     let str = "";
     // console.log(reservationFilter.city,"reservationFilter")
@@ -221,9 +197,14 @@
                  ${city
                    .map(
                      (item, index) =>
-                       `<div data-id="${item}" onclick="cityChange('${ zone[0]}','${item}')" 
-                       class=" listItem listItem-city ${reservationFilter.city===item ? 'active': ''}">${item}</div>`
-                   ).join("")}
+                       `<div data-id="${item}" onclick="cityChange('${
+                         zone[0]
+                       }','${item}')" 
+                       class=" listItem listItem-city ${
+                         reservationFilter.city === item ? "active" : ""
+                       }">${item}</div>`
+                   )
+                   .join("")}
                 </div>`;
     }
     // ${searchObj.city === item ? "active" : ""}
@@ -235,90 +216,94 @@
     let target = event.target; //自己
     manager.selectArea(zone);
     manager.selectCity(city);
-    let oldDom=document.querySelector(".cardItem-container.city-container .active")
-    if (oldDom===target) {
-      return
+    let oldDom = document.querySelector(
+      ".cardItem-container.city-container .active"
+    );
+    if (oldDom === target) {
+      return;
     }
-    oldDom.classList.remove("active")
-    target.classList.add("active")
-    reservationFilter.onCityChange(city)
+    oldDom.classList.remove("active");
+    target.classList.add("active");
+    reservationFilter.onCityChange(city);
   };
-  function districtUIRender(initial,items){
+  function districtUIRender(initial, items) {
     items = items.slice(1);
-    let dom=document.querySelector("#district")
-    let listDom=dom.querySelector(".list-singleLine")
-    let unlimitedDom=dom.querySelector(".unlimited_btn")
+    let dom = document.querySelector("#district");
+    let listDom = dom.querySelector(".list-singleLine");
+    let unlimitedDom = dom.querySelector(".unlimited_btn");
 
-    unlimitedControl(unlimitedDom,initial)
-    listRender(listDom,items,'district')
+    unlimitedControl(unlimitedDom, initial);
+    listRender(listDom, items, "district");
   }
-  function listRender(dom,arr,type) {
-    console.log(type,"tpye")
-    let str=""
+  function listRender(dom, arr, type) {
+    console.log(type, "tpye");
+    let str = "";
     for (let i = 0; i < arr.length; i++) {
       const e = arr[i];
-      str+=`<div data-id=${e.code} class="listItem listItem-district" onClick=optionSelect('${type}')>${e.text}</div>`
+      str += `<div data-id=${e.code} class="listItem listItem-district" onClick=optionSelect('${type}')>${e.text}</div>`;
     }
-    dom.innerHTML=str
+    dom.innerHTML = str;
   }
-function unlimitedControl(dom,initial) {
-  if (initial==="不分區" || initial===[]) {
-    dom.classList.add("active")
-    return
+  function unlimitedControl(dom, initial) {
+    if (initial === "不分區" || initial === []) {
+      dom.classList.add("active");
+      return;
+    }
+    dom.classList.remove(".active");
   }
-dom.classList.remove(".active")
-  
-}
-function optionSelect(params,state=null) {
-  let e=event.target
-  if (state==="reset") {
-    reservationFilter.onReset(params)
-    return
+  function optionSelect(params, state = null) {
+    let e = event.target;
+    if (state === "reset") {
+      reservationFilter.onReset(params);
+      return;
+    }
+    let obj = {
+      id: e.getAttribute("data-id"),
+      text: e.innerHTML,
+    };
+    // console.log(obj,"event")
+    if (params === "district") {
+      reservationFilter.onDistrictChange(obj, params);
+    } else if (params === "department") {
+      reservationFilter.onDepartmentChange(obj, params);
+    } else {
+      // condition
+      reservationFilter.onConditionChange(obj, params);
+    }
   }
-  let obj={
-    id:e.getAttribute("data-id"),
-    text:e.innerHTML
-  }
-  // console.log(obj,"event")
-  if (params==="district") {
-    reservationFilter.onDistrictChange(obj,params)
-  }else if (params==="department") {
-    reservationFilter.onDepartmentChange(obj,params)
-  }else{
-    // condition
-    reservationFilter.onConditionChange(obj,params)
-  }
-
-}
-function departmentRender(initial,items){
+  function departmentRender(initial, items) {
     // items = items.slice(1);
-    let dom=document.querySelector("#department")
-    let listDom=dom.querySelector(".list-singleLine")
-    let unlimitedDom=dom.querySelector(".unlimited_btn")
+    let dom = document.querySelector("#department");
+    let listDom = dom.querySelector(".list-singleLine");
+    let unlimitedDom = dom.querySelector(".unlimited_btn");
 
-    unlimitedControl(unlimitedDom,initial)
-    listRender(listDom,items,'department')
+    unlimitedControl(unlimitedDom, initial);
+    listRender(listDom, items, "department");
   }
-let departmentArr=[{code:1,text:"123"},{code:2,text:"2"},{code:3,text:"3"},{code:4,text:"4"}]
-  departmentRender([],departmentArr)
+  let departmentArr = [
+    { code: 1, text: "123" },
+    { code: 2, text: "2" },
+    { code: 3, text: "3" },
+    { code: 4, text: "4" },
+  ];
+  departmentRender([], departmentArr);
 
-
-  function conditionRender(initial,items){
+  function conditionRender(initial, items) {
     // items = items.slice(1);
-    let dom=document.querySelector("#condition")
-    let listDom=dom.querySelector(".list-singleLine")
-    let unlimitedDom=dom.querySelector(".unlimited_btn")
+    let dom = document.querySelector("#condition");
+    let listDom = dom.querySelector(".list-singleLine");
+    let unlimitedDom = dom.querySelector(".unlimited_btn");
 
-    unlimitedControl(unlimitedDom,initial)
-    listRender(listDom,items,'condition')
+    unlimitedControl(unlimitedDom, initial);
+    listRender(listDom, items, "condition");
   }
-let conditionArr=[{code:1,text:"123"},{code:2,text:"2"},{code:3,text:"3"},{code:4,text:"4"}]
-conditionRender([],conditionArr)
-
-
-
-
-
+  let conditionArr = [
+    { code: 1, text: "123" },
+    { code: 2, text: "2" },
+    { code: 3, text: "3" },
+    { code: 4, text: "4" },
+  ];
+  conditionRender([], conditionArr);
 </script>
 
 <script>
@@ -330,5 +315,68 @@ conditionRender([],conditionArr)
   // function keywordChange(params) {
   //   console.log(inputContainer,"inputContainer","qwqwefqefew",params)
   // }
-  
+</script>
+
+<script>
+  // click 搜尋 得到data renderUI
+  let data = {
+    total: 100,
+    page: 20,
+    nowPage: 1,
+    clinicList: [
+      {
+        clinicName: "丁文內科診所",
+        clinicID: "w95135",
+        address: "新北市蘆洲區長安街23號",
+        department: ["家醫科", "婦產科"],
+        tel: "02-54156651265",
+      },
+      {
+        clinicName: "丁文內科診所",
+        clinicID: "w95135",
+        address: "新北市蘆洲區長安街23號",
+        tel: "02-54156651265",
+        department: ["家醫科", "婦產科"],
+      },
+    ],
+  };
+  let resultDom = document.querySelector(".searchResult");
+  function listUIRender() {
+    let totalDom = resultDom.querySelector(".total");
+    totalDom.innerHTML = `共${data.total}間診所`;
+    let clinicListDOM = resultDom.querySelector(".clinicList");
+    let str = "";
+    for (let i = 0; i < data.clinicList.length; i++) {
+      const e = data.clinicList[i];
+      str += `<div class="clinicItem">
+          <div class="departmentList">
+            ${e.department.map(d=>`<div class="departmentItem department">${d}</div>`).join("")}
+            <div class="departmentItem department">家醫科</div>
+            <div class="departmentItem department">家醫科</div>
+            <div class="departmentItem department">家醫科</div>
+          </div>
+          <div class="inform">
+            <div class="informItem name">${e.clinicName}</div>
+            <div class="informItem tel">${e.tel}</div>
+            <div class="informItem address">${e.address}</div>
+            <div class="informItem btn btn-detail" onclick='redirect(${i})'>詳細內容</div>
+          </div>
+        </div>
+      `;
+    }
+    clinicListDOM.innerHTML=str
+  }
+  listUIRender();
+
+  let page = new PAGINATION(data.page);
+
+  function redirect(i) {
+    if (i===1) {
+      window.location.href='/reservation/html/clinic_website_simple.html'
+
+    }else{
+      window.location.href='/reservation/html/formal/clinic_website_formal.html'
+
+    }
+  }
 </script>

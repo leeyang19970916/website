@@ -2536,13 +2536,17 @@ ul {
     white-space: nowrap;
   }
 }
+.search-bar .search-bar-card .card-content .search_btn:hover {
+  color: white;
+  border: none;
+}
 
 #search-container .heightControl {
   height: 224px;
 }
 @media (max-width: 996px) {
   #search-container .heightControl {
-    height: 93.3333333333px;
+    height: 140px;
   }
 }
 #search-container .search-list-card {
@@ -2709,6 +2713,9 @@ ul {
 }
 #search-container .search-list-card .card-list .list-item-center-reservation .reservationItem .label {
   color: #53b6b7;
+}
+#search-container .search-list-card .card-list .list-item-center-reservation .reservationItem .break-line {
+  color: #53B6B7;
 }
 #search-container .search-list-card .card-list .list-item-end-btn .cancel-button {
   margin-top: 0.5rem;
