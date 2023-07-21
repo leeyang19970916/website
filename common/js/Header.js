@@ -35,7 +35,7 @@ class HEADER {
   navUI() {
     let str = "";
     this.list.forEach((item) => {
-      str += `<div class="header-nav-item ${item===this.now_page ? 'activing' :""}" onclick="redirect('${item}')">${item}</div>`;
+      str += `<div class="header-nav-item ${item===this.now_page ? 'activing' :""}" onclick="header_redirect('${item}')">${item}</div>`;
     });
     return str;
   }
@@ -60,10 +60,9 @@ class HEADER {
     menuDom.classList.toggle("show");
   }
 }
-function redirect(p){
+function header_redirect(p){
 
 let now_page=h_page.now_page
-console.log(now_page,"efe")
 if (now_page===p) {
   return
 }

@@ -49,8 +49,18 @@
   .form-control {
   }
   .cancelIcon {
+    display: none;
+    cursor: pointer;
+    transition: all 0.25s;
+    padding: 0.5rem 0.25rem;
+    &.show{
+      display: block;
+    }
+    &:hover{
+      color: rgb(137, 137, 137);
+    }
     // background-color: red;
-    color: red;
+    // color: red;
   }
 }
 

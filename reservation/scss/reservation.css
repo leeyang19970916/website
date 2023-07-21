@@ -84,7 +84,16 @@ section.ad-loop {
   }
 }
 .input-container .cancelIcon {
-  color: red;
+  display: none;
+  cursor: pointer;
+  transition: all 0.25s;
+  padding: 0.5rem 0.25rem;
+}
+.input-container .cancelIcon.show {
+  display: block;
+}
+.input-container .cancelIcon:hover {
+  color: rgb(137, 137, 137);
 }
 .input-container .form-control {
   width: 50%;
@@ -97,7 +106,7 @@ section.ad-loop {
 .input-container .keyword {
   border-radius: 16px;
 }
-.input-container .fa-xmark {
+.input-container .cancelIcon {
   color: rgb(183, 183, 183);
   transform: translate(-30px, 0);
 }
@@ -1981,7 +1990,16 @@ ul {
   }
 }
 #personal-inform .option-container .inform-input .inform-input-item .cancelIcon {
-  color: red;
+  display: none;
+  cursor: pointer;
+  transition: all 0.25s;
+  padding: 0.5rem 0.25rem;
+}
+#personal-inform .option-container .inform-input .inform-input-item .cancelIcon.show {
+  display: block;
+}
+#personal-inform .option-container .inform-input .inform-input-item .cancelIcon:hover {
+  color: rgb(137, 137, 137);
 }
 @media (max-width: 996px) {
   #personal-inform .option-container .inform-input .inform-input-item {
@@ -2416,7 +2434,16 @@ ul {
   }
 }
 .search-bar .search-bar-card .card-content .inform-input .inform-input-item .cancelIcon {
-  color: red;
+  display: none;
+  cursor: pointer;
+  transition: all 0.25s;
+  padding: 0.5rem 0.25rem;
+}
+.search-bar .search-bar-card .card-content .inform-input .inform-input-item .cancelIcon.show {
+  display: block;
+}
+.search-bar .search-bar-card .card-content .inform-input .inform-input-item .cancelIcon:hover {
+  color: rgb(137, 137, 137);
 }
 @media (max-width: 996px) {
   .search-bar .search-bar-card .card-content .inform-input .inform-input-item {

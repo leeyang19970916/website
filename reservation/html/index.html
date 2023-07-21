@@ -26,12 +26,12 @@
           <div class="cardItem">
             <div class="minTitle">搜尋關鍵字</div>
             <div class="input-container input_keyWordValue">
-              <input
+              <!-- <input
                 type="text "
                 placeholder="關鍵字搜尋..."
                 class="form-control keyword"
               />
-              <i class="fa-solid fa-xmark cancelIcon"></i>
+              <i class="fa-solid fa-xmark cancelIcon"></i> -->
             </div>
           </div>
           <div class="cardItem">
@@ -154,6 +154,7 @@
 
 <script type="module" src="/common/js/Common_UI_Render.js"></script>
 <script src="/common/js/Header.js"></script>
+<script src="/common/js/INPUT.js"></script>
 <script src="/reservation/js/class/AREAMANAGER.js"></script>
 <script src="/reservation/js/class/PAGINATION.js"></script>
 <script src="/reservation/js/class/RESERVATIONFILTER.js"></script>
@@ -281,10 +282,10 @@
     listRender(listDom, items, "department");
   }
   let departmentArr = [
-    { code: 1, text: "123" },
-    { code: 2, text: "2" },
-    { code: 3, text: "3" },
-    { code: 4, text: "4" },
+    { code: 1, text: "家醫科" },
+    { code: 2, text: "內科" },
+    { code: 3, text: "中醫科" },
+    { code: 4, text: "骨科" },
   ];
   departmentRender([], departmentArr);
 
@@ -298,10 +299,10 @@
     listRender(listDom, items, "condition");
   }
   let conditionArr = [
-    { code: 1, text: "123" },
-    { code: 2, text: "2" },
-    { code: 3, text: "3" },
-    { code: 4, text: "4" },
+    { code: 1, text: "週六看診" },
+    { code: 2, text: "周日看診" },
+    { code: 3, text: "X光" },
+    { code: 4, text: "動態心電圖" },
   ];
   conditionRender([], conditionArr);
 </script>
@@ -371,6 +372,8 @@
   let page = new PAGINATION(data.page);
 
   function redirect(i) {
+    console.log("經過了嗎")
+    return
     if (i===1) {
       window.location.href='/reservation/html/clinic_website_simple.html'
 
@@ -379,4 +382,6 @@
 
     }
   }
+  let inputDom=document.querySelector(".input_keyWordValue")
+  let www=new INPUT(inputDom)
 </script>
