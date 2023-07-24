@@ -1,5 +1,6 @@
 .pagination {
   margin: 0 auto;
+  width: 100%;
   @include dflex(center, center);
 }
 
@@ -81,9 +82,11 @@ ul {
     justify-content: center;
     align-items: center;
     // margin: 0.8rem;
-    margin: 0.25rem 0.5rem;
+    margin: 0rem 0.25rem;
     font-size: 1rem;
     cursor: pointer;
+    width: calc(100% / 15);
+    max-width: 50px;
     @media (max-width: 996px) {
       margin: 2px 0.25rem;
     }
@@ -136,20 +139,6 @@ ul {
       }
     }
   }
-  // .prevIcon,
-  // .nextIcon {
-  //   background: #ffffff;
-  //   border: 0.5px solid #4a4a4a;
-  //   border-radius: 8px;
-  //   padding: 0.5rem 0.5rem;
-  //   cursor: pointer;
-  //   &.dis {
-  //     background: #edebeb;
-  //     color: white;
-  //     border: none;
-  //   }
-  //   // transform: matrix(1, 0, 0, -1, 0, 0);
-  // }
 }
 
 #simple-container {
@@ -174,4 +163,7 @@ ul {
       color: rgba(205, 205, 205, 1);
     }
   }
+}
+.v-hidden{
+  visibility: hidden;
 }

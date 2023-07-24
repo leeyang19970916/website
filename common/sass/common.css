@@ -12047,6 +12047,14 @@ textarea.form-control-lg {
   background: #3dc7c7;
 }
 
+.d_none {
+  display: none;
+}
+
+.icon {
+  transition: all 0.5s;
+}
+
 header {
   --heightMax: 70px;
 }

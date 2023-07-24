@@ -1,3 +1,4 @@
+// @import "/common/sass/scrollbar";
 #callingProgress-container {
   // padding: 1.25rem 1rem;
   margin: 1rem auto;
@@ -16,29 +17,55 @@
     .content {
       @include fontSize(1rem, #4a4a4a, 500);
       letter-spacing: 1.12px;
-      padding: 0.5rem 0.75rem;
+      padding: 0.5rem 0rem;
       .phone,
       .addr {
         padding: 0.25rem 0;
       }
       .doctorList-container {
-        @include dflex(center, center, nowrap);
+        @include dflex(start, center, nowrap);
         margin: 0.5rem 0 1rem 0;
         .doctorList {
           @include dflex(start, center, nowrap);
-          width: 100%;
+          white-space: nowrap;
+          overflow: hidden;
+          overflow-x: scroll;
+          &::-webkit-scrollbar {
+            width: 5px ;  /* 设置滚动条的宽度 */
+            height: 5px;
+          }
+          
+          /* 修改滚动条轨道背景颜色 */
+          &::-webkit-scrollbar-track {
+            // background-color: #f1f1f1;
+            background-color: transparent;
+          }
+          
+          /* 修改滚动条滑块 */
+          &::-webkit-scrollbar-thumb {
+            // background-color: #53b6b7;
+            background-color: #c0c0c0;
+          }
+          
+          /* 修改滚动条滑块悬停时的样式 */
+          &::-webkit-scrollbar-thumb:hover {
+            background-color: #5f5c5c
+            // background-color: #1c5556;
+          }
           .doctorItem {
             @include fontSize(1rem, #c0c0c0, 500);
             width: calc(100% / 3);
             text-align: center;
             padding-bottom: 0.5rem;
-            padding: 0 1rem;
+            padding: 0 0.5rem;
             padding-bottom: 0.5rem;
-            border-bottom: 1px solid #cdcdcd;
+            // flex: 0 1 calc(33.33% - 10px); /* 設定 flex 屬性控制寬度 */
+
+            // border-bottom: 1px solid #cdcdcd;
             cursor: pointer;
             &.show {
               color: #53b6b7 !important;
-              border-bottom: 2px solid #53b6b7 !important;
+              // border-bottom: 2px solid #53b6b7 !important;
               // background-color: transparent !important;
             }
           }
@@ -82,9 +109,9 @@
         .update-btn {
           margin: 1rem auto;
           border-radius: 3px;
-          border: 1px solid #ea4438;
+          border: 1px solid #EA4438;
           background: #fff;
-          @include fontSize(1rem, #ea4438, 500);
+          @include fontSize(10px, #EA4438, 500);
           @include dflex(center, center);
           width: 30%;
           padding: 0.25rem 0;

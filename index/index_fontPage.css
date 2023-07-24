@@ -7,6 +7,14 @@
   background: #3dc7c7;
 }
 
+.d_none {
+  display: none;
+}
+
+.icon {
+  transition: all 0.5s;
+}
+
 .header {
   margin-bottom: 0 !important;
 }

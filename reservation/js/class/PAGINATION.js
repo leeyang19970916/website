@@ -5,7 +5,6 @@ class PAGINATION {
       (this.nowPage = 1),
       this.showsize = 5
     this.uiRender();
-    // this.eventBinding()
   }
   changePage(page) {
     if (page === this.nowPage) {
@@ -36,17 +35,22 @@ class PAGINATION {
   }
 
   angle_prevUI(state) {
-    return ` <i class="fa-solid fa-angles-left pagination_arrow   ${state === 1 ? 'd-none' : ""}"></i>`
+    return ` <i class="fa-solid fa-angles-left pagination_arrow   ${state === 1 ? 'v-hidden' : ""}"></i>`
   }
   angle_nextUI(state) {
-    return `<i class="fa-solid fa-angles-right pagination_arrow   ${state === 'max' ? 'd-none' : ""}"></i>`
+    return `<i class="fa-solid fa-angles-right pagination_arrow   ${state === 'max' ? 'v-hidden' : ""}"></i>`
   }
   pageChange(action) {
+    console.log("action", action)
     if (action === 'anglesPrev') {
       this.nowPage = 1
+      this.uiRender();
+      return
     }
     if (action === 'anglesNext') {
       this.nowPage = this.totalPage
+      this.uiRender();
+      return
     }
     if (action === "prev") {
       if (this.nowPage === 1) {
@@ -64,40 +68,48 @@ class PAGINATION {
     this.uiRender();
   }
   pageUIRender() {
-    let pageUI = ''
-    if (this.nowPage===1) {
-      
+    let pageUI = '';
+
+    // 計算目前要顯示的頁數範圍
+    let startPage = Math.max(1, this.nowPage - 2);
+    let endPage = Math.min(this.totalPage, startPage + this.showsize - 1);
+    // 若目前頁數在末尾，將頁數範圍往左偏移一頁
+    if (endPage === this.totalPage) {
+      startPage = endPage - this.showsize + 1
     }
-    for (let i = 1; i < this.totalPage+1; i++) {
+    for (let i = startPage; i <= endPage; i++) {
       pageUI += `<li onclick="selectPage(${i})" class="page__numbers ${this.nowPage === i ? "active" : ""
         }">${i}</li> `;
     }
-    return pageUI
+    return pageUI;
   }
+
   uiRender() {
     let str = "";
-    let prevUI = ''
-    let nextUI = ''
-    let angle_prevUI = ""
-    let angle_nextUI = ""
+    let prevUI = '';
+    let nextUI = '';
+    let angle_prevUI = "";
+    let angle_nextUI = "";
+
+    // 若目前頁數在起始，將頁數範圍往右偏移一頁
     if (this.nowPage === 1) {
       prevUI = this.prevUI(1);
-      angle_prevUI = this.angle_prevUI(1)
+      angle_prevUI = this.angle_prevUI(1);
     } else {
       prevUI = this.prevUI();
-      angle_prevUI = this.angle_prevUI()
+      angle_prevUI = this.angle_prevUI();
     }
 
+    // 若目前頁數在末尾，將頁數範圍往左偏移一頁
     if (this.nowPage === this.totalPage) {
       nextUI = this.nextUI('max');
-      angle_nextUI = this.angle_nextUI('max')
+      angle_nextUI = this.angle_nextUI('max');
     } else {
       nextUI = this.nextUI();
-      angle_nextUI = this.angle_nextUI()
-
+      angle_nextUI = this.angle_nextUI();
     }
 
-    str = this.pageUIRender()
+    str = this.pageUIRender();
 
     this.dom.innerHTML = `${angle_prevUI}${prevUI}${str} ${nextUI}${angle_nextUI} `;
     this.eventBinding();

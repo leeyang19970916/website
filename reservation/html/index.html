@@ -53,7 +53,6 @@
               </div>
             </div>
           </div>
-
           <div id="district" class="cardItem">
             <div class="minTitle borderBottom">
               選擇區域(可複選)
@@ -135,6 +134,8 @@
     </div>
   </body>
 </html>
+<style>
+</style>
 <!-- <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
 <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script> -->
 <!-- <script src="../../js/innerHeight.js"></script> -->
@@ -153,12 +154,13 @@
 <script src="/js/class/RESERVATION_SEARCH.js"></script> -->
 
 <script type="module" src="/common/js/Common_UI_Render.js"></script>
-<script src="/common/js/Header.js"></script>
+<!-- <script src="/common/js/Header.js"></script> -->
 <script src="/common/js/INPUT.js"></script>
 <script src="/reservation/js/class/AREAMANAGER.js"></script>
 <script src="/reservation/js/class/PAGINATION.js"></script>
 <script src="/reservation/js/class/RESERVATIONFILTER.js"></script>
-<script>
+<script src="/common/js/Header.js">
+  
   // HEADER.js
   let h_page = new HEADER("預約掛號");
 </script>
@@ -384,4 +386,16 @@
   }
   let inputDom=document.querySelector(".input_keyWordValue")
   let www=new INPUT(inputDom)
+</script>
+
+
+<script>
+  document.addEventListener('scroll',function(e){
+    // console.log(e,this)
+    if (window.innerHeight + window.scrollY >= document.body.scrollHeight) {
+    console.log('已經滑到最下方','只要經過一次');
+    // 這時觸發fontawesome 轉轉轉 
+    // 然後撈API往下展示
+  }
+  })
 </script>

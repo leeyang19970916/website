@@ -16,8 +16,8 @@
         <section class="section-container inform">
           <div class="title">泛亞皮膚科整形外科診所</div>
           <div class="content">
-            <div class="phone">02-278915348</div>
-            <div class="addr">台北市中正區濟南路二段48巷3之2號1樓</div>
+            <div class="phone"><img src="/reservation/image/icon/phone_icon.svg" class="iconSetting" alt="">02-278915348</div>
+            <div class="addr"><img src="/reservation/image/icon/address_icon.svg" class="iconSetting" alt="">台北市中正區濟南路二段48巷3之2號1樓</div>
           </div>
         </section>
 
@@ -25,13 +25,17 @@
           <div class="title">看診進度</div>
           <div class="content">
             <div class="doctorList-container">
-              <div class="prev"><</div>
+              <!-- <div class="prev"><</div> -->
               <div class="doctorList">
                 <div class="doctorItem show">郭柏伶</div>
                 <div class="doctorItem">郭柏伶</div>
                 <div class="doctorItem">郭柏伶</div>
+                <div class="doctorItem">郭柏伶</div>
+                <div class="doctorItem">郭柏伶</div>
+                <div class="doctorItem">郭柏伶</div>
+                <div class="doctorItem">郭柏伶</div>
               </div>
-              <div class="next">></div>
+              <!-- <div class="next">></div> -->
             </div>
             <div class="calling-container">
               <div class="callingCard">
@@ -41,7 +45,7 @@
                   <div class="number">128</div>
                 </div>
               </div>
-              <div class="update-btn">叫號刷新</div>
+              <div class="update-btn"><i class="fa-solid fa-rotate pe-1"></i>叫號刷新</div>
             </div>
           </div>
         </section>
@@ -58,31 +62,16 @@
         <section class="clinicDetail clinicDetail-progress">
           <div class="title">
             <div
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapseExample"
-              aria-expanded="false"
-              aria-controls="collapseExample"
             >
               注意事項
             </div>
-            <span
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapseExample"
-              aria-expanded="false"
-              aria-controls="collapseExample"
-            >
-              ></span
-            >
+            
           </div>
-          <div class="collapse" id="collapseExample">
             <div class="card card-body">
               Some placeholder content for the collapse component. This panel is
               hidden by default but revealed when the user activates the
               relevant trigger.
             </div>
-          </div>
         </section>
       </div>
 
@@ -92,11 +81,12 @@
 </html>
 
 <script type="module" src="/common/js/Common_UI_Render.js"></script>
-<script src="/reservation/js/class/PAGINATION.js"></script>
+<script src="/common/js/Header.js"></script>
 <script src="/reservation/js/class/SCHEDULE.js"></script>
 <script>
-  // page
-  let page = new PAGINATION(5);
+  
+  // HEADER.js
+  let h_page = new HEADER("預約掛號");
 </script>
 <script>
   let SleepData = ["02", "61", "43", "52", "33", "32"];
