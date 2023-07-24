@@ -65,6 +65,9 @@ class PAGINATION {
   }
   pageUIRender() {
     let pageUI = ''
+    if (this.nowPage===1) {
+      
+    }
     for (let i = 1; i < this.totalPage+1; i++) {
       pageUI += `<li onclick="selectPage(${i})" class="page__numbers ${this.nowPage === i ? "active" : ""
         }">${i}</li> `;

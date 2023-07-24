@@ -3130,6 +3130,7 @@ ul {
   letter-spacing: 1.92px;
   margin-top: 0.25rem;
   padding: 0.25rem 0.75rem;
+  line-height: 24px;
 }
 @media (max-width: 996px) {
   .clinicDetail-progress .card {
